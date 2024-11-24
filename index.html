@@ -1,626 +1,550 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<script src="https://cdn.tailwindcss.com"></script>
-		<link rel="preconnect" href="https://fonts.googleapis.com" />
-		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-		<link
-			href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Flow+Circular&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Pen+Script&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
-			rel="stylesheet"
-		/>
-		<link rel="shortcut icon" href="./assets/img/logo.svg" type="image/x-icon" />
-		<title>Createx</title>
-	</head>
 
-	<body class="max-w-[1920px] mx-auto font-['Lato', sans-serif]">
-		<header class="bg-[#f55d0541] text-white overflow-hidden">
-			<div
-				class="container max-w-[1230px] mx-auto flex justify-between items-center px-2 py-5"
-			>
-				<div class="flex items-center gap-x-14">
-					<a href="./index.html"
-						><img src="./assets/img/logo.svg" alt="Logo"
-					/></a>
-					<nav class="hidden lg:block">
-						<ul class="flex space-x-9 font-bold text-[#424551]">
-							<li>
-								<a
-									href="#"
-									class="hover:text-[#31333b] transition duration-300"
-									>About Us</a
-								>
-							</li>
-							<li>
-								<a
-									href="./pages/Courses.html"
-									class="hover:text-[#31333b] transition duration-300"
-									>Courses</a
-								>
-							</li>
-							<li>
-								<a
-									href="./pages/Events_List_View.html"
-									class="hover:text-[#31333b] transition duration-300"
-									>Events</a
-								>
-							</li>
-							<li>
-								<a
-									href="#"
-									class="hover:text-[#31333b] transition duration-300"
-									>Blog</a
-								>
-							</li>
-							<li>
-								<a
-									href="#"
-									class="hover:text-[#31333b] transition duration-300"
-									>Contacts</a
-								>
-							</li>
-						</ul>
-					</nav>
-				</div>
-				<div class="flex items-center gap-x-2">
-					<button
-						id="getConsultationBtn"
-						class="hidden sm:block px-4 py-3 rounded hover:bg-red-500 bg-red-600 text-white font-bold truncate max-w-[160px] transition duration-300"
-					>
-						Get consultation
-					</button>
-					<button
-						id="loginRegisterBtn"
-						class="hidden sm:block flex items-center gap-x-2 px-4 py-3 rounded bg-transparent hover:text-[#31333b] text-[#424551] font-bold truncate max-w-[160px] transition duration-300"
-					>
-						Log in / Register
-					</button>
-					<button
-						id="menuToggle"
-						class="lg:hidden px-3 py-2 text-[#424551] font-bold"
-					>
-						<svg
-							xmlns="http://www.w3.org/2000/svg"
-							fill="none"
-							viewBox="0 0 24 24"
-							stroke-width="2"
-							stroke="currentColor"
-							class="w-6 h-6"
-						>
-							<path
-								stroke-linecap="round"
-								stroke-linejoin="round"
-								d="M4 6h16M4 12h16m-7 6h7"
-							/>
-						</svg>
-					</button>
-				</div>
-			</div>
-			<div
-				id="mobileMenu"
-				class="hidden lg:hidden fixed inset-0 bg-[#f55d05cc] flex flex-col items-center justify-center transform translate-x-full transition-transform duration-500"
-			>
-				<button
-					id="closeMenu"
-					class="absolute top-5 right-5 text-white text-3xl font-bold"
-				>
-					&times;
-				</button>
-				<ul class="space-y-4 font-bold text-white text-lg">
-					<li>
-						<a href="#" class="hover:text-[#31333b] transition duration-300"
-							>About Us</a
-						>
-					</li>
-					<li>
-						<a href="#" class="hover:text-[#31333b] transition duration-300"
-							>About Us</a
-						>
-					</li>
-					<li>
-						<a
-							href="./pages/Courses.html"
-							class="hover:text-[#31333b] transition duration-300"
-							>Courses</a
-						>
-					</li>
-					<li>
-						<a
-							href="./pages/Events_List_View.html"
-							class="hover:text-[#31333b] transition duration-300"
-							>Events</a
-						>
-					</li>
-					<li>
-						<a href="#" class="hover:text-[#31333b] transition duration-300"
-							>Blog</a
-						>
-					</li>
-					<li>
-						<a href="#" class="hover:text-[#31333b] transition duration-300"
-							>Contacts</a
-						>
-					</li>
-				</ul>
-				<div class="mt-6 flex flex-col gap-y-4 sm:hidden">
-					<button
-						id="mobileGetConsultationBtn"
-						class="px-4 py-3 rounded bg-red-600 text-white font-bold"
-					>
-						Get consultation
-					</button>
-					<button
-						id="mobileLoginRegisterBtn"
-						class="flex items-center gap-x-2 px-4 py-3 rounded bg-white text-[#424551] font-bold"
-					>
-						<img src="./assets/icon/Profile.svg" alt="" />Log in / Register
-					</button>
-				</div>
-			</div>
-			<div
-				id="consultationModal"
-				class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-250 text-black"
-			>
-				<div
-					class="mx-auto mt-16 bg-white rounded-lg p-8 w-[400px] transition relative duration-300"
-				>
-					<button
-						id="closeModal"
-						class="absolute top-2 right-4 text-xl text-gray-600 w-8 h-8"
-					>
-						&times;
-					</button>
-					<h2 class="text-2xl font-semibold mb-4 text-center">Sign in</h2>
-					<p class="mb-6 font-medium">
-						Sign in to your account using email and password provided during
-						registration.
-					</p>
-					<form class="authForm" data-form="signin">
-						<div class="mb-4">
-							<label for="email" class="block text-sm font-medium"
-								>Email</label
-							>
-							<input
-								type="email"
-								id="email"
-								name="email"
-								class="w-full p-2 border rounded focus:border-blue-500 focus:outline-none"
-								placeholder="Your working email"
-								required
-							/>
-						</div>
-						<div class="mb-4">
-							<label for="password" class="block text-sm font-medium"
-								>Password</label
-							>
-							<input
-								type="password"
-								id="password"
-								name="password"
-								class="w-full p-2 border rounded focus:border-blue-500 focus:outline-none"
-								placeholder="********"
-								required
-							/>
-						</div>
-						<div class="flex justify-between items-center mb-4">
-							<label class="flex items-center">
-								<input type="checkbox" name="remember" />
-								<span class="ml-2 text-sm">Keep me signed in</span>
-							</label>
-							<a href="#" class="text-sm text-blue-500"
-								>Forgot password?</a
-							>
-						</div>
-						<button
-							type="submit"
-							class="w-full bg-red-600 hover:bg-red-700 transition duration-300 text-white py-2 rounded-lg font-semibold authButton"
-						>
-							Sign In
-						</button>
-						<div class="text-center mt-4">
-							<span
-								>Don't have an account?
-								<a
-									href="#"
-									id="switchToSignUp"
-									class="text-blue-500 cursor-pointer"
-									>Sign up</a
-								></span
-							>
-						</div>
-						<div class="mt-6 text-center">
-							<span class="text-sm">Or sign in with</span>
-							<div class="flex justify-center gap-x-4 mt-2">
-								<a href="https://Facebook.com"
-									><img
-										src="./assets/icon/Facebook.svg"
-										alt="Facebook"
-								/></a>
-								<a href="https://Google.com"
-									><img
-										src="./assets/icon/Google.svg"
-										alt="Google"
-								/></a>
-								<a href="https://Linked-In.com"
-									><img
-										src="./assets/icon/Linked-In.svg"
-										alt="Linked-In"
-								/></a>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>
-			<div
-				id="loginRegisterModal"
-				class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50 text-black"
-			>
-				<div class="bg-white mx-auto relative rounded-lg p-8 w-[400px]">
-					<button
-						id="closeModal"
-						class="absolute top-2 right-4 text-xl text-gray-600 w-8 h-8"
-					>
-						&times;
-					</button>
-					<h2 class="text-2xl font-semibold mb-4 modalTitle">Sign up</h2>
-					<p class="mb-6 text-sm text-gray-500">
-						Registration takes less than a minute but gives you full control
-						over your studying.
-					</p>
-					<form class="authForm" data-form="signup">
-						<div class="mb-4">
-							<label for="fullName" class="block text-sm font-medium"
-								>Full Name</label
-							>
-							<input
-								type="text"
-								id="fullName"
-								name="fullName"
-								class="w-full p-2 border rounded focus:border-blue-500 focus:outline-none"
-								placeholder="Your full name"
-								required
-							/>
-						</div>
-						<div class="mb-4">
-							<label for="email" class="block text-sm font-medium"
-								>Email</label
-							>
-							<input
-								type="email"
-								id="email"
-								name="email"
-								class="w-full p-2 border rounded focus:border-blue-500 focus:outline-none"
-								placeholder="Your working email"
-								required
-							/>
-						</div>
-						<div class="mb-4">
-							<label for="password" class="block text-sm font-medium"
-								>Password</label
-							>
-							<input
-								type="password"
-								id="password"
-								name="password"
-								class="w-full p-2 border rounded focus:border-blue-500 focus:outline-none"
-								placeholder="********"
-								required
-							/>
-						</div>
-						<div class="mb-4">
-							<label
-								for="confirmPassword"
-								class="block text-sm font-medium"
-								>Confirm Password</label
-							>
-							<input
-								type="password"
-								id="confirmPassword"
-								name="confirmPassword"
-								class="w-full p-2 border rounded focus:border-blue-500 focus:outline-none"
-								placeholder="********"
-								required
-							/>
-						</div>
-						<div class="flex items-center mb-4">
-							<input
-								type="checkbox"
-								id="rememberMe"
-								name="rememberMe"
-								class="mr-2"
-							/>
-							<label for="rememberMe" class="text-sm"
-								>Remember me</label
-							>
-						</div>
-						<button
-							type="submit"
-							class="w-full bg-red-600 hover:bg-red-700 transition duration-300 text-white py-2 rounded-lg font-semibold authButton"
-						>
-							Sign up
-						</button>
-						<div class="text-center mt-4">
-							<span class="text-sm"
-								>Already have an account?
-								<a
-									href="#"
-									id="switchToSignIn"
-									class="text-blue-500 cursor-pointer"
-									>Sign in</a
-								></span
-							>
-						</div>
-						<div class="mt-6 text-center">
-							<span class="text-sm">Or sign in with</span>
-							<div class="flex justify-center gap-x-4 mt-2">
-								<a href="https://Facebook.com"
-									><img
-										src="./assets/icon/Facebook.svg"
-										alt="Facebook"
-								/></a>
-								<a href="https://Google.com"
-									><img
-										src="./assets/icon/Google.svg"
-										alt="Google"
-								/></a>
-								<a href="https://Linked-In.com"
-									><img
-										src="./assets/icon/Linked-In.svg"
-										alt="Linked-In"
-								/></a>
-							</div>
-						</div>
-					</form>
-				</div>
-			</div>
-		</header>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Flow+Circular&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Pen+Script&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+        rel="stylesheet" />
+    <link rel="shortcut icon" href="./assets/img/logo.svg" type="image/x-icon" />
+    <title>Createx</title>
+</head>
+ 
+ 
 
-		
-            <script src="https://cdn.tailwindcss.com"></script>
-            <script>
-                tailwind.config = {
-                    theme: {
-                        extend: {
-                            colors: {
-                                primary: '#FF3F3A'
-                            }
-                        }
+<header class="bg-[#f55d0541] text-white overflow-hidden">
+    <div class="container max-w-[1230px] mx-auto flex justify-between items-center px-2 py-5">
+        <div class="flex items-center gap-x-14">
+            <a href="../index.html"><img src="../assets/img/logo.svg" alt="Logo"></a>
+            <nav class="hidden lg:block">
+                <ul class="flex space-x-9 font-bold text-[#424551]">
+                    <li><a href="./pages/Course.html" target="_blank" class="hover:text-[#31333b] transition duration-300">About Us</a></li>
+                    <li><a href="./pages/Courses.html" target="_blank" class="hover:text-[#31333b] transition duration-300">Courses</a>
+                    </li>
+                    <li><a href="./pages/Events_List_View.html" target="_blank"
+                            class="hover:text-[#31333b] transition duration-300">Events</a></li>
+                    <li><a href="#" class="hover:text-[#31333b] transition duration-300">Blog</a></li>
+                    <li><a href="#" class="hover:text-[#31333b] transition duration-300">Contacts</a></li>
+                </ul>
+            </nav>
+
+        </div>
+        <div class="flex items-center gap-x-2">
+            <button id="getConsultationBtn"
+                class="hidden sm:block px-4 py-3 rounded hover:bg-red-500 bg-red-600 text-white font-bold truncate max-w-[160px] transition duration-300">
+                Get consultation
+            </button>
+            <button id="loginRegisterBtn"
+                class="hidden sm:block flex items-center gap-x-2 px-4 py-3 rounded  bg-transparent hover:text-[#31333b] text-[#424551] font-bold truncate max-w-[160px] transition duration-300">
+                Log in / Register
+            </button>
+            <button id="menuToggle" class="lg:hidden px-3 py-2 text-[#424551] font-bold">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                    stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+                </svg>
+            </button>
+        </div>
+    </div>
+    <div id="mobileMenu"
+        class="hidden lg:hidden fixed inset-0 bg-[#f55d05cc] flex flex-col items-center justify-center transform translate-x-full transition-transform duration-500">
+        <button id="closeMenu" class="absolute top-5 right-5 text-white text-3xl font-bold">&times;</button>
+        <ul class="space-y-4 font-bold text-white text-lg">
+            <li><a href="#" class="hover:text-[#31333b] transition duration-300">About Us</a></li>
+            <li><a href="./Courses.html" class="hover:text-[#31333b] transition duration-300">Courses</a></li>
+            <li><a href="./Events_List_View.html" class="hover:text-[#31333b] transition duration-300">Events</a>
+            </li>
+            <li><a href="#" class="hover:text-[#31333b] transition duration-300">Blog</a></li>
+            <li><a href="#" class="hover:text-[#31333b] transition duration-300">Contacts</a></li>
+        </ul>
+        <div class="mt-6 flex flex-col gap-y-4 sm:hidden">
+            <button id="mobileGetConsultationBtn" class="px-4 py-3 rounded bg-red-600 text-white font-bold">Get
+                consultation</button>
+            <button id="mobileLoginRegisterBtn"
+                class="flex items-center gap-x-2 px-4 py-3 rounded bg-white text-[#424551] font-bold">
+                <img src="../assets/icon/Profile.svg" alt="">Log in / Register
+            </button>
+        </div>
+    </div>
+    <div id="consultationModal"
+        class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-250 text-black">
+        <div class="mx-auto mt-16 bg-white rounded-lg p-8 w-[400px] transition relative duration-300">
+            <button id="closeModal" class="absolute top-2 right-4 text-xl text-gray-600 w-8 h-8">&times;</button>
+            <h2 class="text-2xl font-semibold mb-4 text-center">Sign in</h2>
+            <p class="mb-6 font-medium">Sign in to your account using email and password provided during
+                registration.</p>
+            <form class="authForm" data-form="signin">
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium">Email</label>
+                    <input type="email" id="email" name="email"
+                        class="w-full p-2 border rounded focus:border-blue-500 focus:outline-none"
+                        placeholder="Your working email" required />
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="block text-sm font-medium ">Password</label>
+                    <input type="password" id="password" name="password"
+                        class="w-full p-2 border rounded focus:border-blue-500 focus:outline-none"
+                        placeholder="********" required />
+                </div>
+                <div class="flex justify-between items-center mb-4">
+                    <label class="flex items-center">
+                        <input type="checkbox" name="remember" /> <span class="ml-2 text-sm">Keep me signed
+                            in</span>
+                    </label>
+                    <a href="#" class="text-sm text-blue-500">Forgot password?</a>
+                </div>
+                <button type="submit"
+                    class="w-full bg-red-600 hover:bg-red-700 transition duration-300 text-white py-2 rounded-lg font-semibold authButton">Sign
+                    In</button>
+                <div class="text-center mt-4">
+                    <span>Don't have an account? <a href="#" id="switchToSignUp"
+                            class="text-blue-500 cursor-pointer">Sign up</a></span>
+                </div>
+                <div class="mt-6 text-center">
+                    <span class="text-sm">Or sign in with</span>
+                    <div class="flex justify-center gap-x-4 mt-2">
+                        <a href="https://Facebook.com"><img src="../assets/icon/Facebook.svg" alt="Facebook"></a>
+                        <a href="https://Google.com"><img src="../assets/icon/Google.svg" alt="Google"></a>
+                        <a href="https://Linked-In.com"><img src="../assets/icon/Linked-In.svg" alt="Linked-In"></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    <div id="loginRegisterModal"
+        class="fixed  inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50 text-black">
+        <div class="bg-white mx-auto relative rounded-lg p-8 w-[400px]  ">
+            <button id="closeModal" class="absolute top-2 right-4 text-xl text-gray-600 w-8 h-8">&times;</button>
+            <h2 class="text-2xl font-semibold mb-4 modalTitle">Sign up</h2>
+            <p class="mb-6 text-sm text-gray-500">Registration takes less than a minute but gives you full control
+                over your studying.</p>
+            <form class="authForm" data-form="signup">
+                <div class="mb-4">
+                    <label for="fullName" class="block text-sm font-medium">Full Name</label>
+                    <input type="text" id="fullName" name="fullName"
+                        class="w-full p-2 border rounded focus:border-blue-500 focus:outline-none"
+                        placeholder="Your full name" required />
+                </div>
+                <div class="mb-4">
+                    <label for="email" class="block text-sm font-medium">Email</label>
+                    <input type="email" id="email" name="email"
+                        class="w-full p-2 border rounded focus:border-blue-500 focus:outline-none"
+                        placeholder="Your working email" required />
+                </div>
+                <div class="mb-4">
+                    <label for="password" class="block text-sm font-medium">Password</label>
+                    <input type="password" id="password" name="password"
+                        class="w-full p-2 border rounded focus:border-blue-500 focus:outline-none"
+                        placeholder="********" required />
+                </div>
+                <div class="mb-4">
+                    <label for="confirmPassword" class="block text-sm font-medium">Confirm Password</label>
+                    <input type="password" id="confirmPassword" name="confirmPassword"
+                        class="w-full p-2 border rounded focus:border-blue-500 focus:outline-none"
+                        placeholder="********" required />
+                </div>
+                <div class="flex items-center mb-4">
+                    <input type="checkbox" id="rememberMe" name="rememberMe" class="mr-2" />
+                    <label for="rememberMe" class="text-sm">Remember me</label>
+                </div>
+                <button type="submit"
+                    class="w-full bg-red-600 hover:bg-red-700 transition duration-300 text-white py-2 rounded-lg font-semibold authButton">Sign
+                    up</button>
+                <div class="text-center mt-4">
+                    <span class="text-sm">Already have an account? <a href="#" id="switchToSignIn"
+                            class="text-blue-500 cursor-pointer">Sign in</a></span>
+                </div>
+                <div class="mt-6 text-center">
+                    <span class="text-sm">Or sign in with</span>
+                    <div class="flex justify-center gap-x-4 mt-2">
+                        <a href="https://Facebook.com"><img src="../assets/icon/Facebook.svg" alt="Facebook"></a>
+                        <a href="https://Google.com"><img src="../assets/icon/Google.svg" alt="Google"></a>
+                        <a href="https://Linked-In.com"><img src="../assets/icon/Linked-In.svg" alt="Linked-In"></a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+</header>
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#FF3F3A'
                     }
                 }
-            </script>
-        </head>
-        <body class="bg-pink-50 min-h-screen">
-            <div class="container mx-auto px-4 py-16">
-                <div class="grid md:grid-cols-2 gap-8 items-center">
-                    <div class="space-y-8">
-                        <!-- Play Button -->
-                        <button 
-                            onclick="togglePlay()"
-                            class="flex items-center space-x-2 text-primary hover:text-red-600 transition-colors"
-                        >
-                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
-                                <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
-                            </svg>
-                            <span>Play showreel</span>
+            }
+        }
+    </script>
+    </head>
+
+    <body class="bg-pink-50 min-h-screen">
+        <!-- Navigation -->
+        <nav class="bg-transparent py-4">
+            <div class="container mx-auto px-4 flex justify-between items-center">
+                <div class="hidden md:flex space-x-6">
+                   
+                </div>
+                
+            </div>
+        </nav>
+
+        <!-- Hero Section -->
+        <div class="container mx-auto px-4 py-16">
+            <div class="grid md:grid-cols-2 gap-8 items-center">
+                <div class="space-y-8">
+                    <!-- Play Button -->
+                    <button onclick="togglePlay()"
+                        class="flex items-center space-x-2 text-primary hover:text-red-600 transition-colors">
+                        <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
+                            <path
+                                d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z" />
+                        </svg>
+                        <span>Play showreel</span>
+                    </button>
+
+                    <!-- Hero Text -->
+                    <h2 class="text-5xl font-bold text-gray-800 leading-tight">
+                        Enjoy studying with Createx Online Courses
+                    </h2>
+
+                    <!-- CTA Buttons -->
+                    <div class="flex space-x-4">
+                        <button
+                            class="bg-white text-gray-800 px-8 py-3 rounded-md border hover:bg-gray-50 transition-colors">
+                            About us
                         </button>
-        
-                        <!-- Hero Text -->
-                        <h2 class="text-5xl font-bold text-gray-800 leading-tight">
-                            Enjoy studying with Createx Online Courses
-                        </h2>
-        
-                        <!-- CTA Buttons -->
-                        <div class="flex space-x-4">
-                            <button class="bg-white text-gray-800 px-8 py-3 rounded-md border hover:bg-gray-50 transition-colors">
-                                About us
-                            </button>
-                            <button class="bg-gradient-to-r from-primary to-orange-500 text-white px-8 py-3 rounded-md hover:opacity-90 transition-opacity">
-                                Explore courses
-                            </button>
+                        <button
+                            class="bg-gradient-to-r from-primary to-orange-500 text-white px-8 py-3 rounded-md hover:opacity-90 transition-opacity">
+                            Explore courses
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Hero Image -->
+                <div class="relative">
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
+                        alt="Student studying" class="rounded-lg shadow-xl" />
+                </div>
+            </div>
+
+            <!-- Stats -->
+            <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
+                <div class="text-center">
+                    <h3 class="text-4xl font-bold text-gray-800">
+                        <span class="counter" data-target="1200">0</span>
+                    </h3>
+                    <p class="text-gray-600">Students graduated</p>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-4xl font-bold text-gray-800">
+                        <span class="counter" data-target="84">0</span>
+                    </h3>
+                    <p class="text-gray-600">Completed courses</p>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-4xl font-bold text-gray-800">
+                        <span class="counter" data-target="16">0</span>
+                    </h3>
+                    <p class="text-gray-600">Qualified tutors</p>
+                </div>
+                <div class="text-center">
+                    <h3 class="text-4xl font-bold text-gray-800">
+                        <span class="counter" data-target="5">0</span>
+                    </h3>
+                    <p class="text-gray-600">Years of experience</p>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            // Counter animation
+            const counters = document.querySelectorAll('.counter');
+
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const duration = 2000; // 2 seconds
+                const step = target / (duration / 16); // 60fps
+                let current = 0;
+
+                const updateCounter = () => {
+                    current += step;
+                    if (current < target) {
+                        counter.textContent = Math.round(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+
+                updateCounter();
+            });
+
+            // Play button functionality
+            function togglePlay() {
+                // Add your video play logic here
+                console.log('Toggle play');
+            }
+        </script>
+
+
+
+
+        <div class="grid md:grid-cols-2 gap-12 mt-24 items-center">
+            <div class="relative" data-aos="fade-right" data-aos-duration="1000">
+                <img src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                    alt="Student with headphones" class="rounded-lg shadow-xl" />
+            </div>
+            <div class="space-y-6" data-aos="fade-left" data-aos-duration="1000">
+                <h2 class="text-4xl font-bold text-gray-800">Why Createx?</h2>
+                <ul class="space-y-4">
+                    <li class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
+                        </svg>
+                        <span class="text-gray-600">A new approach to online learning</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
+                        </svg>
+                        <span class="text-gray-600">Flexible schedule and learning paths</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
+                        </svg>
+                        <span class="text-gray-600">Interactive learning experience</span>
+                    </li>
+                    <li class="flex items-center space-x-3">
+                        <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
+                            <path
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
+                        </svg>
+                        <span class="text-gray-600">Expert instructors and community</span>
+                    </li>
+                </ul>
+                <button
+                    class="mt-6 bg-gradient-to-r from-primary to-orange-500 text-white px-8 py-3 rounded-md hover:opacity-90 transition-opacity">
+                    More about us
+                </button>
+            </div>
+        </div>
+
+
+
+        <script>
+            // Initialize AOS
+            AOS.init({
+                once: true,
+                offset: 100,
+                duration: 800
+            });
+
+            // Counter animation
+            const counters = document.querySelectorAll('.counter');
+
+            counters.forEach(counter => {
+                const target = parseInt(counter.getAttribute('data-target'));
+                const duration = 2000; // 2 seconds
+                const step = target / (duration / 16); // 60fps
+                let current = 0;
+
+                const updateCounter = () => {
+                    current += step;
+                    if (current < target) {
+                        counter.textContent = Math.round(current);
+                        requestAnimationFrame(updateCounter);
+                    } else {
+                        counter.textContent = target;
+                    }
+                };
+
+                updateCounter();
+            });
+
+            // Play button functionality
+            function togglePlay() {
+                // Add your video play logic here
+                console.log('Toggle play');
+            }
+
+
+
+
+
+            <script src="https://cdn.tailwindcss.com"></script>
+        <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+        <style>
+            .course-card {
+                transition: all 0.3s ease;
+            }
+
+            .course-card:hover {
+                transform: translateY(-8px);
+            }
+        </style>
+        </head>
+
+        <body class="bg-gray-50 min-h-screen py-16">
+            <div class="container mx-auto px-4">
+                <!-- Section Header -->
+                <div class="flex justify-between items-center mb-12">
+                    <div data-aos="fade-right">
+                        <span class="text-gray-600 text-sm uppercase tracking-wider">FEATURED COURSES</span>
+                        <h2 class="text-3xl font-bold text-gray-900 mt-2">Featured Courses</h2>
+                    </div>
+                    <button
+                        class="px-6 py-3 text-red-500 border-2 border-red-500 rounded-lg hover:bg-red-500 hover:text-white transition-colors duration-300"
+                        data-aos="fade-left">
+                        View all courses
+                    </button>
+                </div>
+
+                <!-- Course Grid -->
+                <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+                    <!-- Course Card 1 -->
+                    <div class="course-card bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up"
+                        data-aos-delay="100">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3"
+                                alt="Course" class="w-full h-48 object-cover" />
+                            <span
+                                class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm">Marketing</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-red-500 font-semibold">$100</span>
+                                <span class="text-gray-500">by Jerome Bell</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-4 hover:text-red-500 transition-colors">The
+                                Ultimate Google Ads Training Course</h3>
+                            <div class="flex items-center text-gray-500 text-sm">
+                                <span class="mr-4">6 lessons</span>
+                                <span>4.5 rating</span>
+                            </div>
                         </div>
                     </div>
-        
-                    <!-- Hero Image -->
-                    <div class="relative">
-                        <img 
-                            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
-                            alt="Student studying"
-                            class="rounded-lg shadow-xl"
-                        />
+
+                    <!-- Course Card 2 -->
+                    <div class="course-card bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up"
+                        data-aos-delay="200">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3"
+                                alt="Course" class="w-full h-48 object-cover" />
+                            <span
+                                class="absolute top-4 left-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm">Management</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-red-500 font-semibold">$150</span>
+                                <span class="text-gray-500">by Leslie Alexander</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-4 hover:text-red-500 transition-colors">
+                                Product Management Fundamentals</h3>
+                            <div class="flex items-center text-gray-500 text-sm">
+                                <span class="mr-4">8 lessons</span>
+                                <span>4.8 rating</span>
+                            </div>
+                        </div>
                     </div>
-                </div>
-        
-                <!-- Stats -->
-                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
-                    <div class="text-center">
-                        <h3 class="text-4xl font-bold text-gray-800">
-                            <span class="counter" data-target="1200">0</span>
-                        </h3>
-                        <p class="text-gray-600">Students graduated</p>
-                    </div>
-                    <div class="text-center">
-                        <h3 class="text-4xl font-bold text-gray-800">
-                            <span class="counter" data-target="84">0</span>
-                        </h3>
-                        <p class="text-gray-600">Completed courses</p>
-                    </div>
-                    <div class="text-center">
-                        <h3 class="text-4xl font-bold text-gray-800">
-                            <span class="counter" data-target="16">0</span>
-                        </h3>
-                        <p class="text-gray-600">Qualified tutors</p>
-                    </div>
-                    <div class="text-center">
-                        <h3 class="text-4xl font-bold text-gray-800">
-                            <span class="counter" data-target="5">0</span>
-                        </h3>
-                        <p class="text-gray-600">Years of experience</p>
+
+                    <!-- Course Card 3 -->
+                    <div class="course-card bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up"
+                        data-aos-delay="300">
+                        <div class="relative">
+                            <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3"
+                                alt="Course" class="w-full h-48 object-cover" />
+                            <span
+                                class="absolute top-4 left-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm">Development</span>
+                        </div>
+                        <div class="p-6">
+                            <div class="flex justify-between items-center mb-4">
+                                <span class="text-red-500 font-semibold">$200</span>
+                                <span class="text-gray-500">by Kristin Watson</span>
+                            </div>
+                            <h3 class="text-xl font-bold text-gray-900 mb-4 hover:text-red-500 transition-colors">HR
+                                Management and Analytics</h3>
+                            <div class="flex items-center text-gray-500 text-sm">
+                                <span class="mr-4">10 lessons</span>
+                                <span>4.9 rating</span>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-        
+
             <script>
-                // Counter animation
-                const counters = document.querySelectorAll('.counter');
-                
-                counters.forEach(counter => {
-                    const target = parseInt(counter.getAttribute('data-target'));
-                    const duration = 2000; // 2 seconds
-                    const step = target / (duration / 16); // 60fps
-                    let current = 0;
-                    
-                    const updateCounter = () => {
-                        current += step;
-                        if (current < target) {
-                            counter.textContent = Math.round(current);
-                            requestAnimationFrame(updateCounter);
-                        } else {
-                            counter.textContent = target;
-                        }
-                    };
-                    
-                    updateCounter();
-                });
-        
-                // Play button functionality
-                function togglePlay() {
-                    // Add your video play logic here
-                    console.log('Toggle play');
-                }
-            </script>
-      
-
-
-
-      <div class="grid md:grid-cols-2 gap-12 mt-24 items-center">
-        <div class="relative" data-aos="fade-right" data-aos-duration="1000">
-            <img 
-                src="https://images.unsplash.com/photo-1577896851231-70ef18881754?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                alt="Student with headphones"
-                class="rounded-lg shadow-xl"
-            />
-        </div>
-        <div class="space-y-6" data-aos="fade-left" data-aos-duration="1000">
-            <h2 class="text-4xl font-bold text-gray-800">Why Createx?</h2>
-            <ul class="space-y-4">
-                <li class="flex items-center space-x-3">
-                    <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                    </svg>
-                    <span class="text-gray-600">A new approach to online learning</span>
-                </li>
-                <li class="flex items-center space-x-3">
-                    <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                    </svg>
-                    <span class="text-gray-600">Flexible schedule and learning paths</span>
-                </li>
-                <li class="flex items-center space-x-3">
-                    <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                    </svg>
-                    <span class="text-gray-600">Interactive learning experience</span>
-                </li>
-                <li class="flex items-center space-x-3">
-                    <svg class="w-5 h-5 text-primary" fill="currentColor" viewBox="0 0 20 20">
-                        <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
-                    </svg>
-                    <span class="text-gray-600">Expert instructors and community</span>
-                </li>
-            </ul>
-            <button class="mt-6 bg-gradient-to-r from-primary to-orange-500 text-white px-8 py-3 rounded-md hover:opacity-90 transition-opacity">
-                More about us
-            </button>
-        </div>
-    </div>
-
-    
-
-<script>
-    // Initialize AOS
-    AOS.init({
+        AOS.init({
+            duration: 1000,
         once: true,
-        offset: 100,
-        duration: 800
-    });
+        offset: 100
+        });
+            </script>
+        </body>
 
-    // Counter animation
-    const counters = document.querySelectorAll('.counter');
-    
-    counters.forEach(counter => {
-        const target = parseInt(counter.getAttribute('data-target'));
-        const duration = 2000; // 2 seconds
-        const step = target / (duration / 16); // 60fps
-        let current = 0;
-        
-        const updateCounter = () => {
-            current += step;
-            if (current < target) {
-                counter.textContent = Math.round(current);
-                requestAnimationFrame(updateCounter);
-            } else {
-                counter.textContent = target;
-            }
-        };
-        
-        updateCounter();
-    });
+</html>
 
-    // Play button functionality
-    function togglePlay() {
-        // Add your video play logic here
-        console.log('Toggle play');
+
+
+
+
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+<style>
+    .course-card {
+        transition: all 0.3s ease;
     }
 
-
-
-
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Featured Courses - Createx</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <style>
-        .course-card {
-            transition: all 0.3s ease;
-        }
-        .course-card:hover {
-            transform: translateY(-8px);
-        }
-    </style>
+    .course-card:hover {
+        transform: translateY(-8px);
+    }
+</style>
 </head>
+
 <body class="bg-gray-50 min-h-screen py-16">
     <div class="container mx-auto px-4">
         <!-- Section Header -->
         <div class="flex justify-between items-center mb-12">
             <div data-aos="fade-right">
-                <span class="text-gray-600 text-sm uppercase tracking-wider">FEATURED COURSES</span>
-                <h2 class="text-3xl font-bold text-gray-900 mt-2">Featured Courses</h2>
+
             </div>
-            <button class="px-6 py-3 text-red-500 border-2 border-red-500 rounded-lg hover:bg-red-500 hover:text-white transition-colors duration-300" data-aos="fade-left">
-                View all courses
-            </button>
+
         </div>
 
         <!-- Course Grid -->
         <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             <!-- Course Card 1 -->
-            <div class="course-card bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+            <div class="course-card bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up"
+                data-aos-delay="100">
                 <div class="relative">
-                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3" alt="Course" class="w-full h-48 object-cover"/>
-                    <span class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm">Marketing</span>
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3" alt="Course"
+                        class="w-full h-48 object-cover" />
+                    <span
+                        class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm">Marketing</span>
                 </div>
                 <div class="p-6">
                     <div class="flex justify-between items-center mb-4">
                         <span class="text-red-500 font-semibold">$100</span>
                         <span class="text-gray-500">by Jerome Bell</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4 hover:text-red-500 transition-colors">The Ultimate Google Ads Training Course</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 hover:text-red-500 transition-colors">The Ultimate
+                        Google Ads Training Course</h3>
                     <div class="flex items-center text-gray-500 text-sm">
                         <span class="mr-4">6 lessons</span>
                         <span>4.5 rating</span>
@@ -629,17 +553,21 @@
             </div>
 
             <!-- Course Card 2 -->
-            <div class="course-card bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+            <div class="course-card bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up"
+                data-aos-delay="200">
                 <div class="relative">
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3" alt="Course" class="w-full h-48 object-cover"/>
-                    <span class="absolute top-4 left-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm">Management</span>
+                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3" alt="Course"
+                        class="w-full h-48 object-cover" />
+                    <span
+                        class="absolute top-4 left-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm">Management</span>
                 </div>
                 <div class="p-6">
                     <div class="flex justify-between items-center mb-4">
                         <span class="text-red-500 font-semibold">$150</span>
                         <span class="text-gray-500">by Leslie Alexander</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4 hover:text-red-500 transition-colors">Product Management Fundamentals</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 hover:text-red-500 transition-colors">Product
+                        Management Fundamentals</h3>
                     <div class="flex items-center text-gray-500 text-sm">
                         <span class="mr-4">8 lessons</span>
                         <span>4.8 rating</span>
@@ -648,17 +576,21 @@
             </div>
 
             <!-- Course Card 3 -->
-            <div class="course-card bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+            <div class="course-card bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up"
+                data-aos-delay="300">
                 <div class="relative">
-                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3" alt="Course" class="w-full h-48 object-cover"/>
-                    <span class="absolute top-4 left-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm">Development</span>
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3" alt="Course"
+                        class="w-full h-48 object-cover" />
+                    <span
+                        class="absolute top-4 left-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm">Development</span>
                 </div>
                 <div class="p-6">
                     <div class="flex justify-between items-center mb-4">
                         <span class="text-red-500 font-semibold">$200</span>
                         <span class="text-gray-500">by Kristin Watson</span>
                     </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4 hover:text-red-500 transition-colors">HR Management and Analytics</h3>
+                    <h3 class="text-xl font-bold text-gray-900 mb-4 hover:text-red-500 transition-colors">HR Management
+                        and Analytics</h3>
                     <div class="flex items-center text-gray-500 text-sm">
                         <span class="mr-4">10 lessons</span>
                         <span>4.9 rating</span>
@@ -671,124 +603,20 @@
     <script>
         AOS.init({
             duration: 1000,
-            once: true,
-            offset: 100
+        once: true,
+        offset: 100
         });
     </script>
 </body>
+
 </html>
 
 
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Featured Courses - Createx</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-    <style>
-        .course-card {
-            transition: all 0.3s ease;
-        }
-        .course-card:hover {
-            transform: translateY(-8px);
-        }
-    </style>
+<script src="https://cdn.tailwindcss.com"></script>
+<link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+<script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 </head>
-<body class="bg-gray-50 min-h-screen py-16">
-    <div class="container mx-auto px-4">
-        <!-- Section Header -->
-        <div class="flex justify-between items-center mb-12">
-            <div data-aos="fade-right">
-                
-            </div>
-           
-        </div>
 
-        <!-- Course Grid -->
-        <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-            <!-- Course Card 1 -->
-            <div class="course-card bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
-                <div class="relative">
-                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3" alt="Course" class="w-full h-48 object-cover"/>
-                    <span class="absolute top-4 left-4 bg-green-500 text-white px-3 py-1 rounded-full text-sm">Marketing</span>
-                </div>
-                <div class="p-6">
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="text-red-500 font-semibold">$100</span>
-                        <span class="text-gray-500">by Jerome Bell</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4 hover:text-red-500 transition-colors">The Ultimate Google Ads Training Course</h3>
-                    <div class="flex items-center text-gray-500 text-sm">
-                        <span class="mr-4">6 lessons</span>
-                        <span>4.5 rating</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Course Card 2 -->
-            <div class="course-card bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
-                <div class="relative">
-                    <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3" alt="Course" class="w-full h-48 object-cover"/>
-                    <span class="absolute top-4 left-4 bg-blue-500 text-white px-3 py-1 rounded-full text-sm">Management</span>
-                </div>
-                <div class="p-6">
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="text-red-500 font-semibold">$150</span>
-                        <span class="text-gray-500">by Leslie Alexander</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4 hover:text-red-500 transition-colors">Product Management Fundamentals</h3>
-                    <div class="flex items-center text-gray-500 text-sm">
-                        <span class="mr-4">8 lessons</span>
-                        <span>4.8 rating</span>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Course Card 3 -->
-            <div class="course-card bg-white rounded-2xl shadow-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
-                <div class="relative">
-                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3" alt="Course" class="w-full h-48 object-cover"/>
-                    <span class="absolute top-4 left-4 bg-purple-500 text-white px-3 py-1 rounded-full text-sm">Development</span>
-                </div>
-                <div class="p-6">
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="text-red-500 font-semibold">$200</span>
-                        <span class="text-gray-500">by Kristin Watson</span>
-                    </div>
-                    <h3 class="text-xl font-bold text-gray-900 mb-4 hover:text-red-500 transition-colors">HR Management and Analytics</h3>
-                    <div class="flex items-center text-gray-500 text-sm">
-                        <span class="mr-4">10 lessons</span>
-                        <span>4.9 rating</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        AOS.init({
-            duration: 1000,
-            once: true,
-            offset: 100
-        });
-    </script>
-</body>
-</html>
-
-
-    <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>How We Do It - Createx</title>
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
-    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-</head>
 <body class="bg-gray-50 min-h-screen py-16">
     <div class="container mx-auto px-4">
         <!-- Benefits Section -->
@@ -823,26 +651,30 @@
             <div class="space-y-6" data-aos="fade-right" data-aos-delay="200">
                 <h3 class="text-2xl font-bold text-gray-900">Only practicing tutors</h3>
                 <p class="text-gray-600 leading-relaxed">
-                    Our tutors are experienced professionals who bring real-world expertise to their teaching. 
-                    They've worked in the field and know exactly what skills modern specialists need. 
-                    This practical knowledge ensures you learn current, relevant skills that will help you succeed in your career.
+                    Our tutors are experienced professionals who bring real-world expertise to their teaching.
+                    They've worked in the field and know exactly what skills modern specialists need.
+                    This practical knowledge ensures you learn current, relevant skills that will help you succeed in
+                    your career.
                 </p>
                 <div class="space-y-4">
                     <div class="flex items-center gap-3" data-aos="fade-up" data-aos-delay="300">
                         <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            <path
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
                         </svg>
                         <span>Only practicing tutors</span>
                     </div>
                     <div class="flex items-center gap-3" data-aos="fade-up" data-aos-delay="400">
                         <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            <path
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
                         </svg>
                         <span>Feedback & Support</span>
                     </div>
                     <div class="flex items-center gap-3" data-aos="fade-up" data-aos-delay="500">
                         <svg class="w-5 h-5 text-red-500" fill="currentColor" viewBox="0 0 20 20">
-                            <path d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"/>
+                            <path
+                                d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z" />
                         </svg>
                         <span>24/7 Online Delivery</span>
                     </div>
@@ -852,12 +684,11 @@
             <!-- Image -->
             <div class="relative" data-aos="fade-left" data-aos-delay="200">
                 <div class="relative">
-                    <div class="absolute inset-0 bg-gradient-to-br from-red-100 to-orange-50 rounded-2xl transform rotate-3"></div>
-                    <img 
-                        src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                        alt="Online tutoring session"
-                        class="relative rounded-2xl shadow-lg w-full h-auto z-10"
-                    />
+                    <div
+                        class="absolute inset-0 bg-gradient-to-br from-red-100 to-orange-50 rounded-2xl transform rotate-3">
+                    </div>
+                    <img src="https://images.unsplash.com/photo-1531482615713-2afd69097998?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                        alt="Online tutoring session" class="relative rounded-2xl shadow-lg w-full h-auto z-10" />
                 </div>
             </div>
         </div>
@@ -867,15 +698,521 @@
         // Initialize AOS
         AOS.init({
             duration: 1000,
-            once: true,
-            offset: 100
+        once: true,
+        offset: 100
         });
     </script>
 </body>
-</html>
-    
 
-		 <footer class="bg-[#1b1f24] text-white py-10">
+
+
+
+
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+ 
+  <body class="bg-pink-50 min-h-screen">
+    <div class="container mx-auto px-4 py-12">
+      <h1 class="text-3xl font-bold mb-12 text-center" data-aos="fade-down">
+        Lectures & workshops
+      </h1>
+
+      <div class="space-y-6">
+        <!-- Event Card 1 -->
+        <div class="bg-white rounded-lg shadow-md p-6" data-aos="fade-right" data-aos-delay="100">
+          <div class="flex items-start gap-6">
+            <div class="text-center">
+              <div class="text-2xl font-bold text-red-500">05</div>
+              <div class="text-sm text-gray-500">April</div>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-lg font-semibold mb-2">Formation of the organizational structure</h3>
+              <p class="text-gray-600 mb-4">Overview of key principles</p>
+              <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition">View more</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event Card 2 -->
+        <div class="bg-white rounded-lg shadow-md p-6" data-aos="fade-left" data-aos-delay="200">
+          <div class="flex items-start gap-6">
+            <div class="text-center">
+              <div class="text-2xl font-bold text-red-500">24</div>
+              <div class="text-sm text-gray-500">July</div>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-lg font-semibold mb-2">Building customer service department</h3>
+              <p class="text-gray-600 mb-4">Best Practices</p>
+              <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition">Learn more</button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Event Card 3 -->
+        <div class="bg-white rounded-lg shadow-md p-6" data-aos="fade-right" data-aos-delay="300">
+          <div class="flex items-start gap-6">
+            <div class="text-center">
+              <div class="text-2xl font-bold text-red-500">16</div>
+              <div class="text-sm text-gray-500">May</div>
+            </div>
+            <div class="flex-1">
+              <h3 class="text-lg font-semibold mb-2">How to apply methods of specialized design</h3>
+              <p class="text-gray-600 mb-4">Workshop training</p>
+              <button class="bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600 transition">View more</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="text-center mt-12" data-aos="fade-up">
+        <h2 class="text-xl mb-4">Do you want more?</h2>
+        <button class="bg-red-500 text-white px-6 py-3 rounded-lg hover:bg-red-600 transition">
+          Explore all events
+        </button>
+      </div>
+    </div>
+    <script type="module" src="/main.js"></script>
+  </body>
+
+
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .certificate-gradient {
+            background: linear-gradient(135deg, #8BC6EC 0%, #9599E2 100%);
+        }
+        .certificate-shape {
+            position: absolute;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background: rgba(255, 255, 255, 0.1);
+        }
+    </style>
+
+<body class="bg-gray-50 min-h-screen flex items-center justify-center p-6">
+    <div class="container mx-auto max-w-6xl">
+        <div class="grid md:grid-cols-2 gap-12 items-center">
+            <!-- Left Section -->
+            <div data-aos="fade-right" data-aos-duration="1000">
+                <h2 class="text-3xl font-bold mb-6">Your expertise will be confirmed</h2>
+                <p class="text-gray-600 mb-8">We are certified by world-renowned professional organizations and institutions.</p>
+                <div class="flex gap-6 items-center">
+                    <div data-aos="zoom-in" data-aos-delay="200" class="bg-white p-3 rounded-lg shadow-sm">
+                        <img src="./assets/icon/home-logo-1.svg" alt="Logo 1" class="h-6">
+                    </div>
+                    <div data-aos="zoom-in" data-aos-delay="400" class="bg-white p-3 rounded-lg shadow-sm">
+                        <img src="./assets/icon/home-logo-2.png" alt="Logo 2" class="h-6">
+                    </div>
+                    <div data-aos="zoom-in" data-aos-delay="600" class="bg-white p-3 rounded-lg shadow-sm">
+                        <img src="./assets/icon/home-logo-3.svg" alt="Logo 3" class="h-6">
+                    </div>
+                </div>
+            </div>
+
+            <!-- Certificate Card -->
+            <div data-aos="fade-left" data-aos-duration="1000" class="relative">
+                <!-- Decorative Elements -->
+                <div class="certificate-shape" style="top: -20px; right: 40px;" data-aos="fade-down" data-aos-delay="300"></div>
+                <div class="certificate-shape" style="bottom: -20px; left: 40px;" data-aos="fade-up" data-aos-delay="300"></div>
+                
+                <!-- Certificate -->
+                <div class="bg-white rounded-xl shadow-xl p-8 relative overflow-hidden">
+                    <div class="certificate-gradient absolute top-0 right-0 w-32 h-32 -mr-16 -mt-16 rounded-full opacity-20"></div>
+                    
+                    <div class="text-center">
+                        <div data-aos="zoom-in" data-aos-delay="200">
+                            <h3 class="text-2xl font-bold text-gray-800 mb-2">CERTIFICATE</h3>
+                            <p class="text-gray-500 text-sm mb-6">THE CERTIFICATE IS PRESENTED TO:</p>
+                        </div>
+                        
+                        <div data-aos="fade-up" data-aos-delay="400">
+                            <p class="text-xl font-semibold text-gray-800 mb-8">Jacob William</p>
+                        </div>
+                        
+                        <div class="grid grid-cols-2 gap-8 mt-12" data-aos="fade-up" data-aos-delay="600">
+                            <div>
+                                <p class="font-bold text-gray-800">Author</p>
+                                <div class="w-full h-px bg-gray-300 mt-2"></div>
+                            </div>
+                            <div>
+                                <p class="font-bold text-gray-800">Admin</p>
+                                <div class="w-full h-px bg-gray-300 mt-2"></div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Decorative Corner -->
+                    <div class="absolute top-0 right-0">
+                        <svg width="100" height="100" viewBox="0 0 100 100" fill="none">
+                            <path d="M0 0L100 100V0H0Z" fill="#8BC6EC" opacity="0.1"/>
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 800,
+            easing: 'ease-out'
+        });
+    </script>
+
+
+
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+
+<body class="bg-gray-50">
+    <!-- Team Section -->
+    <section class="py-20 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <div class="flex justify-between items-center mb-12">
+                <h2 class="text-3xl font-bold" data-aos="fade-right">Meet our team</h2>
+                <div class="w-10 h-10 rounded-full bg-red-500 flex items-center justify-center" data-aos="fade-left">
+                    <span class="text-white">→</span>
+                </div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                <!-- Team Member 1 -->
+                <div data-aos="fade-up" data-aos-delay="100" class="group">
+                    <div class="relative overflow-hidden rounded-lg bg-yellow-400 aspect-square">
+                        <img src="https://source.unsplash.com/random/400x400?woman" alt="Diana Russell" 
+                             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute bottom-4 left-4">
+                            <h3 class="text-xl font-semibold text-white">Diana Russell</h3>
+                            <p class="text-white/80 text-sm">Product Manager</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 2 -->
+                <div data-aos="fade-up" data-aos-delay="200" class="group">
+                    <div class="relative overflow-hidden rounded-lg bg-yellow-400 aspect-square">
+                        <img src="https://source.unsplash.com/random/400x400?man" alt="Jerome Bell" 
+                             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute bottom-4 left-4">
+                            <h3 class="text-xl font-semibold text-white">Jerome Bell</h3>
+                            <p class="text-white/80 text-sm">Design Lead</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 3 -->
+                <div data-aos="fade-up" data-aos-delay="300" class="group">
+                    <div class="relative overflow-hidden rounded-lg bg-yellow-400 aspect-square">
+                        <img src="https://source.unsplash.com/random/400x400?woman-2" alt="Kristin Watson" 
+                             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute bottom-4 left-4">
+                            <h3 class="text-xl font-semibold text-white">Kristin Watson</h3>
+                            <p class="text-white/80 text-sm">Developer</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Team Member 4 -->
+                <div data-aos="fade-up" data-aos-delay="400" class="group">
+                    <div class="relative overflow-hidden rounded-lg bg-yellow-400 aspect-square">
+                        <img src="https://source.unsplash.com/random/400x400?man-2" alt="Marvin McKinney" 
+                             class="w-full h-full object-cover transition-transform duration-300 group-hover:scale-110">
+                        <div class="absolute bottom-4 left-4">
+                            <h3 class="text-xl font-semibold text-white">Marvin McKinney</h3>
+                            <p class="text-white/80 text-sm">Developer</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 px-4 bg-white">
+        <div class="container mx-auto max-w-6xl">
+            <h2 class="text-3xl font-bold text-center mb-12" data-aos="fade-up">What our students say</h2>
+            
+            <div class="swiper testimonialSwiper" data-aos="fade-up" data-aos-delay="200">
+                <div class="swiper-wrapper">
+                    <!-- Testimonial 1 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white rounded-xl p-8 shadow-lg">
+                            <div class="flex gap-4 items-center mb-6">
+                                <img src="https://source.unsplash.com/random/100x100?woman" 
+                                     alt="Eleanor Pena" 
+                                     class="w-12 h-12 rounded-full object-cover">
+                                <div>
+                                    <h3 class="font-semibold">Eleanor Pena</h3>
+                                    <p class="text-gray-500 text-sm">Student</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600">"Learning to design was a great experience with this team. Simple explanations, great examples, and hands-on tasks. Now I can build my own layouts!"</p>
+                        </div>
+                    </div>
+
+                    <!-- Testimonial 2 -->
+                    <div class="swiper-slide">
+                        <div class="bg-white rounded-xl p-8 shadow-lg">
+                            <div class="flex gap-4 items-center mb-6">
+                                <img src="https://source.unsplash.com/random/100x100?man" 
+                                     alt="Robert Fox" 
+                                     class="w-12 h-12 rounded-full object-cover">
+                                <div>
+                                    <h3 class="font-semibold">Robert Fox</h3>
+                                    <p class="text-gray-500 text-sm">Student</p>
+                                </div>
+                            </div>
+                            <p class="text-gray-600">"The instructors are amazing! They explain complex concepts in simple terms and are always ready to help."</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="swiper-pagination mt-8"></div>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            duration: 800,
+            easing: 'ease-out'
+        });
+
+        new Swiper('.testimonialSwiper', {
+            slidesPerView: 1,
+            spaceBetween: 30,
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true
+            },
+            breakpoints: {
+                640: {
+                    slidesPerView: 2
+                }
+            },
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false
+            }
+        });
+    </script>
+
+
+
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+<body class="bg-gray-50">
+    <section class="py-16 px-4">
+        <div class="container mx-auto max-w-6xl">
+            <!-- Header -->
+            <div class="flex justify-between items-center mb-12">
+                <div data-aos="fade-right">
+                    <span class="text-sm font-medium text-gray-500 uppercase tracking-wider">OUR BLOG</span>
+                    <h2 class="text-3xl font-bold mt-2">Latest posts</h2>
+                </div>
+                <a href="#" class="px-4 py-2 bg-red-500 text-white rounded-lg hover:bg-red-600 transition-colors duration-300" 
+                   data-aos="fade-left">
+                    Go to blog
+                </a>
+            </div>
+
+            <!-- Blog Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Blog Post 1 -->
+                <article data-aos="fade-up" data-aos-delay="100" 
+                         class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300">
+                    <div class="relative bg-blue-100 aspect-[4/3] overflow-hidden">
+                        <img src="https://placehold.co/400x300/b3e0ff/333333.png?text=Marketing" 
+                             alt="Marketing illustration" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <span class="absolute top-4 left-4 bg-white/90 px-3 py-1 rounded-full text-sm">Future</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <span>September 4, 2024</span>
+                            <span class="mx-2">•</span>
+                            <span>5 min</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 group-hover:text-blue-600 transition-colors duration-300">
+                            What is traffic arbitrage and does it really make money?
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Planning a discussion? Get facts before partaking and be sure to understand the main topics being shared.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-blue-600 hover:text-blue-700 transition-colors duration-300">
+                            Listen
+                            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 2 -->
+                <article data-aos="fade-up" data-aos-delay="200" 
+                         class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300">
+                    <div class="relative bg-green-100 aspect-[4/3] overflow-hidden">
+                        <img src="https://placehold.co/400x300/b3ffb3/333333.png?text=Management" 
+                             alt="Management illustration" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <span class="absolute top-4 left-4 bg-white/90 px-3 py-1 rounded-full text-sm">Views</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <span>August 29, 2024</span>
+                            <span class="mx-2">•</span>
+                            <span>4 min</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 group-hover:text-green-600 transition-colors duration-300">
+                            What to do and who to talk to if you want to get feedback on the product
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Having a productive conversation and efficient results requires proper planning and execution.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-green-600 hover:text-green-700 transition-colors duration-300">
+                            Watch
+                            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+
+                <!-- Blog Post 3 -->
+                <article data-aos="fade-up" data-aos-delay="300" 
+                         class="group bg-white rounded-xl overflow-hidden shadow-sm hover:shadow-xl transition-shadow duration-300">
+                    <div class="relative bg-yellow-100 aspect-[4/3] overflow-hidden">
+                        <img src="https://placehold.co/400x300/fff4b3/333333.png?text=Design" 
+                             alt="Design illustration" 
+                             class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300">
+                        <span class="absolute top-4 left-4 bg-white/90 px-3 py-1 rounded-full text-sm">Article</span>
+                    </div>
+                    <div class="p-6">
+                        <div class="flex items-center text-sm text-gray-500 mb-3">
+                            <span>August 15, 2024</span>
+                            <span class="mx-2">•</span>
+                            <span>6 min</span>
+                        </div>
+                        <h3 class="text-xl font-semibold mb-3 group-hover:text-yellow-600 transition-colors duration-300">
+                            Should you choose a creative profession if you are attracted to creativity?
+                        </h3>
+                        <p class="text-gray-600 mb-4">
+                            Our article will help you pick an interesting curriculum and guide you through the decision process.
+                        </p>
+                        <a href="#" class="inline-flex items-center text-yellow-600 hover:text-yellow-700 transition-colors duration-300">
+                            Read
+                            <svg class="w-4 h-4 ml-2 group-hover:translate-x-1 transition-transform duration-300" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"/>
+                            </svg>
+                        </a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            once: true,
+            easing: 'ease-out'
+        });
+    </script>
+
+
+
+
+
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <style>
+        .confetti-bg {
+            background-image: url('data:image/svg+xml,<svg width="52" height="52" viewBox="0 0 52 52" xmlns="http://www.w3.org/2000/svg"><path fill="%23FFD7D7" d="M26 4l4 4-4 4-4-4 4-4zm16 16l4 4-4 4-4-4 4-4zm-32 0l4 4-4 4-4-4 4-4zm16 16l4 4-4 4-4-4 4-4z"/></svg>');
+        }
+    </style>
+</head>
+<body class="bg-pink-50">
+    <section class="min-h-screen flex items-center justify-center px-4 confetti-bg">
+        <div class="max-w-4xl w-full text-center relative">
+            <!-- Decorative Elements -->
+            <div class="absolute left-0 -translate-x-1/2" data-aos="fade-right" data-aos-duration="1000">
+                <div class="flex space-x-2">
+                    <div class="w-8 h-24 bg-purple-400 rounded-full transform -rotate-45"></div>
+                    <div class="w-8 h-32 bg-blue-400 rounded-full transform rotate-12"></div>
+                    <div class="w-8 h-20 bg-yellow-400 rounded-full transform -rotate-25"></div>
+                </div>
+            </div>
+            
+            <div class="absolute right-0 translate-x-1/2" data-aos="fade-left" data-aos-duration="1000">
+                <div class="flex space-x-2">
+                    <div class="w-8 h-20 bg-red-400 rounded-full transform rotate-45"></div>
+                    <div class="w-8 h-32 bg-green-400 rounded-full transform -rotate-12"></div>
+                    <div class="w-8 h-24 bg-orange-400 rounded-full transform rotate-25"></div>
+                </div>
+            </div>
+
+            <!-- Content -->
+            <div class="bg-white/80 backdrop-blur-sm p-8 md:p-12 rounded-3xl shadow-xl relative z-10" 
+                 data-aos="fade-up" 
+                 data-aos-duration="800">
+                <span class="text-sm font-medium text-gray-600 uppercase tracking-wider"
+                      data-aos="fade-up" 
+                      data-aos-delay="100">
+                    DON'T MISS ANYTHING
+                </span>
+                
+                <h2 class="text-2xl md:text-4xl font-bold text-gray-800 mt-4 mb-8"
+                    data-aos="fade-up" 
+                    data-aos-delay="200">
+                    Subscribe to the Createx School<br>announcements
+                </h2>
+
+                <form class="max-w-md mx-auto space-y-4"
+                      data-aos="fade-up" 
+                      data-aos-delay="300">
+                    <div class="flex flex-col sm:flex-row gap-4">
+                        <input 
+                            type="email" 
+                            placeholder="Your working email" 
+                            class="flex-1 px-6 py-3 rounded-full border border-gray-200 focus:outline-none focus:border-red-400 focus:ring-2 focus:ring-red-100 transition-all duration-300"
+                            required
+                        >
+                        <button 
+                            type="submit" 
+                            class="px-8 py-3 bg-red-500 text-white rounded-full hover:bg-red-600 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
+                        >
+                            Subscribe
+                        </button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init({
+            once: true,
+            easing: 'ease-out-cubic',
+            duration: 800
+        });
+    </script>
+
+
+<footer class="bg-[#1b1f24] text-white py-10">
 
 
 
@@ -891,12 +1228,18 @@
                         theory. We provide relevant approaches to online learning.
                     </p>
                     <div class="flex gap-x-4 mt-4">
-                        <a href="htps://Facebook.com"><img src="./assets/icon/Facebook.svg" alt="Facebook" class="w-5 h-5"></a>
-                        <a href="htps://Twitter.com"><img src="./assets/icon/Twitter.svg" alt="Twitter" class="w-5 h-5"></a>
-                        <a href="htps://Youtube.com"><img src="./assets/icon/YouTube.svg" alt="YouTube" class="w-5 h-5"></a>
-                        <a href="htps://Telegram.com"><img src="./assets/icon/telegram.svg" alt="Telegram" class="w-5 h-5"></a>
-                        <a href="htps://Instagram.com"><img src="./assets/icon/Instagram.svg" alt="Instagram" class="w-5 h-5"></a>
-                        <a href="htps://Linkedin.com"><img src="./assets/icon/Linked-In.svg" alt="LinkedIn" class="w-5 h-5"></a>
+                        <a href="htps://Facebook.com"><img src="./assets/icon/Facebook.svg" alt="Facebook"
+                                class="w-5 h-5"></a>
+                        <a href="htps://Twitter.com"><img src="./assets/icon/Twitter.svg" alt="Twitter"
+                                class="w-5 h-5"></a>
+                        <a href="htps://Youtube.com"><img src="./assets/icon/YouTube.svg" alt="YouTube"
+                                class="w-5 h-5"></a>
+                        <a href="htps://Telegram.com"><img src="./assets/icon/telegram.svg" alt="Telegram"
+                                class="w-5 h-5"></a>
+                        <a href="htps://Instagram.com"><img src="./assets/icon/Instagram.svg" alt="Instagram"
+                                class="w-5 h-5"></a>
+                        <a href="htps://Linkedin.com"><img src="./assets/icon/Linked-In.svg" alt="LinkedIn"
+                                class="w-5 h-5"></a>
                     </div>
                 </div>
                 <div class="ml-4">
@@ -904,7 +1247,8 @@
                     <ul class="space-y-2 text-sm text-gray-400">
                         <li><a href="#" class="hover:text-red-500 transition">About Us</a></li>
                         <li><a href="./pages/Courses.html" class="hover:text-red-500 transition">Courses</a></li>
-                        <li><a href="./pages/Events_List_View.html" class="hover:text-red-500 transition">Events</a></li>
+                        <li><a href="./pages/Events_List_View.html" class="hover:text-red-500 transition">Events</a>
+                        </li>
                         <li><a href="#" class="hover:text-red-500 transition">Blog</a></li>
                         <li><a href="#" class="hover:text-red-500 transition">Contacts</a></li>
                     </ul>
@@ -922,22 +1266,19 @@
                 <div class="ml-4">
                     <h3 class="text-lg font-semibold mb-4">CONTACT US</h3>
                     <ul class="space-y-2 text-sm text-gray-400">
-                        <li>📞 <a href="tel:+1234567890" class="hover:text-red-500 transition">+1 (234) 567-89-00</a></li>
-                        <li>✉️ <a href="mailto:hello@createx.com" class="hover:text-red-500 transition">hello@createx.com</a></li>
+                        <li>📞 <a href="tel:+1234567890" class="hover:text-red-500 transition">+1 (234) 567-89-00</a>
+                        </li>
+                        <li>✉️ <a href="mailto:hello@createx.com"
+                                class="hover:text-red-500 transition">hello@createx.com</a></li>
                     </ul>
                 </div>
                 <div class="mr-10">
                     <h3 class="text-lg font-semibold mb-4">SIGN UP TO OUR NEWSLETTER</h3>
                     <form action="#" class="relative">
-                        <input
-                            type="email"
-                            placeholder="Email address"
-                            class="w-64 p-2 pr-12 rounded bg-gray-800 text-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500"
-                        />
-                        <button
-                            type="submit"
-                            class="absolute top-0 right-50 h-full px-4 bg-red-500 hover:bg-red-600 rounded-r text-white transition"
-                        >
+                        <input type="email" placeholder="Email address"
+                            class="w-64 p-2 pr-12 rounded bg-gray-800 text-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500" />
+                        <button type="submit"
+                            class="absolute top-0 right-50 h-full px-4 bg-red-500 hover:bg-red-600 rounded-r text-white transition">
                             &rarr;
                         </button>
                     </form>
@@ -946,15 +1287,14 @@
                     </p>
                 </div>
             </div>
-            <div
-                class="mt-8 border-t border-gray-700 pt-4 flex justify-between items-center text-sm text-gray-500"
-            >
-                <p>© All  reserved. Made with ❤️ by  Studio</p>
+            <div class="mt-8 border-t border-gray-700 pt-4 flex justify-between items-center text-sm text-gray-500">
+                <p>© All reserved. Made with ❤️ by Studio</p>
                 <a href="#" class="hover:text-red-500 transition">GO TO TOP</a>
             </div>
         </div>
-    </footer> 
+    </footer>
 
-		<script src="./js/app.js"></script>
-	</body>
-</html>
+    <script src="./js/app.js"></script>
+    </body>
+
+    </html>
