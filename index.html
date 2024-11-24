@@ -13,6 +13,22 @@
         <link rel="shortcut icon" href="./assets/img/logo.svg" type="image/x-icon">
     <title>Createx</title>
 </head>
+<style>
+    h1 {
+        color: #d7d5d5;
+    }
+    .hero-txs{
+        color: black;
+        font-size: 3rem;
+        max-width: 400px;
+    }
+    .home-pg-img{
+        display: flex;
+        margin-top: 10px;
+        justify-content: center;
+    }
+</style>
+
 
 <body class="max-w-[1920px] mx-auto font-['Lato', sans-serif]">
     <header class="bg-[#f55d0541] text-white overflow-hidden">
@@ -169,6 +185,62 @@
 
 
     </header>
+
+  <section class="hme-pg-sc-1[max-w-[500px]]">
+    <main class="hero-sctn"[display:flex;justify-center;]>
+        <p>play</p>
+        <h1 class="hero-txs">Enjoy studying
+            with Createx Online Courses</h1>
+            <img src="./assets/img/hero-img-home-page.png" alt="" class="home-pg-img">
+
+            
+
+
+
+    </main>
+  </section>
+
+    <script>
+        const getConsultationBtn = document.getElementById('getConsultationBtn');
+        const loginRegisterBtn = document.getElementById('loginRegisterBtn');
+        const consultationModal = document.getElementById('consultationModal');
+        const loginRegisterModal = document.getElementById('loginRegisterModal');
+        const closeModalBtns = document.querySelectorAll('#closeModal');
+        getConsultationBtn.addEventListener('click', () => {
+            consultationModal.classList.remove('hidden'); 
+            loginRegisterModal.classList.add('hidden');  
+        });
+        loginRegisterBtn.addEventListener('click', () => {
+            loginRegisterModal.classList.remove('hidden'); 
+            consultationModal.classList.add('hidden');   
+        });
+        closeModalBtns.forEach(button => {
+            button.addEventListener('click', () => {
+                consultationModal.classList.add('hidden'); 
+                loginRegisterModal.classList.add('hidden'); 
+            });
+        });
+
+
+
+        const menuToggle = document.getElementById('menuToggle');
+        const mobileMenu = document.getElementById('mobileMenu');
+        const closeMenu = document.getElementById('closeMenu');
+        menuToggle.addEventListener('click', () => {
+            mobileMenu.classList.remove('hidden');
+            mobileMenu.classList.remove('translate-x-full');
+            mobileMenu.classList.add('translate-x-0');
+        });
+        closeMenu.addEventListener('click', () => {
+            mobileMenu.classList.remove('translate-x-0');
+            mobileMenu.classList.add('translate-x-full');
+            setTimeout(() => {
+                mobileMenu.classList.add('hidden');
+            }, 500);
+        });
+    </script>
+
+
 
     <footer class="bg-[#1b1f24] text-white py-10">
         <div class="container mx-auto max-w-[1230px] px-4">
