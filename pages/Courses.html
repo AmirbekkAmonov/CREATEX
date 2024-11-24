@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Flow+Circular&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Pen+Script&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+        rel="stylesheet">
+        <link rel="shortcut icon" href="../assets/img/logo.svg" type="image/x-icon">
+    <title>Createx</title>
+</head>
+
+<body class="max-w-[1920px] mx-auto font-['Lato', sans-serif]">
+    <header class="bg-[#f55d0541] text-white overflow-hidden">
+        <div class="container max-w-[1230px] mx-auto flex justify-between items-center px-2 py-5">
+            <div class="flex items-center gap-x-14">
+                <a href="../index.html"><img src="../assets/img/logo.svg" alt="Logo"></a>
+                <nav class="hidden lg:block">
+                    <ul class="flex space-x-9 font-bold text-[#424551]">
+                        <li><a href="#" class="hover:text-[#31333b] transition duration-300">About Us</a></li>
+                        <li><a href="./Courses.html" class="hover:text-[#31333b] transition duration-300">Courses</a></li>
+                        <li><a href="./Events_List_View.html" class="hover:text-[#31333b] transition duration-300">Events</a></li>
+                        <li><a href="#" class="hover:text-[#31333b] transition duration-300">Blog</a></li>
+                        <li><a href="#" class="hover:text-[#31333b] transition duration-300">Contacts</a></li>
+                    </ul>
+                </nav>
+
+            </div>
+            <div class="flex items-center gap-x-2">
+                <button id="getConsultationBtn"
+                    class="hidden sm:block px-4 py-3 rounded hover:bg-red-500 bg-red-600 text-white font-bold truncate max-w-[160px] transition duration-300">
+                    Get consultation
+                </button>
+                <button id="loginRegisterBtn"
+                    class="hidden sm:block flex items-center gap-x-2 px-4 py-3 rounded  bg-transparent hover:text-[#31333b] text-[#424551] font-bold truncate max-w-[160px] transition duration-300">
+                    Log in / Register
+                </button>
+                <button id="menuToggle" class="lg:hidden px-3 py-2 text-[#424551] font-bold">
+                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                        stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+                    </svg>
+                </button>
+            </div>
+        </div>
+        <div id="mobileMenu"
+            class="hidden lg:hidden fixed inset-0 bg-[#f55d05cc] flex flex-col items-center justify-center transform translate-x-full transition-transform duration-500">
+            <button id="closeMenu" class="absolute top-5 right-5 text-white text-3xl font-bold">&times;</button>
+            <ul class="space-y-4 font-bold text-white text-lg">
+                <li><a href="#" class="hover:text-[#31333b] transition duration-300">About Us</a></li>
+                <li><a href="./Courses.html" class="hover:text-[#31333b] transition duration-300">Courses</a></li>
+                <li><a href="./Events_List_View.html" class="hover:text-[#31333b] transition duration-300">Events</a></li>
+                <li><a href="#" class="hover:text-[#31333b] transition duration-300">Blog</a></li>
+                <li><a href="#" class="hover:text-[#31333b] transition duration-300">Contacts</a></li>
+            </ul>
+            <div class="mt-6 flex flex-col gap-y-4 sm:hidden">
+                <button id="mobileGetConsultationBtn" class="px-4 py-3 rounded bg-red-600 text-white font-bold">Get
+                    consultation</button>
+                <button id="mobileLoginRegisterBtn"
+                    class="flex items-center gap-x-2 px-4 py-3 rounded bg-white text-[#424551] font-bold">
+                    <img src="../assets/icon/Profile.svg" alt="">Log in / Register
+                </button>
+            </div>
+        </div>
+        <div id="consultationModal"
+            class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-250 text-black">
+            <div class="mx-auto mt-16 bg-white rounded-lg p-8 w-[400px] transition relative duration-300">
+                <button id="closeModal" class="absolute top-2 right-4 text-xl text-gray-600 w-8 h-8">&times;</button>
+                <h2 class="text-2xl font-semibold mb-4 text-center">Sign in</h2>
+                <p class="mb-6 font-medium">Sign in to your account using email and password provided during
+                    registration.</p>
+                <form class="authForm" data-form="signin">
+                    <div class="mb-4">
+                        <label for="email" class="block text-sm font-medium">Email</label>
+                        <input type="email" id="email" name="email"
+                            class="w-full p-2 border rounded focus:border-blue-500 focus:outline-none"
+                            placeholder="Your working email" required />
+                    </div>
+                    <div class="mb-4">
+                        <label for="password" class="block text-sm font-medium ">Password</label>
+                        <input type="password" id="password" name="password"
+                            class="w-full p-2 border rounded focus:border-blue-500 focus:outline-none"
+                            placeholder="********" required />
+                    </div>
+                    <div class="flex justify-between items-center mb-4">
+                        <label class="flex items-center">
+                            <input type="checkbox" name="remember" /> <span class="ml-2 text-sm">Keep me signed
+                                in</span>
+                        </label>
+                        <a href="#" class="text-sm text-blue-500">Forgot password?</a>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-red-600 hover:bg-red-700 transition duration-300 text-white py-2 rounded-lg font-semibold authButton">Sign
+                        In</button>
+                    <div class="text-center mt-4">
+                        <span>Don't have an account? <a href="#" id="switchToSignUp"
+                                class="text-blue-500 cursor-pointer">Sign up</a></span>
+                    </div>
+                    <div class="mt-6 text-center">
+                        <span class="text-sm">Or sign in with</span>
+                        <div class="flex justify-center gap-x-4 mt-2">
+                            <a href="https://Facebook.com"><img src="../assets/icon/Facebook.svg" alt="Facebook"></a>
+                            <a href="https://Google.com"><img src="../assets/icon/Google.svg" alt="Google"></a>
+                            <a href="https://Linked-In.com"><img src="../assets/icon/Linked-In.svg" alt="Linked-In"></a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <div id="loginRegisterModal"
+            class="fixed  inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50 text-black">
+            <div class="bg-white mx-auto relative rounded-lg p-8 w-[400px]  ">
+                <button id="closeModal" class="absolute top-2 right-4 text-xl text-gray-600 w-8 h-8">&times;</button>
+                <h2 class="text-2xl font-semibold mb-4 modalTitle">Sign up</h2>
+                <p class="mb-6 text-sm text-gray-500">Registration takes less than a minute but gives you full control
+                    over your studying.</p>
+                <form class="authForm" data-form="signup">
+                    <div class="mb-4">
+                        <label for="fullName" class="block text-sm font-medium">Full Name</label>
+                        <input type="text" id="fullName" name="fullName"
+                            class="w-full p-2 border rounded focus:border-blue-500 focus:outline-none"
+                            placeholder="Your full name" required />
+                    </div>
+                    <div class="mb-4">
+                        <label for="email" class="block text-sm font-medium">Email</label>
+                        <input type="email" id="email" name="email"
+                            class="w-full p-2 border rounded focus:border-blue-500 focus:outline-none"
+                            placeholder="Your working email" required />
+                    </div>
+                    <div class="mb-4">
+                        <label for="password" class="block text-sm font-medium">Password</label>
+                        <input type="password" id="password" name="password"
+                            class="w-full p-2 border rounded focus:border-blue-500 focus:outline-none"
+                            placeholder="********" required />
+                    </div>
+                    <div class="mb-4">
+                        <label for="confirmPassword" class="block text-sm font-medium">Confirm Password</label>
+                        <input type="password" id="confirmPassword" name="confirmPassword"
+                            class="w-full p-2 border rounded focus:border-blue-500 focus:outline-none"
+                            placeholder="********" required />
+                    </div>
+                    <div class="flex items-center mb-4">
+                        <input type="checkbox" id="rememberMe" name="rememberMe" class="mr-2" />
+                        <label for="rememberMe" class="text-sm">Remember me</label>
+                    </div>
+                    <button type="submit"
+                        class="w-full bg-red-600 hover:bg-red-700 transition duration-300 text-white py-2 rounded-lg font-semibold authButton">Sign
+                        up</button>
+                    <div class="text-center mt-4">
+                        <span class="text-sm">Already have an account? <a href="#" id="switchToSignIn"
+                                class="text-blue-500 cursor-pointer">Sign in</a></span>
+                    </div>
+                    <div class="mt-6 text-center">
+                        <span class="text-sm">Or sign in with</span>
+                        <div class="flex justify-center gap-x-4 mt-2">
+                            <a href="https://Facebook.com"><img src="../assets/icon/Facebook.svg" alt="Facebook"></a>
+                            <a href="https://Google.com"><img src="../assets/icon/Google.svg" alt="Google"></a>
+                            <a href="https://Linked-In.com"><img src="../assets/icon/Linked-In.svg" alt="Linked-In"></a>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+
+
+    </header>
+    <main>
+        <section class="bg-gray-100 py-12 px-8">
+            <div class="container mx-auto px-4">
+              <div class="text-center mb-10">
+                <p class="text-gray-500 mt-2">TESTIMONIALS</p>
+                <h2 class="text-3xl font-bold text-gray-800">What our students say</h2>
+              </div>
+          
+              <div class="relative max-w-3xl mx-auto">
+                <div id="carousel" class="overflow-hidden bg-white rounded-lg shadow-md">
+                  <div class="flex transition-transform duration-500">
+                    <div class="flex min-w-full p-8">
+                      <img class="w-5 h-5 mr-4" src="../assets/icon/braces.svg" alt="">
+                      <div>
+                        <blockquote class="text-gray-600 ">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.
+                        </blockquote>
+                        <div class="flex items-center mt-4">
+                          <img class="w-12 h-12" src="../assets/img/image-avatar.svg" alt="Student 1" class="w-10 h-10 rounded-full">
+                          <div class="ml-3">
+                            <h4 class="text-sm font-bold text-gray-800">Eleanor Pena</h4>
+                            <p class="text-xs text-gray-500">Position, Course</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex min-w-full p-8">
+                      <img class="w-5 h-5 mr-4" src="../assets/icon/braces.svg" alt="">
+                      <div>
+                        <blockquote class="text-gray-600 ">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.
+                        </blockquote>
+                        <div class="flex items-center mt-4">
+                          <img class="w-12 h-12" src="../assets/img/image-avatar.svg" alt="Student 2" class="w-10 h-10 rounded-full">
+                          <div class="ml-3">
+                            <h4 class="text-sm font-bold text-gray-800">Eleanor Pena</h4>
+                            <p class="text-xs text-gray-500">Position, Course</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex min-w-full p-8">
+                      <img class="w-5 h-5 mr-4" src="../assets/icon/braces.svg" alt="">
+                      <div>
+                        <blockquote class="text-gray-600 ">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.
+                        </blockquote>
+                        <div class="flex items-center mt-4">
+                          <img class="w-12 h-12" src="../assets/img/image-avatar.svg" alt="Student 3" class="w-10 h-10 rounded-full">
+                          <div class="ml-3">
+                            <h4 class="text-sm font-bold text-gray-800">Eleanor Pena</h4>
+                            <p class="text-xs text-gray-500">Position, Course</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex min-w-full p-8">
+                      <img class="w-5 h-5 mr-4" src="../assets/icon/braces.svg" alt="">
+                      <div>
+                        <blockquote class="text-gray-600 ">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.
+                        </blockquote>
+                        <div class="flex items-center mt-4">
+                          <img class="w-12 h-12" src="../assets/img/image-avatar.svg" alt="Student 4" class="w-10 h-10 rounded-full">
+                          <div class="ml-3">
+                            <h4 class="text-sm font-bold text-gray-800">Eleanor Pena</h4>
+                            <p class="text-xs text-gray-500">Position, Course</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="flex min-w-full p-8">
+                      <img class="w-5 h-5 mr-4" src="../assets/icon/braces.svg" alt="">
+                      <div>
+                        <blockquote class="text-gray-600 ">
+                          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in euismod vulputate etiam eros. Pulvinar neque pharetra arcu diam maecenas diam integer in.
+                        </blockquote>
+                        <div class="flex items-center mt-4">
+                          <img class="w-12 h-12" src="../assets/img/image-avatar.svg" alt="Student 5" class="w-10 h-10 rounded-full">
+                          <div class="ml-3">
+                            <h4 class="text-sm font-bold text-gray-800">Eleanor Pena</h4>
+                            <p class="text-xs text-gray-500">Position, Course</p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <button
+                  id="prevBtn"
+                  class="absolute md:left-[-5rem] left-2 top-1/2 transform -translate-y-1/2  hover:bg-red-500 text-black hover:text-white rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center hover:shadow-lg transform transition duration-300"
+                >
+                  <span class="text-xl">&larr;</span>
+                </button>
+                <button
+                  id="nextBtn"
+                  class="absolute md:right-[-5rem] right-2 top-1/2 transform -translate-y-1/2  hover:bg-red-500 text-black hover:text-white rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center hover:shadow-lg transform transition duration-300"
+                >
+                  <span class="text-xl">&rarr;</span>
+                </button>
+              </div>
+              <div id="indicators" class="flex justify-center mt-6 space-x-2">
+                <button class="w-4 h-1 md:w-6 md:h-1 bg-gray-400 rounded-full"></button>
+                <button class="w-4 h-1 md:w-6 md:h-1 bg-gray-400 rounded-full"></button>
+                <button class="w-4 h-1 md:w-6 md:h-1 bg-gray-400 rounded-full"></button>
+                <button class="w-4 h-1 md:w-6 md:h-1 bg-gray-400 rounded-full"></button>
+                <button class="w-4 h-1 md:w-6 md:h-1 bg-gray-400 rounded-full"></button>
+              </div>
+            </div>
+          </section>
+    </main>
+    <footer class="bg-[#1b1f24] text-white py-10">
+        <div class="container mx-auto max-w-[1230px] px-4">
+            <div class="flex flex-wrap justify-between gap-y-8 ">
+                <div class="max-w-[300px]">
+                    <a href="../index.html" class="block mb-4">
+                        <img src="../assets/img/logo2.svg" alt="">
+                    </a>
+                    <p class="text-sm text-gray-400">
+                        Createx Online School is a leader in online studying. We base our courses on practice, not on
+                        theory. We provide relevant approaches to online learning.
+                    </p>
+                    <div class="flex gap-x-4 mt-4">
+                        <a href="htps://Facebook.com"><img src="../assets/icon/Facebook.svg" alt="Facebook" class="w-5 h-5"></a>
+                        <a href="htps://Twitter.com"><img src="../assets/icon/Twitter.svg" alt="Twitter" class="w-5 h-5"></a>
+                        <a href="htps://Youtube.com"><img src="../assets/icon/YouTube.svg" alt="YouTube" class="w-5 h-5"></a>
+                        <a href="htps://Telegram.com"><img src="../assets/icon/telegram.svg" alt="Telegram" class="w-5 h-5"></a>
+                        <a href="htps://Instagram.com"><img src="../assets/icon/Instagram.svg" alt="Instagram" class="w-5 h-5"></a>
+                        <a href="htps://Linkedin.com"><img src="../assets/icon/Linked-In.svg" alt="LinkedIn" class="w-5 h-5"></a>
+                    </div>
+                </div>
+                <div class="ml-4">
+                    <h3 class="text-lg font-semibold mb-4">SITE MAP</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-red-500 transition">About Us</a></li>
+                        <li><a href="./Courses.html" class="hover:text-red-500 transition">Courses</a></li>
+                        <li><a href="./Events_List_View.html" class="hover:text-red-500 transition">Events</a></li>
+                        <li><a href="#" class="hover:text-red-500 transition">Blog</a></li>
+                        <li><a href="#" class="hover:text-red-500 transition">Contacts</a></li>
+                    </ul>
+                </div>
+                <div class="ml-4">
+                    <h3 class="text-lg font-semibold mb-4">COURSES</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li><a href="#" class="hover:text-red-500 transition">Marketing</a></li>
+                        <li><a href="#" class="hover:text-red-500 transition">Management</a></li>
+                        <li><a href="#" class="hover:text-red-500 transition">HR & Recruiting</a></li>
+                        <li><a href="#" class="hover:text-red-500 transition">Design</a></li>
+                        <li><a href="#" class="hover:text-red-500 transition">Development</a></li>
+                    </ul>
+                </div>
+                <div class="ml-4">
+                    <h3 class="text-lg font-semibold mb-4">CONTACT US</h3>
+                    <ul class="space-y-2 text-sm text-gray-400">
+                        <li>📞 <a href="tel:+1234567890" class="hover:text-red-500 transition">+1 (234) 567-89-00</a></li>
+                        <li>✉️ <a href="mailto:hello@createx.com" class="hover:text-red-500 transition">hello@createx.com</a></li>
+                    </ul>
+                </div>
+                <div class="mr-10">
+                    <h3 class="text-lg font-semibold mb-4">SIGN UP TO OUR NEWSLETTER</h3>
+                    <form action="#" class="relative">
+                        <input
+                            type="email"
+                            placeholder="Email address"
+                            class="w-64 p-2 pr-12 rounded bg-gray-800 text-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500"
+                        />
+                        <button
+                            type="submit"
+                            class="absolute top-0 right-50 h-full px-4 bg-red-500 hover:bg-red-600 rounded-r text-white transition"
+                        >
+                            &rarr;
+                        </button>
+                    </form>
+                    <p class="w-64 text-xs text-gray-500 mt-2">
+                        *Subscribe to receive marketing, communication, and education emails from Createx Agency.
+                    </p>
+                </div>
+            </div>
+            <div
+                class="mt-8 border-t border-gray-700 pt-4 flex justify-between items-center text-sm text-gray-500"
+            >
+                <p>© All  reserved. Made with ❤️ by  Studio</p>
+                <a href="#" class="hover:text-red-500 transition">GO TO TOP</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/app.js"></script>
+</body>
+
+</html>
