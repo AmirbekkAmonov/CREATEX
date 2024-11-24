@@ -6,30 +6,22 @@ document.addEventListener('DOMContentLoaded', () => {
     const consultationModal = document.getElementById('consultationModal');
     const loginRegisterModal = document.getElementById('loginRegisterModal');
     const closeModalBtns = document.querySelectorAll('#closeModal');
-    const body = document.body; // Body element for scroll control
-
-    // Open Consultation Modal
+    const body = document.body; 
     getConsultationBtn.addEventListener('click', () => {
         consultationModal.classList.remove('hidden');
         loginRegisterModal.classList.add('hidden');
-        body.classList.add('overflow-hidden'); // Disable scroll
+        body.classList.add('overflow-hidden'); 
     });
-
-    // Open Login/Register Modal
     loginRegisterBtn.addEventListener('click', () => {
         loginRegisterModal.classList.remove('hidden');
         consultationModal.classList.add('hidden');
-        body.classList.add('overflow-hidden'); // Disable scroll
+        body.classList.add('overflow-hidden'); 
     });
-
-    // Open Consultation Modal (Mobile)
     mobileGetConsultationBtn.addEventListener('click', () => {
         consultationModal.classList.remove('hidden');
         loginRegisterModal.classList.add('hidden');
-        body.classList.add('overflow-hidden'); // Disable scroll
+        body.classList.add('overflow-hidden'); 
     });
-
-    // Open Login/Register Modal (Mobile)
     mobileLoginRegisterBtn.addEventListener('click', () => {
         loginRegisterModal.classList.remove('hidden');
         consultationModal.classList.add('hidden');
@@ -76,3 +68,47 @@ function toggleAccordion(id) {
       icon.classList.remove('rotate-180');
     }
   }
+
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const carousel = document.querySelector('#carousel > div');
+    const slides = document.querySelectorAll('#carousel > div > div');
+    const prevBtn = document.getElementById('prevBtn');
+    const nextBtn = document.getElementById('nextBtn');
+    const indicators = document.querySelectorAll('#indicators > button');
+  
+    let currentIndex = 0;
+  
+    const updateCarousel = () => {
+      const offset = -currentIndex * 100; 
+      carousel.style.transform = `translateX(${offset}%)`;
+  
+      indicators.forEach((indicator, index) => {
+        indicator.classList.toggle('bg-[#424551]', index === currentIndex);
+        indicator.classList.toggle('bg-[#B3B7BC]', index !== currentIndex);
+      });
+    };
+  
+    prevBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + slides.length) % slides.length; 
+      updateCarousel();
+    });
+  
+    nextBtn.addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % slides.length; 
+      updateCarousel();
+    });
+  
+    indicators.forEach((indicator, index) => {
+      indicator.addEventListener('click', () => {
+        currentIndex = index; 
+        updateCarousel();
+      });
+    });
+  
+    updateCarousel(); 
+  });
+  
+
+  
