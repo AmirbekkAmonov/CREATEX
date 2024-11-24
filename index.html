@@ -14,6 +14,7 @@
     <title>Createx</title>
 </head>
 
+<<<<<<< HEAD
 <body class="max-w-[1920px] mx-auto font-['Lato', sans-serif]">
     <header class="bg-[#f55d0541] text-white overflow-hidden">
         <div class="container max-w-[1230px] mx-auto flex justify-between items-center px-2 py-5">
@@ -56,6 +57,90 @@
                         <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
                     </svg>
                 </button>
+=======
+		
+            <script src="https://cdn.tailwindcss.com"></script>
+            <script>
+                tailwind.config = {
+                    theme: {
+                        extend: {
+                            colors: {
+                                primary: '#FF3F3A'
+                            }
+                        }
+                    }
+                }
+            </script>
+        </head>
+        <body class="bg-pink-50 min-h-screen">
+            <div class="container mx-auto px-4 py-16">
+                <div class="grid md:grid-cols-2 gap-8 items-center">
+                    <div class="space-y-8">
+                        <!-- Play Button -->
+                        <button 
+                            onclick="togglePlay()"
+                            class="flex items-center space-x-2 text-primary hover:text-red-600 transition-colors"
+                        >
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.477 2 2 6.477 2 12s4.477 10 10 10 10-4.477 10-10S17.523 2 12 2zm-2 14.5v-9l6 4.5-6 4.5z"/>
+                            </svg>
+                            <span>Play showreel</span>
+                        </button>
+        
+                        <!-- Hero Text -->
+                        <h2 class="text-5xl font-bold text-gray-800 leading-tight">
+                            Enjoy studying with Createx Online Courses
+                        </h2>
+        
+                        <!-- CTA Buttons -->
+                        <div class="flex space-x-4">
+                            <button class="bg-white text-gray-800 px-8 py-3 rounded-md border hover:bg-gray-50 transition-colors">
+                                About us
+                            </button>
+                            <button class="bg-gradient-to-r from-primary to-orange-500 text-white px-8 py-3 rounded-md hover:opacity-90 transition-opacity">
+                                Explore courses
+                            </button>
+                        </div>
+                    </div>
+        
+                    <!-- Hero Image -->
+                    <div class="relative">
+                        <img 
+                            src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1471&q=80"
+                            alt="Student studying"
+                            class="rounded-lg shadow-xl"
+                        />
+                    </div>
+                </div>
+        
+                <!-- Stats -->
+                <div class="grid grid-cols-2 md:grid-cols-4 gap-8 mt-16">
+                    <div class="text-center">
+                        <h3 class="text-4xl font-bold text-gray-800">
+                            <span class="counter" data-target="1200">0</span>
+                        </h3>
+                        <p class="text-gray-600">Students graduated</p>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-4xl font-bold text-gray-800">
+                            <span class="counter" data-target="84">0</span>
+                        </h3>
+                        <p class="text-gray-600">Completed courses</p>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-4xl font-bold text-gray-800">
+                            <span class="counter" data-target="16">0</span>
+                        </h3>
+                        <p class="text-gray-600">Qualified tutors</p>
+                    </div>
+                    <div class="text-center">
+                        <h3 class="text-4xl font-bold text-gray-800">
+                            <span class="counter" data-target="5">0</span>
+                        </h3>
+                        <p class="text-gray-600">Years of experience</p>
+                    </div>
+                </div>
+>>>>>>> 884a4c3ec2dfa2e6db218e415586732e41cbf079
             </div>
         </div>
         <div id="mobileMenu"

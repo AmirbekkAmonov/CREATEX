@@ -112,3 +112,39 @@ function toggleAccordion(id) {
   
 
   
+  document.addEventListener("DOMContentLoaded", function () {
+    const prevBtn = document.getElementById("prevBtn2");
+    const nextBtn = document.getElementById("nextBtn2");
+    const gridContainer = document.querySelector(".grid");
+    const gridItems = Array.from(gridContainer.children);
+    const itemWidth = gridItems[0].getBoundingClientRect().width + 24; // Karta eni + bo'shliq (gap)
+
+    let currentScrollPosition = 0;
+
+    const scrollGrid = (direction) => {
+        if (direction === "next") {
+            currentScrollPosition += itemWidth;
+            if (currentScrollPosition >= gridContainer.scrollWidth) {
+                currentScrollPosition = 0; // Cheksiz aylanish uchun boshlanishiga qaytish
+            }
+        } else if (direction === "prev") {
+            currentScrollPosition -= itemWidth;
+            if (currentScrollPosition < 0) {
+                currentScrollPosition = gridContainer.scrollWidth - gridContainer.offsetWidth; // Oxirgi qismga o'tish
+            }
+        }
+        gridContainer.scrollTo({
+            left: currentScrollPosition,
+            behavior: "smooth",
+        });
+    };
+
+    // Tugmalar uchun hodisalarni ulash
+    prevBtn.addEventListener("click", () => scrollGrid("prev"));
+    nextBtn.addEventListener("click", () => scrollGrid("next"));
+});
+
+
+
+
+  
