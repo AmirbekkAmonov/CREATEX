@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,22 +11,26 @@
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Flow+Circular&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Pen+Script&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
         rel="stylesheet">
     <link rel="shortcut icon" href="../assets/img/logo.svg" type="image/x-icon">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
     <title>Createx</title>
 </head>
-<body  class="max-w-[1920px] mx-auto font-['Lato', sans-serif]">
-    <header class="bg-[#f55d0541] text-white overflow-hidden">
+
+<body class=" mx-auto font-['Lato', sans-serif]">
+    <header class=" text-white overflow-hidden">
         <div class="container max-w-[1230px] mx-auto flex justify-between items-center px-2 py-5">
             <div class="flex items-center gap-x-14">
                 <a href="../index.html"><img src="../assets/img/logo.svg" alt="Logo"></a>
                 <nav class="hidden lg:block">
                     <ul class="flex space-x-9 font-bold text-[#424551]">
-                        <li><a href="./About_us.html" class="hover:text-[#31333b] transition duration-300">About Us</a></li>
+                        <li><a href="./About_us.html" class="hover:text-[#31333b] transition duration-300">About Us</a>
+                        </li>
                         <li><a href="./Courses.html" class="hover:text-[#31333b] transition duration-300">Courses</a>
                         </li>
                         <li><a href="./Events_List_View.html"
                                 class="hover:text-[#31333b] transition duration-300">Events</a></li>
                         <li><a href="./Blog.html" class="hover:text-[#31333b] transition duration-300">Blog</a></li>
-                        <li><a href="./contacts.html" class="hover:text-[#31333b] transition duration-300">Contacts</a></li>
+                        <li><a href="./contacts.html" class="hover:text-[#31333b] transition duration-300">Contacts</a>
+                        </li>
                     </ul>
                 </nav>
 
@@ -169,6 +174,275 @@
 
 
     </header>
+    <main>
+        <section class="py-12" data-aos="fade-up">
+            <div class="text-center">
+                <p class="text-lg font-semibold mb-4" data-aos="fade-down" data-aos-delay="200" data-aos-duration="1000">
+                    Our blog
+                </p>
+                <h3 class="text-6xl font-bold mb-4" data-aos="zoom-in" data-aos-duration="1500">
+                    Createx School Journal
+                </h3>
+            </div>
+        </section>
+        <section class="p-12" data-aos="fade-up">
+            <div class="container mx-auto max-w-[1230px]">
+                <div class="flex flex-wrap items-center justify-between gap-4 p-4 w-full max-w-full overflow-hidden">
+                    <button class="border border-red-500 text-red-500 px-4 py-2 rounded-md" data-aos="zoom-in" data-aos-delay="100">
+                        All
+                    </button>
+                    <button class="text-gray-700 px-4 py-2" data-aos="fade-right" data-aos-delay="200">Articles</button>
+                    <button class="text-gray-700 px-4 py-2" data-aos="fade-left" data-aos-delay="300">Videos</button>
+                    <button class="text-gray-700 px-4 py-2" data-aos="fade-up" data-aos-delay="400">Podcasts</button>
+                    <div class="flex items-center gap-2" data-aos="fade-down" data-aos-delay="500">
+                        <label for="blog-category" class="text-gray-700">Blog category</label>
+                        <select id="blog-category"
+                            class="border border-gray-300 px-4 py-2 rounded-md focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500">
+                            <option value="all-themes">All themes</option>
+                            <option value="art">Art</option>
+                            <option value="business">Business</option>
+                            <option value="design">Design</option>
+                        </select>
+                    </div>
+                    <div class="flex items-center" data-aos="flip-left" data-aos-delay="600">
+                        <input type="text" placeholder="Search blog..."
+                            class="border border-gray-300 px-4 py-2 rounded-md focus:outline-none focus:ring-1 focus:ring-indigo-500 focus:border-indigo-500" />
+                        <button class="ml-2 text-gray-700">
+                            <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24"
+                                stroke="currentColor">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8 16l-4-4m0 0l4-4m-4 4h16" />
+                            </svg>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>  
+        <section class="p-12">
+            <div class="container mx-auto max-w-[1230px]">
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+                    <div class="bg-blue-100 rounded-lg shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                        <img src="../assets/img/about6.png" alt="Podcast" class="w-full h-46 object-cover" />
+                        <div class="p-4">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="bg-blue-200 text-blue-600 text-sm px-2 py-1 rounded">🎙️ Podcast</span>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">What is traffic arbitrage and does it really make money?</h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                                Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus
+                                gravida...
+                            </p>
+                            <div class="text-gray-500 text-xs mb-2">Marketing · September 4, 2020 · 36 min</div>
+                            <a href="#" class="text-blue-600 font-semibold text-sm flex items-center gap-1">
+                                Listen <span>→</span>
+                            </a>
+                        </div>
+                    </div>
+                
+                    <div class="bg-gray-100 rounded-lg shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                        <img src="../assets/img/blog1.png" alt="Article" class="w-full h-46 object-cover" />
+                        <div class="p-4">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="bg-gray-200 text-gray-600 text-sm px-2 py-1 rounded">📄 Article</span>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">How to choose the first programming language for a beginner</h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                                Turpis sed at magna laoreet gravida consequat tortor placerat. Gravida vitae aliquet enim egestas dui...
+                            </p>
+                            <div class="text-gray-500 text-xs mb-2">Development · September 1, 2020</div>
+                            <a href="#" class="text-gray-600 font-semibold text-sm flex items-center gap-1">
+                                Read <span>→</span>
+                            </a>
+                        </div>
+                    </div>
+                
+                    <div class="bg-yellow-100 rounded-lg shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                        <img src="../assets/img/about8.png" alt="Video" class="w-full h-46 object-cover" />
+                        <div class="p-4">
+                            <div class="flex items-center gap-2 mb-4">
+                                <span class="bg-yellow-200 text-yellow-600 text-sm px-2 py-1 rounded">🎥 Video</span>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">Should you choose a creative profession if you are attracted to
+                                creativity?</h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                                Curabitur nisl tincidunt eros venenatis vestibulum ac placerat. Tortor, viverra sed vulputate ultrices...
+                            </p>
+                            <div class="text-gray-500 text-xs mb-2">Design · August 8, 2020 · 40 min</div>
+                            <a href="#" class="text-yellow-600 font-semibold text-sm flex items-center gap-1">
+                                Watch <span>→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="grid grid-cols-1 lg:grid-cols-12 gap-6 p-4">
+                    <div class="lg:col-span-7 bg-white rounded-lg shadow-md overflow-hidden border" data-aos="fade-up" data-aos-delay="100">
+                        <img src="../assets/img/blog2.png" alt="Article" class="w-full h-60 object-cover" />
+                        <div class="p-4">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="bg-gray-200 text-gray-600 text-sm px-2 py-1 rounded">📄 Article</span>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">
+                                HR statistics: job search, interviews, hiring and recruiting
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                                Massa, lectus nibh consectetur aliquet nunc risus aenean. Leo hac netus bibendum diam adipiscing aenean nisl...
+                            </p>
+                            <div class="text-gray-500 text-xs mb-2">HR & Recruiting · August 3, 2020</div>
+                            <a href="#" class="text-red-600 font-semibold text-sm flex items-center gap-1">
+                                Read <span>→</span>
+                            </a>
+                        </div>
+                    </div>
+                    <div class="lg:col-span-5 bg-white rounded-lg shadow-md overflow-hidden border" data-aos="fade-up" data-aos-delay="200">
+                        <img src="../assets/img/about7.png" alt="Video" class="w-full h-60 object-cover" />
+                        <div class="p-4">
+                            <div class="flex items-center gap-2 mb-2">
+                                <span class="bg-green-200 text-green-600 text-sm px-2 py-1 rounded">🎥 Video</span>
+                            </div>
+                            <h3 class="text-lg font-semibold mb-2">
+                                What to do and who to talk to if you want to get feedback on the product
+                            </h3>
+                            <p class="text-gray-600 text-sm mb-4">
+                                Neque, a senectus consectetur odio in aliquet nec eu. Ultricies ac nibh urna urna sagittis faucibus...
+                            </p>
+                            <div class="text-gray-500 text-xs mb-2">Management · August 2, 2020 · 45 min</div>
+                            <a href="#" class="text-red-600 font-semibold text-sm flex items-center gap-1">
+                                Watch <span>→</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>              
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+                        <img src="../assets/img/blog3.png" alt="Graphic Design" class="w-full h-50 object-cover" />
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="bg-purple-100 text-purple-600 text-xs font-medium px-2.5 py-0.5 rounded">
+                                    Podcast
+                                </span>
+                                <span class="text-gray-500 text-sm">July 28, 2020</span>
+                            </div>
+                            <h2 class="text-lg font-bold text-gray-800 mb-2">
+                                What are color profiles and how they work in graphic design
+                            </h2>
+                            <p class="text-sm text-gray-600 mb-4">
+                                Aliquam vulputate hendrerit quam sollicitudin urna enim viverra gravida.
+                            </p>
+                            <a href="#" class="text-purple-600 text-sm font-semibold hover:underline">
+                                Listen →
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+                        <img src="../assets/img/blog4.png" alt="Startup Team" class="w-full h-50 object-cover" />
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="bg-pink-100 text-pink-600 text-xs font-medium px-2.5 py-0.5 rounded">
+                                    Video
+                                </span>
+                                <span class="text-gray-500 text-sm">July 15, 2020</span>
+                            </div>
+                            <h2 class="text-lg font-bold text-gray-800 mb-2">
+                                Startup: how to build a team that will live longer than a year
+                            </h2>
+                            <p class="text-sm text-gray-600 mb-4">
+                                Nisi, massa sit est faucibus et diam. Faucibus...
+                            </p>
+                            <a href="#" class="text-pink-600 text-sm font-semibold hover:underline">
+                                Watch →
+                            </a>
+                        </div>
+                    </div>
+                    <div class="bg-white shadow-lg rounded-lg overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+                        <img src="../assets/img/blog5.png" alt="Marketing Tips" class="w-full h-50 object-cover" />
+                        <div class="p-6">
+                            <div class="flex items-center justify-between mb-4">
+                                <span class="bg-blue-100 text-blue-600 text-xs font-medium px-2.5 py-0.5 rounded">
+                                    Article
+                                </span>
+                                <span class="text-gray-500 text-sm">July 9, 2020</span>
+                            </div>
+                            <h2 class="text-lg font-bold text-gray-800 mb-2">
+                                How to get customers to love your business from the start
+                            </h2>
+                            <p class="text-sm text-gray-600 mb-4">
+                                Maecenas in augue nec...
+                            </p>
+                            <a href="#" class="text-blue-600 text-sm font-semibold hover:underline">
+                                Read →
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="flex justify-center mt-6" data-aos="fade-up" data-aos-delay="100">
+                    <nav class="inline-flex rounded-md shadow-sm">
+                        <a href="#"
+                            class="px-3 py-1 border border-gray-300 bg-white text-gray-500 rounded-l-md hover:bg-gray-100">
+                            &larr;
+                        </a>
+                        <a href="#" class="px-3 py-1 border border-gray-300 bg-white text-gray-700 hover:bg-gray-100">
+                            1
+                        </a>
+                        <a href="#" class="px-3 py-1 border border-gray-300 bg-white text-gray-700 hover:bg-gray-100">
+                            2
+                        </a>
+                        <a href="#" class="px-3 py-1 border border-gray-300 bg-white text-gray-700 hover:bg-gray-100">
+                            3
+                        </a>
+                        <a href="#"
+                            class="px-3 py-1 border border-gray-300 bg-white text-gray-500 rounded-r-md hover:bg-gray-100">
+                            &rarr;
+                        </a>
+                    </nav>
+                </div>
+                
+
+            </div>
+        </section>
+        <section>
+            <div class="bg-gray-50 py-16 mt-10">
+                <div class="container mx-auto px-4 md:flex items-center justify-between">
+                    <div class="flex-1 mb-8 md:mb-0" data-aos="zoom-in-up" data-aos-delay="100">
+                        <img
+                            src="../assets/img/illustration_blog.png"
+                            alt="Illustration of person with books"
+                            class="w-full max-w-md mx-auto"
+                        />
+                    </div>
+                    <!-- Matn va forma (o'ng tomonda) -->
+                    <div class="flex-1" data-aos="zoom-in-up" data-aos-delay="200">
+                        <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+                            Want to get the best articles weekly? <br />
+                            Subscribe to our newsletter!
+                        </h2>
+                        <form class="flex flex-col space-y-4">
+                            <div class="flex items-center">
+                                <input
+                                    type="email"
+                                    placeholder="Your working email"
+                                    class="flex-1 px-4 py-3 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-orange-500"
+                                />
+                                <button
+                                    type="submit"
+                                    class="px-6 py-3 bg-orange-500 text-white font-semibold rounded-r-md hover:bg-orange-600"
+                                >
+                                    Subscribe
+                                </button>
+                            </div>
+                            <label class="flex items-center text-sm text-gray-600">
+                                <input
+                                    type="checkbox"
+                                    class="mr-2 text-orange-500 focus:ring-orange-500"
+                                />
+                                I agree to receive communications from Createx Online School
+                            </label>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+    </main>
     <footer class="bg-[#1b1f24] text-white py-10">
         <div class="container mx-auto max-w-[1230px] px-4">
             <div class="flex flex-wrap justify-between gap-y-8 ">
@@ -181,12 +455,18 @@
                         theory. We provide relevant approaches to online learning.
                     </p>
                     <div class="flex gap-x-4 mt-4">
-                        <a href="htps://Facebook.com"><img src="../assets/icon/Facebook.svg" alt="Facebook" class="w-5 h-5"></a>
-                        <a href="htps://Twitter.com"><img src="../assets/icon/Twitter.svg" alt="Twitter" class="w-5 h-5"></a>
-                        <a href="htps://Youtube.com"><img src="../assets/icon/YouTube.svg" alt="YouTube" class="w-5 h-5"></a>
-                        <a href="htps://Telegram.com"><img src="../assets/icon/telegram.svg" alt="Telegram" class="w-5 h-5"></a>
-                        <a href="htps://Instagram.com"><img src="../assets/icon/Instagram.svg" alt="Instagram" class="w-5 h-5"></a>
-                        <a href="htps://Linkedin.com"><img src="../assets/icon/Linked-In.svg" alt="LinkedIn" class="w-5 h-5"></a>
+                        <a href="htps://Facebook.com"><img src="../assets/icon/Facebook.svg" alt="Facebook"
+                                class="w-5 h-5"></a>
+                        <a href="htps://Twitter.com"><img src="../assets/icon/Twitter.svg" alt="Twitter"
+                                class="w-5 h-5"></a>
+                        <a href="htps://Youtube.com"><img src="../assets/icon/YouTube.svg" alt="YouTube"
+                                class="w-5 h-5"></a>
+                        <a href="htps://Telegram.com"><img src="../assets/icon/telegram.svg" alt="Telegram"
+                                class="w-5 h-5"></a>
+                        <a href="htps://Instagram.com"><img src="../assets/icon/Instagram.svg" alt="Instagram"
+                                class="w-5 h-5"></a>
+                        <a href="htps://Linkedin.com"><img src="../assets/icon/Linked-In.svg" alt="LinkedIn"
+                                class="w-5 h-5"></a>
                     </div>
                 </div>
                 <div class="ml-4">
@@ -212,22 +492,19 @@
                 <div class="ml-4">
                     <h3 class="text-lg font-semibold mb-4">CONTACT US</h3>
                     <ul class="space-y-2 text-sm text-gray-400">
-                        <li>📞 <a href="tel:+1234567890" class="hover:text-red-500 transition">+1 (234) 567-89-00</a></li>
-                        <li>✉️ <a href="mailto:hello@createx.com" class="hover:text-red-500 transition">hello@createx.com</a></li>
+                        <li>📞 <a href="tel:+1234567890" class="hover:text-red-500 transition">+1 (234) 567-89-00</a>
+                        </li>
+                        <li>✉️ <a href="mailto:hello@createx.com"
+                                class="hover:text-red-500 transition">hello@createx.com</a></li>
                     </ul>
                 </div>
                 <div class="mr-10">
                     <h3 class="text-lg font-semibold mb-4">SIGN UP TO OUR NEWSLETTER</h3>
                     <form action="#" class="relative">
-                        <input
-                            type="email"
-                            placeholder="Email address"
-                            class="w-64 p-2 pr-12 rounded bg-gray-800 text-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500"
-                        />
-                        <button
-                            type="submit"
-                            class="absolute top-0 right-50 h-full px-4 bg-red-500 hover:bg-red-600 rounded-r text-white transition"
-                        >
+                        <input type="email" placeholder="Email address"
+                            class="w-64 p-2 pr-12 rounded bg-gray-800 text-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500" />
+                        <button type="submit"
+                            class="absolute top-0 right-50 h-full px-4 bg-red-500 hover:bg-red-600 rounded-r text-white transition">
                             &rarr;
                         </button>
                     </form>
@@ -236,14 +513,17 @@
                     </p>
                 </div>
             </div>
-            <div
-                class="mt-8 border-t border-gray-700 pt-4 flex justify-between items-center text-sm text-gray-500"
-            >
-                <p>© All  reserved. Made with ❤️ by  Studio</p>
+            <div class="mt-8 border-t border-gray-700 pt-4 flex justify-between items-center text-sm text-gray-500">
+                <p>© All reserved. Made with ❤️ by Studio</p>
                 <a href="#" class="hover:text-red-500 transition">GO TO TOP</a>
             </div>
         </div>
     </footer>
     <script src="../js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init();
+</script>
 </body>
+
 </html>
