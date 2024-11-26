@@ -1,31 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
     <link
         href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Flow+Circular&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Pen+Script&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
         rel="stylesheet">
     <link rel="shortcut icon" href="../assets/img/logo.svg" type="image/x-icon">
     <title>Createx</title>
 </head>
-<body  class="max-w-[1920px] mx-auto font-['Lato', sans-serif]">
-    <header class="bg-[#f55d0541] text-white overflow-hidden">
+
+<body class="max-w-auto mx-auto font-['Lato', sans-serif]">
+    <header class=" text-white overflow-hidden">
         <div class="container max-w-[1230px] mx-auto flex justify-between items-center px-2 py-5">
             <div class="flex items-center gap-x-14">
                 <a href="../index.html"><img src="../assets/img/logo.svg" alt="Logo"></a>
                 <nav class="hidden lg:block">
                     <ul class="flex space-x-9 font-bold text-[#424551]">
-                        <li><a href="./About_us.html" class="hover:text-[#31333b] transition duration-300">About Us</a></li>
+                        <li><a href="./About_us.html" class="hover:text-[#31333b] transition duration-300">About Us</a>
+                        </li>
                         <li><a href="./Courses.html" class="hover:text-[#31333b] transition duration-300">Courses</a>
                         </li>
                         <li><a href="./Events_List_View.html"
                                 class="hover:text-[#31333b] transition duration-300">Events</a></li>
                         <li><a href="./Blog.html" class="hover:text-[#31333b] transition duration-300">Blog</a></li>
-                        <li><a href="./contacts.html" class="hover:text-[#31333b] transition duration-300">Contacts</a></li>
+                        <li><a href="./contacts.html" class="hover:text-[#31333b] transition duration-300">Contacts</a>
+                        </li>
                     </ul>
                 </nav>
 
@@ -68,7 +74,7 @@
             </div>
         </div>
         <div id="consultationModal"
-            class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-250 text-black">
+            class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50 text-black">
             <div class="mx-auto mt-16 bg-white rounded-lg p-8 w-[400px] transition relative duration-300">
                 <button id="closeModal" class="absolute top-2 right-4 text-xl text-gray-600 w-8 h-8">&times;</button>
                 <h2 class="text-2xl font-semibold mb-4 text-center">Sign in</h2>
@@ -113,8 +119,8 @@
             </div>
         </div>
         <div id="loginRegisterModal"
-            class="fixed  inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50 text-black">
-            <div class="bg-white mx-auto relative rounded-lg p-8 w-[400px]  ">
+            class="fixed mt-16 inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50 text-black">
+            <div class="bg-white mx-auto relative rounded-lg p-8 w-[400px]   ">
                 <button id="closeModal" class="absolute top-2 right-4 text-xl text-gray-600 w-8 h-8">&times;</button>
                 <h2 class="text-2xl font-semibold mb-4 modalTitle">Sign up</h2>
                 <p class="mb-6 text-sm text-gray-500">Registration takes less than a minute but gives you full control
@@ -170,8 +176,605 @@
 
     </header>
     <main>
+        <section class="p-12" data-aos="fade-up">
+            <div
+                class="container max-w-[1230px] mx-auto flex flex-col lg:flex-row items-center lg:items-start justify-between bg-white p-6 lg:p-8">
+                <div class="w-full lg:max-w-md" data-aos="fade-right">
+                    <p class="text-sm text-red-500 text-center lg:text-left">About us</p>
+                    <h2 class="text-2xl lg:text-3xl font-bold text-gray-800 text-center lg:text-left">Createx Online
+                        School</h2>
+                    <p class="mt-4 text-gray-600 text-center lg:text-left">
+                        Createx Online School is a leader in online studying. We have lots of courses and programs from
+                        the main market experts.
+                    </p>
+                    <p class="mt-4 text-gray-600 text-center lg:text-left">
+                        We provide relevant approaches to online learning, internships, and employment in the largest
+                        companies in the country. Our educational programs help you get a new specialty from scratch.
+                        During your studies, we will help you find a job. Check the courses and online events that we
+                        organize.
+                    </p>
+                    <div
+                        class="mt-6 flex flex-col  lg:flex-row items-center lg:items-start lg:space-x-4 space-y-4 lg:space-y-0">
+                        <button
+                            class="bg-gray-0 border-red-600 text-red-500 px-4 py-2 rounded-lg hover:bg-gray-100 w-full lg:w-auto"
+                            data-aos="zoom-in">
+                            Explore events
+                        </button>
+                        <button
+                            class="bg-orange-500 border-red-600 text-white px-4 py-2 rounded-lg hover:bg-orange-400 w-full lg:w-auto"
+                            data-aos="zoom-in">
+                            Browse courses
+                        </button>
+                    </div>
+                </div>
+                <div class="mt-8 lg:mt-0 w-full flex justify-center lg:w-auto" data-aos="fade-left">
+                    <img src="../assets/img/illustration.svg" alt="Illustration" class="w-60 sm:w-80 lg:w-96">
+                </div>
+            </div>
+        </section>   
+        <section class="p-10s pt-0">
+            <div
+                class="container max-w-[1230px] mx-auto flex flex-col lg:flex-row items-center justify-between bg-white p-6 lg:p-12 gap-8">
+                <div class="flex flex-col items-start gap-8" data-aos="fade-right">
+                    <div class="top-4 left-4 flex items-center space-x-2">
+                        <button
+                            class="bg-red-500 text-white w-12 h-12 flex items-center justify-center rounded-full hover:bg-red-600">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
+                                stroke="currentColor" class="w-6 h-6">
+                                <path stroke-linecap="round" stroke-linejoin="round"
+                                    d="M14.752 11.168l-6.664 3.726A1 1 0 017 14.035V9.965a1 1 0 011.088-.982l6.664 3.726a1 1 0 010 1.732z" />
+                            </svg>
+                        </button>
+                        <span class="text-gray-800 font-medium">Watch Video</span>
+                    </div>
+                    <img src="../assets/img/about_img.png" alt="Video thumbnail" data-aos="zoom-in">
+                </div>
+                <div
+                    class="w-full lg:w-1/2 flex flex-col items-start lg:items-start text-center lg:text-right space-y-4" data-aos="zoom-in-up">
+                    <div class="flex items-center gap-x-2">
+                        <span class="text-5xl font-bold text-red-500">1200</span>
+                        <span class="text-lg text-black font-medium">students graduated</span>
+                    </div>
+                    <div class="flex items-center gap-x-2">
+                        <span class="text-5xl font-bold text-red-500">84</span>
+                        <span class="text-lg text-black font-medium">completed courses</span>
+                    </div>
+                    <div class="flex items-center gap-x-2">
+                        <span class="text-5xl font-bold text-red-500">16</span>
+                        <span class="text-lg text-black font-medium">qualified tutors</span>
+                    </div>
+                    <div class="flex items-center gap-x-2">
+                        <span class="text-5xl font-bold text-red-500">5</span>
+                        <span class="text-lg text-black font-medium">years of experience</span>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="p-12 pt-0">
+            <div class="container max-w-[1230px] mx-auto bg-white py-12 px-6">
+                <div class="text-center mb-12" data-aos="fade-up">
+                    <p class="text-gray-600 uppercase tracking-widest text-sm">We Always Stand For</p>
+                    <h2 class="text-3xl font-bold text-gray-800 mt-2">Our Core Values</h2>
+                </div>
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+                    <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="100">
+                        <div class="text-red-500 text-5xl mb-4">
+                            <img src="../assets/icon/ic-structure.svg" alt="">
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">Structured Approach</h3>
+                        <p class="mt-2 text-gray-600">
+                            Aenean urna dictum adipiscing nec, cras quisque. Nunc in mauris.
+                        </p>
+                    </div>
+                    <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="200">
+                        <div class="text-red-500 text-5xl mb-4">
+                            <img src="../assets/icon/ic-chat.svg" alt="">
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">Professional Feedbacks</h3>
+                        <p class="mt-2 text-gray-600">
+                            Culpa nostrud commodo ea consequat reprehenderit aliquip.
+                        </p>
+                    </div>
+                    <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="300">
+                        <div class="text-red-500 text-5xl mb-4">
+                            <img src="../assets/icon/ic-target.svg" alt="">
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">Efficiency</h3>
+                        <p class="mt-2 text-gray-600">
+                            Viverra scelerisque consequat net. Adipiscing esse consequat.
+                        </p>
+                    </div>
+                    <div class="flex flex-col items-center text-center" data-aos="fade-up" data-aos-delay="400">
+                        <div class="text-red-500 text-5xl mb-4">
+                            <img src="../assets/icon/ic-calendar.svg" alt="">
+                        </div>
+                        <h3 class="text-lg font-bold text-gray-800">Flexible Schedule</h3>
+                        <p class="mt-2 text-gray-600">
+                            Aute euismod dolore dolore deserunt veniam ad deserunt.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="p-12 pt-0">
+            <div class="text-center mb-12" data-aos="fade-up">
+                <h3 class="text-sm text-gray-500 uppercase tracking-wide">Our Main Directions</h3>
+                <h2 class="text-4xl font-bold text-gray-800">What we teach</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto px-6">
+                <div class="bg-white rounded-lg shadow-md p-6" data-aos="fade-up" data-aos-delay="100">
+                    <img src="../assets/img/about1.png" alt="Marketing" class="rounded-lg mb-4">
+                    <span
+                        class="inline-block px-3 py-1 text-sm font-semibold text-white bg-green-500 rounded">Marketing</span>
+                    <p class="text-gray-600 mt-4">Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.</p>
+                    <a href="#" class="text-red-500 font-medium mt-4 inline-block hover:underline">Check courses →</a>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6" data-aos="fade-up" data-aos-delay="200">
+                    <img src="../assets/img/about2.png" alt="Management" class="rounded-lg mb-4">
+                    <span
+                        class="inline-block px-3 py-1 text-sm font-semibold text-white bg-blue-500 rounded">Management</span>
+                    <p class="text-gray-600 mt-4">Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.</p>
+                    <a href="#" class="text-red-500 font-medium mt-4 inline-block hover:underline">Check courses →</a>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6" data-aos="fade-up" data-aos-delay="300">
+                    <img src="../assets/img/about3.png" alt="HR & Recruiting" class="rounded-lg mb-4">
+                    <span class="inline-block px-3 py-1 text-sm font-semibold text-white bg-orange-500 rounded">HR & Recruiting</span>
+                    <p class="text-gray-600 mt-4">Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.</p>
+                    <a href="#" class="text-red-500 font-medium mt-4 inline-block hover:underline">Check courses →</a>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6" data-aos="fade-up" data-aos-delay="400">
+                    <img src="../assets/img/about4.png" alt="Design" class="rounded-lg mb-4">
+                    <span
+                        class="inline-block px-3 py-1 text-sm font-semibold text-white bg-pink-500 rounded">Design</span>
+                    <p class="text-gray-600 mt-4">Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.</p>
+                    <a href="#" class="text-red-500 font-medium mt-4 inline-block hover:underline">Check courses →</a>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6" data-aos="fade-up" data-aos-delay="500">
+                    <img src="../assets/img/about5.png" alt="Development" class="rounded-lg mb-4">
+                    <span
+                        class="inline-block px-3 py-1 text-sm font-semibold text-white bg-purple-500 rounded">Development</span>
+                    <p class="text-gray-600 mt-4">Odio posuere netus quisque faucibus lectus arcu donec. Eget dictum eu viverra faucibus. Viverra scelerisque consequat.</p>
+                    <a href="#" class="text-red-500 font-medium mt-4 inline-block hover:underline">Check courses →</a>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 flex items-center justify-center" data-aos="fade-up" data-aos-delay="600">
+                    <p class="text-gray-500 font-medium">New studying program coming soon...</p>
+                </div>
+            </div>
+        </section>
+        <section class="p-12 pt-0">
+            <div class="max-w-7xl mx-auto px-6 lg:flex lg:items-center lg:justify-between">
+                <div class="lg:w-1/2" data-aos="fade-right">
+                    <h3 class="text-sm text-gray-500 uppercase tracking-wide">Studying Process</h3>
+                    <h2 class="text-4xl font-bold text-gray-800 mb-8">That’s how we do it</h2>
+                    <div class="space-y-8">
+                        <div class="flex items-start" data-aos="fade-up" data-aos-delay="100">
+                            <div class="h-3 w-3 bg-red-500 rounded-full mt-2 mr-4"></div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-500">Step 1 <span class="flex text-2xl text-gray-800"> Watching online video lectures</span></h4>
+                                <p class="text-gray-600 mt-2">Aliquam turpis viverra quam sit interdum blandit posuere pellentesque. Nisl, imperdiet gravida massa neque.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start" data-aos="fade-up" data-aos-delay="200">
+                            <div class="h-3 w-3 bg-red-500 rounded-full mt-2 mr-4"></div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-500">Step 2 <span class="flex text-2xl text-gray-800"> Passing test</span></h4>
+                                <p class="text-gray-600 mt-2">Facilisis pellentesque quis accumsan ultrices. Eu egestas eget feugiat lacus, amet, sollicitudin egestas laoreet etiam.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start" data-aos="fade-up" data-aos-delay="300">
+                            <div class="h-3 w-3 bg-red-500 rounded-full mt-2 mr-4"></div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-500">Step 3 <span class="flex text-2xl text-gray-800"> Curator’s feedback</span></h4>
+                                <p class="text-gray-600 mt-2">Eget amet, enim pharetra leo egestas nisi, odio imperdiet facilisis. Aliquet orci varius volutpat egestas facilisi lobortis.</p>
+                            </div>
+                        </div>
+                        <div class="flex items-start" data-aos="fade-up" data-aos-delay="400">
+                            <div class="h-3 w-3 bg-red-500 rounded-full mt-2 mr-4"></div>
+                            <div>
+                                <h4 class="text-lg font-semibold text-gray-500">Step 4 <span class="flex text-2xl text-gray-800"> Corrections if needed</span></h4>
+                                <p class="text-gray-600 mt-2">Non tempor pulvinar tincidunt aliquam. Placerat ultricies malesuada dui auctor.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lg:w-1/2 mt-10 lg:mt-0 flex justify-center" data-aos="zoom-in-up">
+                    <img src="../assets/img/illustration_about.png" alt="Graduate Illustration" class="max-w-full h-auto">
+                </div>
+            </div>
+        </section>  
+        <section class="p-12 pt-0">
+            <div class="text-center mb-12">
+                <h3 class="text-sm text-gray-500 uppercase tracking-wide">Best tutors are all here</h3>
+                <h2 class="text-4xl font-bold text-gray-800">Meet our team</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-7xl mx-auto px-6 h-full">
+                <div class="bg-white rounded-lg shadow-md p-6 text-center" data-aos="fade-up" data-aos-duration="1000" >
+                    <div class="relative group">
+                        <img src="../assets/img/bilol-main-1.png" alt="Dianne Russell"
+                            class="w-[250px] h-[320px] mx-auto object-cover mb-4">
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-100 rounded-b-lg transition duration-500">
+                            <div class="flex space-x-4 items-center justify-end p-4 absolute bottom-0 right-0">
+                                <a href="#" class="text-white hover:text-gray-300"><img class="w-8"
+                                        src="../assets/icon/Facebook.svg" alt=""></a>
+                                <a href="#" class="text-white hover:text-gray-300"><img class="w-8"
+                                        src="../assets/icon/Instagram.svg" alt=""></a>
+                                <a href="#" class="text-white hover:text-gray-300"><img class="w-8"
+                                        src="../assets/icon/Linked-In.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800">Dianne Russell</h3>
+                    <p class="text-sm text-gray-500">Founder and CEO</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="100">
+                    <div class="relative group">
+                        <img src="../assets/img/bilol-main-2.png" alt="Dianne Russell"
+                            class="w-[250px] h-[320px] mx-auto object-cover mb-4">
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-100 rounded-b-lg transition duration-500">
+                            <div class="flex space-x-4 items-center justify-end p-4 absolute bottom-0 right-0">
+                                <a href="#" class="text-white hover:text-gray-300"><img class="w-8"
+                                        src="../assets/icon/Facebook.svg" alt=""></a>
+                                <a href="#" class="text-white hover:text-gray-300"><img class="w-8"
+                                        src="../assets/icon/Instagram.svg" alt=""></a>
+                                <a href="#" class="text-white hover:text-gray-300"><img class="w-8"
+                                        src="../assets/icon/Linked-In.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800">Jerome Bell</h3>
+                    <p class="text-sm text-gray-500">Founder and Program Director</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 text-center"data-aos="fade-up" data-aos-duration="1000" data-aos-delay="200">
+                    <div class="relative group">
+                        <img src="../assets/img/bilol-main-3.png" alt="Dianne Russell"
+                            class="w-[250px] h-[320px] mx-auto object-cover mb-4">
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-100 rounded-b-lg transition duration-500">
+                            <div class="flex space-x-4 items-center justify-end p-4 absolute bottom-0 right-0">
+                                <a href="#" class="text-white hover:text-gray-300"><img class="w-8"
+                                        src="../assets/icon/Facebook.svg" alt=""></a>
+                                <a href="#" class="text-white hover:text-gray-300"><img class="w-8"
+                                        src="../assets/icon/Instagram.svg" alt=""></a>
+                                <a href="#" class="text-white hover:text-gray-300"><img class="w-8"
+                                        src="../assets/icon/Linked-In.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800">Kristin Watson</h3>
+                    <p class="text-sm text-gray-500">Marketer, Curator of Marketing Course</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 text-center"data-aos="fade-up" data-aos-duration="1000" data-aos-delay="300">
+                    <div class="relative group">
+                        <img src="../assets/img/bilol-main-4.png" alt="Dianne Russell"
+                            class="w-[250px] h-[320px] mx-auto object-cover mb-4">
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-100 rounded-b-lg transition duration-500">
+                            <div class="flex space-x-4 items-center justify-end p-4 absolute bottom-0 right-0">
+                                <a href="#" class="text-white hover:text-gray-300"><img class="w-8"
+                                        src="../assets/icon/Facebook.svg" alt=""></a>
+                                <a href="#" class="text-white hover:text-gray-300"><img class="w-8"
+                                        src="../assets/icon/Instagram.svg" alt=""></a>
+                                <a href="#" class="text-white hover:text-gray-300"><img class="w-8"
+                                        src="../assets/icon/Linked-In.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800">Marvin McKinney</h3>
+                    <p class="text-sm text-gray-500">PM, Curator of Management Course</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="400">
+                    <div class="relative group">
+                        <img src="../assets/img/bilol-main-5.png" alt="Dianne Russell"
+                            class="w-[250px] h-[320px] mx-auto object-cover mb-4">
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-100 rounded-b-lg transition duration-500">
+                            <div class="flex space-x-4 items-center justify-end p-4 absolute bottom-0 right-0">
+                                <a href="#" class="text-white hover:text-gray-300"><img class="w-8"
+                                        src="../assets/icon/Facebook.svg" alt=""></a>
+                                <a href="#" class="text-white hover:text-gray-300"><img class="w-8"
+                                        src="../assets/icon/Instagram.svg" alt=""></a>
+                                <a href="#" class="text-white hover:text-gray-300"><img class="w-8"
+                                        src="../assets/icon/Linked-In.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800">Leslie Alexander</h3>
+                    <p class="text-sm text-gray-500">Curator of HR & Recruiting Course</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 text-center" data-aos="fade-up" data-aos-duration="1000" data-aos-delay="500">
+                    <div class="relative group">
+                        <img src="../assets/img/bilol-main-6.png" alt="Dianne Russell"
+                            class="w-[250px] h-[320px] mx-auto object-cover mb-4">
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-100 rounded-b-lg transition duration-500">
+                            <div class="flex space-x-4 items-center justify-end p-4 absolute bottom-0 right-0">
+                                <a href="#" class="text-white hover:text-gray-300"><img class="w-8"
+                                        src="../assets/icon/Facebook.svg" alt=""></a>
+                                <a href="#" class="text-white hover:text-gray-300"><img class="w-8"
+                                        src="../assets/icon/Instagram.svg" alt=""></a>
+                                <a href="#" class="text-white hover:text-gray-300"><img class="w-8"
+                                        src="../assets/icon/Linked-In.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800">Kathryn Murphy</h3>
+                    <p class="text-sm text-gray-500">Analyst and Marketing specialist</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 text-center"data-aos="fade-up" data-aos-duration="1000" data-aos-delay="600">
+                    <div class="relative group">
+                        <img src="../assets/img/bilol-main-7.png" alt="Dianne Russell"
+                            class="w-[250px] h-[320px] mx-auto object-cover mb-4">
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-100 rounded-b-lg transition duration-500">
+                            <div class="flex space-x-4 items-center justify-end p-4 absolute bottom-0 right-0">
+                                <a href="#" class="text-white hover:text-gray-300"><img class="w-8"
+                                        src="../assets/icon/Facebook.svg" alt=""></a>
+                                <a href="#" class="text-white hover:text-gray-300"><img class="w-8"
+                                        src="../assets/icon/Instagram.svg" alt=""></a>
+                                <a href="#" class="text-white hover:text-gray-300"><img class="w-8"
+                                        src="../assets/icon/Linked-In.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800">Brooklyn Simmons</h3>
+                    <p class="text-sm text-gray-500">Curator of Development Course</p>
+                </div>
+                <div class="bg-white rounded-lg shadow-md p-6 text-center"data-aos="fade-up" data-aos-duration="1000" data-aos-delay="700">
+                    <div class="relative group">
+                        <img src="../assets/img/bilol-main-8.png" alt="Dianne Russell"
+                            class="w-[250px] h-[320px] mx-auto object-cover mb-4">
+                        <div
+                            class="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-b from-transparent to-black opacity-0 group-hover:opacity-100 rounded-b-lg transition duration-500">
+                            <div class="flex space-x-4 items-center justify-end p-4 absolute bottom-0 right-0">
+                                <a href="#" class="text-white hover:text-gray-300"><img class="w-8"
+                                        src="../assets/icon/Facebook.svg" alt=""></a>
+                                <a href="#" class="text-white hover:text-gray-300"><img class="w-8"
+                                        src="../assets/icon/Instagram.svg" alt=""></a>
+                                <a href="#" class="text-white hover:text-gray-300"><img class="w-8"
+                                        src="../assets/icon/Linked-In.svg" alt=""></a>
+                            </div>
+                        </div>
+                    </div>
+                    <h3 class="text-lg font-semibold text-gray-800">Cody Fisher</h3>
+                    <p class="text-sm text-gray-500">UX Designer, Curator of Design Course</p>
+                </div>
+
+            </div>
+        </section>
+        <section class="bg-gray-100 p-12">
+            <div class="container mx-auto px-4">
+                <div class="text-center mb-10">
+                    <p data-aos="fade-up" class="text-gray-500 mt-2">TESTIMONIALS</p>
+                    <h2 data-aos="fade-up" class="text-3xl font-bold text-gray-800">What our students say</h2>
+                </div>
+        
+                <div class="relative max-w-3xl mx-auto">
+                    <div id="carousel" class="overflow-hidden bg-white rounded-lg shadow-md">
+                        <div class="flex transition-transform duration-500">
+                            <div class="flex min-w-full p-8" data-aos="fade-up" data-aos-delay="100">
+                                <img class="w-5 h-5 mr-4" src="../assets/icon/braces.svg" alt="">
+                                <div>
+                                    <blockquote class="text-gray-600">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam
+                                        viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi.
+                                    </blockquote>
+                                    <div class="flex items-center mt-4">
+                                        <img class="w-12 h-12" src="../assets/img/image-avatar.svg" alt="Student 1">
+                                        <div class="ml-3">
+                                            <h4 class="text-sm font-bold text-gray-800">Eleanor Pena</h4>
+                                            <p class="text-xs text-gray-500">Position, Course</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex min-w-full p-8" data-aos="fade-up" data-aos-delay="200">
+                                <img class="w-5 h-5 mr-4" src="../assets/icon/braces.svg" alt="">
+                                <div>
+                                    <blockquote class="text-gray-600">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam
+                                        viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi.
+                                    </blockquote>
+                                    <div class="flex items-center mt-4">
+                                        <img class="w-12 h-12" src="../assets/img/image-avatar.svg" alt="Student 2">
+                                        <div class="ml-3">
+                                            <h4 class="text-sm font-bold text-gray-800">Eleanor Pena</h4>
+                                            <p class="text-xs text-gray-500">Position, Course</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex min-w-full p-8" data-aos="fade-up" data-aos-delay="300">
+                                <img class="w-5 h-5 mr-4" src="../assets/icon/braces.svg" alt="">
+                                <div>
+                                    <blockquote class="text-gray-600">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam
+                                        viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi.
+                                    </blockquote>
+                                    <div class="flex items-center mt-4">
+                                        <img class="w-12 h-12" src="../assets/img/image-avatar.svg" alt="Student 3">
+                                        <div class="ml-3">
+                                            <h4 class="text-sm font-bold text-gray-800">Eleanor Pena</h4>
+                                            <p class="text-xs text-gray-500">Position, Course</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex min-w-full p-8" data-aos="fade-up" data-aos-delay="400">
+                                <img class="w-5 h-5 mr-4" src="../assets/icon/braces.svg" alt="">
+                                <div>
+                                    <blockquote class="text-gray-600">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam
+                                        viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi.
+                                    </blockquote>
+                                    <div class="flex items-center mt-4">
+                                        <img class="w-12 h-12" src="../assets/img/image-avatar.svg" alt="Student 4">
+                                        <div class="ml-3">
+                                            <h4 class="text-sm font-bold text-gray-800">Eleanor Pena</h4>
+                                            <p class="text-xs text-gray-500">Position, Course</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="flex min-w-full p-8" data-aos="fade-up" data-aos-delay="500">
+                                <img class="w-5 h-5 mr-4" src="../assets/icon/braces.svg" alt="">
+                                <div>
+                                    <blockquote class="text-gray-600">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet lectus quam
+                                        viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus facilisi.
+                                    </blockquote>
+                                    <div class="flex items-center mt-4">
+                                        <img class="w-12 h-12" src="../assets/img/image-avatar.svg" alt="Student 5">
+                                        <div class="ml-3">
+                                            <h4 class="text-sm font-bold text-gray-800">Eleanor Pena</h4>
+                                            <p class="text-xs text-gray-500">Position, Course</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+        
+                    <button id="prevBtn"
+                        class="absolute md:left-[-5rem] left-2 top-1/2 transform -translate-y-1/2  hover:bg-red-500 text-black hover:text-white rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center hover:shadow-lg transform transition duration-300">
+                        <span class="text-xl">&larr;</span>
+                    </button>
+                    <button id="nextBtn"
+                        class="absolute md:right-[-5rem] right-2 top-1/2 transform -translate-y-1/2  hover:bg-red-500 text-black hover:text-white rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center hover:shadow-lg transform transition duration-300">
+                        <span class="text-xl">&rarr;</span>
+                    </button>
+                </div>
+                <div id="indicators" class="flex justify-center mt-6 space-x-2">
+                    <button class="w-4 h-1 md:w-6 md:h-1 bg-gray-400 rounded-full"></button>
+                    <button class="w-4 h-1 md:w-6 md:h-1 bg-gray-400 rounded-full"></button>
+                    <button class="w-4 h-1 md:w-6 md:h-1 bg-gray-400 rounded-full"></button>
+                    <button class="w-4 h-1 md:w-6 md:h-1 bg-gray-400 rounded-full"></button>
+                    <button class="w-4 h-1 md:w-6 md:h-1 bg-gray-400 rounded-full"></button>
+                </div>
+            </div>
+        </section>
+        <section class="bg-gray-100 p-12">
+            <div class="container max-w-[1230px] mx-auto">
+                <h2 data-aos="fade-up" class="text-center text-sm md:text-lg font-semibold text-gray-800 uppercase tracking-widest">
+                    Best Jobs for You
+                </h2>
+                <h3 data-aos="fade-up" class="text-center text-xl md:text-2xl font-bold text-gray-900 mt-2">
+                    Our students work here
+                </h3>
+                <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 mt-8 items-center">
+                    <div class="flex flex-col items-center opacity-50 hover:opacity-100 transition duration-300" data-aos="fade-up" data-aos-delay="100">
+                        <img src="../assets/icon/about_logo1.svg" alt="InDepth Consulting" class="h-auto w-auto">
+                    </div>
+                    <div class="flex flex-col items-center opacity-50 hover:opacity-100 transition duration-300" data-aos="fade-up" data-aos-delay="200">
+                        <img src="../assets/icon/about_logo2.svg" alt="Higher Fit" class="h-auto w-auto">
+                    </div>
+                    <div class="flex flex-col items-center opacity-50 hover:opacity-100 transition duration-300" data-aos="fade-up" data-aos-delay="300">
+                        <img src="../assets/icon/about_logo3.svg" alt="Sentinal Consulting" class="h-auto w-auto">
+                    </div>
+                    <div class="flex flex-col items-center opacity-50 hover:opacity-100 transition duration-300" data-aos="fade-up" data-aos-delay="400">
+                        <img src="../assets/icon/about_logo4.svg" alt="Happy Home" class="h-auto w-auto">
+                    </div>
+                    <div class="flex flex-col items-center opacity-50 hover:opacity-100 transition duration-300" data-aos="fade-up" data-aos-delay="500">
+                        <img src="../assets/icon/about_logo5.svg" alt="Sunset Realty" class="h-auto w-auto">
+                    </div>
+                    <div class="flex flex-col items-center opacity-50 hover:opacity-100 transition duration-300" data-aos="fade-up" data-aos-delay="600">
+                        <img src="../assets/icon/about_logo6.svg" alt="Ultimate Gym" class="h-auto w-auto">
+                    </div>
+                    <div class="flex flex-col items-center opacity-50 hover:opacity-100 transition duration-300" data-aos="fade-up" data-aos-delay="700">
+                        <img src="../assets/icon/about_logo7.svg" alt="InDepth Consulting" class="h-auto w-auto">
+                    </div>
+                    <div class="flex flex-col items-center opacity-50 hover:opacity-100 transition duration-300" data-aos="fade-up" data-aos-delay="800">
+                        <img src="../assets/icon/about_logo8.svg" alt="Higher Fit" class="h-auto w-auto">
+                    </div>
+                    <div class="flex flex-col items-center opacity-50 hover:opacity-100 transition duration-300" data-aos="fade-up" data-aos-delay="900">
+                        <img src="../assets/icon/about_logo9.svg" alt="Sentinal Consulting" class="h-auto w-auto">
+                    </div>
+                    <div class="flex flex-col items-center opacity-50 hover:opacity-100 transition duration-300" data-aos="fade-up" data-aos-delay="1000">
+                        <img src="../assets/icon/about_logo10.svg" alt="Happy Home" class="h-auto w-auto">
+                    </div>
+                    <div class="flex flex-col items-center opacity-50 hover:opacity-100 transition duration-300" data-aos="fade-up" data-aos-delay="1100">
+                        <img src="../assets/icon/about_logo11.svg" alt="Sunset Realty" class="h-auto w-auto">
+                    </div>
+                    <div class="flex flex-col items-center opacity-50 hover:opacity-100 transition duration-300" data-aos="fade-up" data-aos-delay="1200">
+                        <img src="../assets/icon/about_logo12.svg" alt="Sunset Realty" class="h-auto w-auto">
+                    </div>
+                </div>
+            </div>
+        </section>        
         <section>
-            
+            <div class="container max-w-[1230px] mx-auto py-12 px-4 sm:px-6 lg:px-8">
+                <div class="flex justify-between items-center mb-12">
+                    <div data-aos="fade-right">
+                        <h2 class="text-sm font-semibold text-gray-600 uppercase tracking-wide">Our Blog</h2>
+                        <h3 class="text-3xl font-bold text-gray-900">Latest posts</h3>
+                    </div>
+                    <a  href="#"
+                        class="bg-orange-500 text-white px-4 py-2 rounded text-sm font-medium hover:bg-orange-600 transition">
+                        Go to blog
+                    </a>
+                </div>
+                <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+                    <div class="bg-blue-50 p-6 rounded-lg shadow-sm hover:shadow-md transition" data-aos="fade-up">
+                        <span
+                            class="inline-block bg-blue-500 text-white text-xs font-medium px-3 py-1 rounded-full mb-4">Podcast</span>
+                        <img class="mb-8" src="../assets/img/about6.png" alt="">
+                        <p class="text-gray-500 text-sm mb-2">Marketing | September 4, 2020 | 36 min</p>
+                        <h4 class="text-lg font-semibold text-gray-900 mb-4">
+                            What is traffic arbitrage and does it really make money?
+                        </h4>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis...
+                        </p>
+                        <a href="#" class="text-orange-500 text-sm font-semibold hover:underline">Listen →</a>
+                    </div>
+                    <div class="bg-green-50 p-6 rounded-lg shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="200">
+                        <span
+                            class="inline-block bg-green-500 text-white text-xs font-medium px-3 py-1 rounded-full mb-4">Video</span>
+                        <img class="mb-8" src="../assets/img/about7.png" alt="">
+                        <p class="text-gray-500 text-sm mb-2">Management | August 25, 2020 | 45 min</p>
+                        <h4 class="text-lg font-semibold text-gray-900 mb-4">
+                            What to do and who to talk to if you want to get feedback on the product
+                        </h4>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Neque, a senectus consectetur dolor in aliquet nec eu. Ultrices ac...
+                        </p>
+                        <a href="#" class="text-orange-500 text-sm font-semibold hover:underline">Watch →</a>
+                    </div>
+                    <div class="bg-yellow-50 p-6 rounded-lg shadow-sm hover:shadow-md transition" data-aos="fade-up" data-aos-delay="400">
+                        <span
+                            class="inline-block bg-yellow-500 text-white text-xs font-medium px-3 py-1 rounded-full mb-4">Article</span>
+                        <img class="mb-8" src="../assets/img/about8.png" alt="">
+                        <p class="text-gray-500 text-sm mb-2">Design | August 8, 2020</p>
+                        <h4 class="text-lg font-semibold text-gray-900 mb-4">
+                            Should you choose a creative profession if you are attracted to creativity?
+                        </h4>
+                        <p class="text-gray-600 text-sm mb-4">
+                            Curabitur nisl tincidunt eros venenatis vestibulum ac placerat...
+                        </p>
+                        <a href="#" class="text-orange-500 text-sm font-semibold hover:underline">Read →</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="bg-[#f55d0541] mx-auto pt-24 pb-36 relative">
+            <div class="container max-w-[1900px] mx-auto">
+                <p class="font-bold text-base text-center" data-aos="fade-up">Don’t miss anything</p>
+                
+                <h2 class="font-black text-3xl text-center lg:text-5xl" data-aos="fade-up" data-aos-delay="100">
+                    Subscribe to the Createx School <br />
+                    announcements
+                </h2>
+                <div class="flex gap-x-4 justify-center mt-14" data-aos="fade-up" data-aos-delay="200">
+                    <input type="email" class="bg-white focus:outline-none focus:ring focus:ring-violet-300 rounded border-slate-200 bg-white border-2 py-3 px-4 w-auto" placeholder="Enter your email" />
+        
+                    <button class="hidden sm:block px-4 py-3 rounded hover:bg-red-500 bg-red-600 text-white font-bold truncate max-w-[160px] transition duration-300">
+                        Subscribe
+                    </button>
+                </div>
+                <img class="absolute bottom-0 left-0 z-[-1] lg:z-0" src="../assets/icon/for-us-position.svg" alt="" />
+                <img class="absolute bottom-0 right-0 z-[-1] lg:z-0" src="../assets/icon/for-us-position.svg" alt="" />
+            </div>
         </section>
     </main>
     <footer class="bg-[#1b1f24] text-white py-10">
@@ -186,12 +789,18 @@
                         theory. We provide relevant approaches to online learning.
                     </p>
                     <div class="flex gap-x-4 mt-4">
-                        <a href="htps://Facebook.com"><img src="../assets/icon/Facebook.svg" alt="Facebook" class="w-5 h-5"></a>
-                        <a href="htps://Twitter.com"><img src="../assets/icon/Twitter.svg" alt="Twitter" class="w-5 h-5"></a>
-                        <a href="htps://Youtube.com"><img src="../assets/icon/YouTube.svg" alt="YouTube" class="w-5 h-5"></a>
-                        <a href="htps://Telegram.com"><img src="../assets/icon/telegram.svg" alt="Telegram" class="w-5 h-5"></a>
-                        <a href="htps://Instagram.com"><img src="../assets/icon/Instagram.svg" alt="Instagram" class="w-5 h-5"></a>
-                        <a href="htps://Linkedin.com"><img src="../assets/icon/Linked-In.svg" alt="LinkedIn" class="w-5 h-5"></a>
+                        <a href="htps://Facebook.com"><img src="../assets/icon/Facebook.svg" alt="Facebook"
+                                class="w-5 h-5"></a>
+                        <a href="htps://Twitter.com"><img src="../assets/icon/Twitter.svg" alt="Twitter"
+                                class="w-5 h-5"></a>
+                        <a href="htps://Youtube.com"><img src="../assets/icon/YouTube.svg" alt="YouTube"
+                                class="w-5 h-5"></a>
+                        <a href="htps://Telegram.com"><img src="../assets/icon/telegram.svg" alt="Telegram"
+                                class="w-5 h-5"></a>
+                        <a href="htps://Instagram.com"><img src="../assets/icon/Instagram.svg" alt="Instagram"
+                                class="w-5 h-5"></a>
+                        <a href="htps://Linkedin.com"><img src="../assets/icon/Linked-In.svg" alt="LinkedIn"
+                                class="w-5 h-5"></a>
                     </div>
                 </div>
                 <div class="ml-4">
@@ -217,22 +826,19 @@
                 <div class="ml-4">
                     <h3 class="text-lg font-semibold mb-4">CONTACT US</h3>
                     <ul class="space-y-2 text-sm text-gray-400">
-                        <li>📞 <a href="tel:+1234567890" class="hover:text-red-500 transition">+1 (234) 567-89-00</a></li>
-                        <li>✉️ <a href="mailto:hello@createx.com" class="hover:text-red-500 transition">hello@createx.com</a></li>
+                        <li>📞 <a href="tel:+1234567890" class="hover:text-red-500 transition">+1 (234) 567-89-00</a>
+                        </li>
+                        <li>✉️ <a href="mailto:hello@createx.com"
+                                class="hover:text-red-500 transition">hello@createx.com</a></li>
                     </ul>
                 </div>
                 <div class="mr-10">
                     <h3 class="text-lg font-semibold mb-4">SIGN UP TO OUR NEWSLETTER</h3>
                     <form action="#" class="relative">
-                        <input
-                            type="email"
-                            placeholder="Email address"
-                            class="w-64 p-2 pr-12 rounded bg-gray-800 text-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500"
-                        />
-                        <button
-                            type="submit"
-                            class="absolute top-0 right-50 h-full px-4 bg-red-500 hover:bg-red-600 rounded-r text-white transition"
-                        >
+                        <input type="email" placeholder="Email address"
+                            class="w-64 p-2 pr-12 rounded bg-gray-800 text-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500" />
+                        <button type="submit"
+                            class="absolute top-0 right-50 h-full px-4 bg-red-500 hover:bg-red-600 rounded-r text-white transition">
                             &rarr;
                         </button>
                     </form>
@@ -241,14 +847,17 @@
                     </p>
                 </div>
             </div>
-            <div
-                class="mt-8 border-t border-gray-700 pt-4 flex justify-between items-center text-sm text-gray-500"
-            >
-                <p>© All  reserved. Made with ❤️ by  Studio</p>
+            <div class="mt-8 border-t border-gray-700 pt-4 flex justify-between items-center text-sm text-gray-500">
+                <p>© All reserved. Made with ❤️ by Studio</p>
                 <a href="#" class="hover:text-red-500 transition">GO TO TOP</a>
             </div>
         </div>
     </footer>
     <script src="../js/app.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
+
 </html>
