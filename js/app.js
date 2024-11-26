@@ -146,5 +146,3 @@ function toggleAccordion(id) {
 
 
 
-
-  
