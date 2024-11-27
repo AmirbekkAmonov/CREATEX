@@ -1,1435 +1,571 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Flow+Circular&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Pen+Script&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
-        rel="stylesheet">
-    <link rel="shortcut icon" href="../assets/img/logo.svg" type="image/x-icon">
-    <title>Createx</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css" rel="stylesheet">
+
+  <link
+    href="https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Flow+Circular&family=Krub:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500;1,600;1,700&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Nanum+Pen+Script&family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Quicksand:wght@300..700&family=Rubik:ital,wght@0,300..900;1,300..900&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap"
+    rel="stylesheet">
+  <link rel="shortcut icon" href="../assets/img/logo.svg" type="image/x-icon">
+  <title>Createx</title>
 </head>
-<body  class="max-w-[1920px] mx-auto font-['Lato', sans-serif]">
-    <header class="bg-[#f55d0541] text-white overflow-hidden">
-        <div class="container max-w-[1230px] mx-auto flex justify-between items-center px-2 py-5">
-            <div class="flex items-center gap-x-14">
-                <a href="../index.html"><img src="../assets/img/logo.svg" alt="Logo"></a>
-                <nav class="hidden lg:block">
-                    <ul class="flex space-x-9 font-bold text-[#424551]">
-                        <li><a href="./About_us.html" class="hover:text-[#31333b] transition duration-300">About Us</a></li>
-                        <li><a href="./Courses.html" class="hover:text-[#31333b] transition duration-300">Courses</a>
-                        </li>
-                        <li><a href="./Events_List_View.html"
-                                class="hover:text-[#31333b] transition duration-300">Events</a></li>
-                        <li><a href="./Blog.html" class="hover:text-[#31333b] transition duration-300">Blog</a></li>
-                        <li><a href="./contacts.html" class="hover:text-[#31333b] transition duration-300">Contacts</a></li>
-                    </ul>
-                </nav>
 
+<body class="max-w-auto mx-auto font-['Lato', sans-serif]">
+  <header class=" text-white overflow-hidden">
+    <div class="container max-w-[1230px] mx-auto flex justify-between items-center px-2 py-5">
+      <div class="flex items-center gap-x-14">
+        <a href="../index.html"><img src="../assets/img/logo.svg" alt="Logo"></a>
+        <nav class="hidden lg:block">
+          <ul class="flex space-x-9 font-bold text-[#424551]">
+            <li><a href="./About_us.html" class="hover:text-[#31333b] transition duration-300">About Us</a>
+            </li>
+            <li><a href="./Courses.html" class="hover:text-[#31333b] transition duration-300">Courses</a>
+            </li>
+            <li><a href="./Events_List_View.html" class="hover:text-[#31333b] transition duration-300">Events</a></li>
+            <li><a href="./Blog.html" class="hover:text-[#31333b] transition duration-300">Blog</a></li>
+            <li><a href="./contacts.html" class="hover:text-[#31333b] transition duration-300">Contacts</a>
+            </li>
+          </ul>
+        </nav>
+
+      </div>
+      <div class="flex items-center gap-x-2">
+        <button id="getConsultationBtn"
+          class="hidden sm:block px-4 py-3 rounded hover:bg-red-500 bg-red-600 text-white font-bold truncate max-w-[160px] transition duration-300">
+          Get consultation
+        </button>
+        <button id="loginRegisterBtn"
+          class="hidden sm:block flex items-center gap-x-2 px-4 py-3 rounded  bg-transparent hover:text-[#31333b] text-[#424551] font-bold truncate max-w-[160px] transition duration-300">
+          Log in / Register
+        </button>
+        <button id="menuToggle" class="lg:hidden px-3 py-2 text-[#424551] font-bold">
+          <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
+            class="w-6 h-6">
+            <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
+          </svg>
+        </button>
+      </div>
+    </div>
+    <div id="mobileMenu"
+      class="hidden lg:hidden fixed inset-0 bg-[#f55d05cc] flex flex-col items-center justify-center transform translate-x-full transition-transform duration-500 text-center">
+      <button id="closeMenu" class="absolute top-5 right-5 text-white text-3xl font-bold">&times;</button>
+      <ul class="space-y-4 font-bold text-white text-lg">
+        <li><a href="./About_us.html" class="hover:text-[#31333b] transition duration-300">About Us</a></li>
+        <li><a href="./Courses.html" class="hover:text-[#31333b] transition duration-300">Courses</a></li>
+        <li><a href="./Events_List_View.html" class="hover:text-[#31333b] transition duration-300">Events</a>
+        </li>
+        <li><a href="./Blog.html" class="hover:text-[#31333b] transition duration-300">Blog</a></li>
+        <li><a href="./contacts.html" class="hover:text-[#31333b] transition duration-300">Contacts</a></li>
+      </ul>
+      <div class="mt-6 flex flex-col gap-y-4 sm:hidden">
+        <button id="mobileGetConsultationBtn" class="px-4 py-3 rounded bg-red-600 text-white font-bold">Get
+          consultation</button>
+        <button id="mobileLoginRegisterBtn"
+          class="flex items-center gap-x-2 px-4 py-3 rounded bg-white text-[#424551] font-bold">
+          <img src="../assets/icon/Profile.svg" alt="">Log in / Register
+        </button>
+      </div>
+    </div>
+    <div id="consultationModal"
+      class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50 text-black">
+      <div class="mx-auto mt-16 bg-white rounded-lg p-8 w-[400px] transition relative duration-300">
+        <button id="closeModal" class="absolute top-2 right-4 text-xl text-gray-600 w-8 h-8">&times;</button>
+        <h2 class="text-2xl font-semibold mb-4 text-center">Sign in</h2>
+        <p class="mb-6 font-medium">Sign in to your account using email and password provided during
+          registration.</p>
+        <form class="authForm" data-form="signin">
+          <div class="mb-4">
+            <label for="email" class="block text-sm font-medium">Email</label>
+            <input type="email" id="email" name="email"
+              class="w-full p-2 border rounded focus:border-blue-500 focus:outline-none"
+              placeholder="Your working email" required />
+          </div>
+          <div class="mb-4">
+            <label for="password" class="block text-sm font-medium ">Password</label>
+            <input type="password" id="password" name="password"
+              class="w-full p-2 border rounded focus:border-blue-500 focus:outline-none" placeholder="********"
+              required />
+          </div>
+          <div class="flex justify-between items-center mb-4">
+            <label class="flex items-center">
+              <input type="checkbox" name="remember" /> <span class="ml-2 text-sm">Keep me signed
+                in</span>
+            </label>
+            <a href="#" class="text-sm text-blue-500">Forgot password?</a>
+          </div>
+          <button type="submit"
+            class="w-full bg-red-600 hover:bg-red-700 transition duration-300 text-white py-2 rounded-lg font-semibold authButton">Sign
+            In</button>
+          <div class="text-center mt-4">
+            <span>Don't have an account? <a href="#" id="switchToSignUp" class="text-blue-500 cursor-pointer">Sign
+                up</a></span>
+          </div>
+          <div class="mt-6 text-center">
+            <span class="text-sm">Or sign in with</span>
+            <div class="flex justify-center gap-x-4 mt-2">
+              <a href="https://Facebook.com"><img src="../assets/icon/Facebook.svg" alt="Facebook"></a>
+              <a href="https://Google.com"><img src="../assets/icon/Google.svg" alt="Google"></a>
+              <a href="https://Linked-In.com"><img src="../assets/icon/Linked-In.svg" alt="Linked-In"></a>
             </div>
-            <div class="flex items-center gap-x-2">
-                <button id="getConsultationBtn"
-                    class="hidden sm:block px-4 py-3 rounded hover:bg-red-500 bg-red-600 text-white font-bold truncate max-w-[160px] transition duration-300">
-                    Get consultation
-                </button>
-                <button id="loginRegisterBtn"
-                    class="hidden sm:block flex items-center gap-x-2 px-4 py-3 rounded  bg-transparent hover:text-[#31333b] text-[#424551] font-bold truncate max-w-[160px] transition duration-300">
-                    Log in / Register
-                </button>
-                <button id="menuToggle" class="lg:hidden px-3 py-2 text-[#424551] font-bold">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2"
-                        stroke="currentColor" class="w-6 h-6">
-                        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16m-7 6h7" />
-                    </svg>
-                </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    <div id="loginRegisterModal"
+      class="fixed mt-16 inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50 text-black">
+      <div class="bg-white mx-auto relative rounded-lg p-8 w-[400px]   ">
+        <button id="closeModal" class="absolute top-2 right-4 text-xl text-gray-600 w-8 h-8">&times;</button>
+        <h2 class="text-2xl font-semibold mb-4 modalTitle">Sign up</h2>
+        <p class="mb-6 text-sm text-gray-500">Registration takes less than a minute but gives you full control
+          over your studying.</p>
+        <form class="authForm" data-form="signup">
+          <div class="mb-4">
+            <label for="fullName" class="block text-sm font-medium">Full Name</label>
+            <input type="text" id="fullName" name="fullName"
+              class="w-full p-2 border rounded focus:border-blue-500 focus:outline-none" placeholder="Your full name"
+              required />
+          </div>
+          <div class="mb-4">
+            <label for="email" class="block text-sm font-medium">Email</label>
+            <input type="email" id="email" name="email"
+              class="w-full p-2 border rounded focus:border-blue-500 focus:outline-none"
+              placeholder="Your working email" required />
+          </div>
+          <div class="mb-4">
+            <label for="password" class="block text-sm font-medium">Password</label>
+            <input type="password" id="password" name="password"
+              class="w-full p-2 border rounded focus:border-blue-500 focus:outline-none" placeholder="********"
+              required />
+          </div>
+          <div class="mb-4">
+            <label for="confirmPassword" class="block text-sm font-medium">Confirm Password</label>
+            <input type="password" id="confirmPassword" name="confirmPassword"
+              class="w-full p-2 border rounded focus:border-blue-500 focus:outline-none" placeholder="********"
+              required />
+          </div>
+          <div class="flex items-center mb-4">
+            <input type="checkbox" id="rememberMe" name="rememberMe" class="mr-2" />
+            <label for="rememberMe" class="text-sm">Remember me</label>
+          </div>
+          <button type="submit"
+            class="w-full bg-red-600 hover:bg-red-700 transition duration-300 text-white py-2 rounded-lg font-semibold authButton">Sign
+            up</button>
+          <div class="text-center mt-4">
+            <span class="text-sm">Already have an account? <a href="#" id="switchToSignIn"
+                class="text-blue-500 cursor-pointer">Sign in</a></span>
+          </div>
+          <div class="mt-6 text-center">
+            <span class="text-sm">Or sign in with</span>
+            <div class="flex justify-center gap-x-4 mt-2">
+              <a href="https://Facebook.com"><img src="../assets/icon/Facebook.svg" alt="Facebook"></a>
+              <a href="https://Google.com"><img src="../assets/icon/Google.svg" alt="Google"></a>
+              <a href="https://Linked-In.com"><img src="../assets/icon/Linked-In.svg" alt="Linked-In"></a>
             </div>
-        </div>
-        <div id="mobileMenu"
-            class="hidden lg:hidden fixed inset-0 bg-[#f55d05cc] flex flex-col items-center justify-center transform translate-x-full transition-transform duration-500 text-center">
-            <button id="closeMenu" class="absolute top-5 right-5 text-white text-3xl font-bold">&times;</button>
-            <ul class="space-y-4 font-bold text-white text-lg">
-                <li><a href="./About_us.html" class="hover:text-[#31333b] transition duration-300">About Us</a></li>
-                <li><a href="./Courses.html" class="hover:text-[#31333b] transition duration-300">Courses</a></li>
-                <li><a href="./Events_List_View.html" class="hover:text-[#31333b] transition duration-300">Events</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+  </header>
+
+  <main>
+    <section class="p-12">
+      <div class="container max-w-[1230px] mx-auto p-4">
+        <div class="lg:grid lg:grid-cols-4 gap-8">
+          <div class="lg:col-span-3" data-aos="fade-up" data-aos-duration="1200">
+            <div class="flex items-center space-x-2" data-aos="fade-up" data-aos-duration="1400">
+              <div class="flex items-center space-x-2 mb-4 border-r-2 border-gray-300 pr-4 ">
+                <img class="w-4 h-4 cursor-pointer" src="../assets/icon/single_icon1.svg" alt="">
+                <p>Article</p>
+              </div>
+              <h3 class="text-lg font-bold text-red-400 mb-4" data-aos="fade-up" data-aos-duration="1600">HR & Recruting</h3>
+            </div>
+            <h1 class="text-5xl font-bold text-gray-800 mb-6" data-aos="fade-up" data-aos-duration="1800">
+              HR statistics: job search, interviews, hiring and recruiting
+            </h1>
+
+            <div class="flex items-center justify-between text-sm text-gray-500 space-x-8 mb-10"  >
+              <div class="flex items-center space-x-8">
+                <div class="flex items-center space-x-2">
+                  <img class="w-4 h-4 cursor-pointer" src="../assets/icon/single_Calendar.svg" alt="">
+                  <span>August 3, 2020</span>
+                </div>
+                <div class="flex items-center space-x-2">
+                  <img class="w-4 h-4 cursor-pointer" src="../assets/icon/single_Clock.svg" alt="">
+                  <span>6 min read</span>
+                </div>
+              </div>
+              <div class="flex items-center space-x-2">
+                <span>Share:</span>
+                <div class="flex space-x-2">
+                  <a href="#" class="text-gray-400 hover:text-gray-600">
+                    <img src="../assets/icon/single_Facebook.svg" alt="">
+                  </a>
+                  <a href="#" class="text-gray-400 hover:text-gray-600">
+                    <img src="../assets/icon/single_Twitter.svg" alt="">
+                  </a>
+                  <a href="#" class="text-gray-400 hover:text-gray-600">
+                    <img src="../assets/icon/single_Linked-In.svg" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+            <img src="../assets/img/blog2.png" alt="Keyboard and Glasses" class="w-full h-auto rounded-lg mb-6"data-aos="fade-up" data-aos-duration="2000"  />
+            <p class="text-gray-700 text-xl font-bold leading-relaxed mb-6" data-aos="fade-up" data-aos-duration="2200">
+              Vulputate vulputate pellentesque scelerisque luctus consequat mattis pellentesque dui
+              odio. Integer enim ac non consectetur arcu. Curabitur venenatis dui in orci dapibus, ac
+              malesuada nisl fringilla. Nulla vestibulum sapien ac elit interdum, ac pharetra nisl
+              lacinia.
+            </p>
+            <p class="mb-10" data-aos="fade-up" data-aos-duration="2400">
+              At facilisi sapien posuere eget nunc senectus proin nullam. Tortor senectus in et sagittis, vitae diam
+              cras dignissim. Varius adipiscing eget diam nisi. Orci, consectetur vulputate metus ornare pharetra,
+              neque, fermentum. Vel nec rhoncus, non nunc, neque in massa. Feugiat leo nam nisl lacinia amet, odio. Mi
+              varius viverra risus vel.
+            </p>
+            <p class="mb-10" >
+              Amet, morbi sed pharetra, elit eget mi potenti. Condimentum orci interdum feugiat lectus libero duis. Nisl
+              massa, elementum varius sit. Nunc felis, porttitor aliquam urna, accumsan et sed. Aliquet non sed duis
+              diam vehicula rhoncus. In dictum nullam tincidunt semper pellentesque purus morbi sed. Ut aliquet velit
+              pharetra, nisi nunc, non.
+            </p>
+            <div class="flex items-start space-x-4 mb-10" data-aos="fade-up" data-aos-duration="2600">
+              <img src="../assets/icon/braces.svg" alt="">
+              <p class="text-xl font-bold text-gray-800">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo,
+                amet lectus quam viverra mus lobortis
+                fermentum amet, eu. Pulvinar eu sed purus facilisi. Vitae id turpis tempus ornare turpis quis non.
+                Congue tortor in tot euismod vulputate etiam eros. Vel accumsan at elit neque, ipsum.</p>
+            </div>
+            <p class="mb-8" data-aos="fade-up" data-aos-duration="2800">Mauris amet arcu nisl vel dictum tellus. Sed rhoncus, ut sed id ut erat mattis. Vitae mus
+              blandit in
+              neque amet non fringilla blandit:</p>
+            <div class="mb-10" data-aos="fade-up" data-aos-duration="3000">
+              <div class="flex items-center space-x-2 mb-2">
+                <img class="w-4.5 h-4.5" src="../assets/icon/check.svg" alt="">
+                <a href="#">A fermentum in morbi pretium aliquam adipiscing donec tempus.</a>
+              </div>
+              <div class="flex items-center space-x-2 mb-2">
+                <img class="w-4.5 h-4.5" src="../assets/icon/check.svg" alt="">
+                <a href="#">Vulputate placerat amet pulvinar lorem nisl.</a>
+              </div>
+              <div class="flex items-center space-x-2 mb-2">
+                <img class="w-4.5 h-4.5" src="../assets/icon/check.svg" alt="">
+                <a href="#">Consequat feugiat habitant gravida quisque elit bibendum id adipiscing sed.</a>
+              </div>
+              <div class="flex items-center space-x-2 mb-2">
+                <img class="w-4.5 h-4.5" src="../assets/icon/check.svg" alt="">
+                <a href="#">Etiam duis lobortis in fames ultrices commodo nibh.</a>
+              </div>
+            </div>
+            <p class="mb-10" data-aos="fade-up" data-aos-duration="3200">Enim, vel massa odio diam. Blandit massa gravida feugiat elementum id nec sed leo. Nisi in
+              ornare lectus
+              eget. Urna, risus, consectetur volutpat lorem purus. Velit aliquet nibh vitae maecenas. Consectetur neque
+              ut aliquam eros, purus enim dignissim aenean vitae. Ultrices fames augue mattis tortor est justo, pharetra
+              nibh risus. Facilisi at porttitor volutpat natoque proin amet, nulla. Vivamus ut lobortis sagittis
+              curabitur tellus convallis eget netus vitae.</p>
+            <div class="flex items-center flex-wrap justify-between space-x-4 mb-16">
+              <div class="flex items-center flex-wrap space-x-4" data-aos="fade-up" data-aos-duration="3400">
+                <span class="text-lg font-bold text-gray-800">Tags:</span>
+                <a href="#" class="bg-red-100 text-red-600 text-sm px-3 py-1 rounded-lg">
+                  #learning
+                </a>
+                <a href="#" class="bg-blue-100 text-blue-600 text-sm px-3 py-1 rounded-lg">
+                  #HR
+                </a>
+                <a href="#" class="bg-green-100 text-green-600 text-sm px-3 py-1 rounded-lg">
+                  #self-development
+                </a>
+              </div>
+              <div class="flex items-center space-x-2">
+                <span>Share:</span>
+                <div class="flex space-x-2">
+                  <a href="#" class="text-gray-400 hover:text-gray-600">
+                    <img src="../assets/icon/single_Facebook.svg" alt="">
+                  </a>
+                  <a href="#" class="text-gray-400 hover:text-gray-600">
+                    <img src="../assets/icon/single_Twitter.svg" alt="">
+                  </a>
+                  <a href="#" class="text-gray-400 hover:text-gray-600">
+                    <img src="../assets/icon/single_Linked-In.svg" alt="">
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="lg:col-span-1" data-aos="fade-up" data-aos-duration="1200">
+            <!-- Search Input -->
+            <input type="text" placeholder="Search blog..." class="w-full p-2 border rounded focus:border-blue-500 focus:outline-none mb-16" data-aos="fade-up" data-aos-duration="1300">
+            
+            <!-- Author Section -->
+            <div class="bg-white shadow-md rounded-lg p-6 mb-6" data-aos="fade-up" data-aos-duration="1400">
+              <h3 class="text-lg font-bold text-gray-800 mb-4">Author</h3>
+              <div class="flex items-center space-x-4">
+                <img class="w-20 h-20 rounded-lg" src="../assets/img/single1.svg" alt="Author Avatar" />
+                <div>
+                  <p class="font-semibold text-gray-800">Kristin Watson</p>
+                  <p class="text-sm text-gray-500">Curator of Marketing</p>
+                  <div class="flex space-x-2 mt-4">
+                    <a href="#"><img class="w-4 h-4" src="../assets/icon/single_Facebook.svg" alt=""></a>
+                    <a href="#"><img class="w-4 h-4" src="../assets/icon/single_Twitter.svg" alt=""></a>
+                    <a href="#"><img class="w-4 h-4" src="../assets/icon/single_Linked-In.svg" alt=""></a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          
+            <!-- Trending Articles Section -->
+            <div class="bg-white shadow-md rounded-lg p-6 mb-16" data-aos="fade-up" data-aos-duration="1500">
+              <h3 class="text-lg font-bold text-gray-800 mb-4">Trending Articles</h3>
+              <ul class="space-y-4">
+                <li>
+                  <a href="#" class="flex items-center space-x-4 hover:text-gray-700">
+                    <img class="w-16 h-16 rounded-lg" src="../assets/img/about6.png" alt="Article Thumbnail" />
+                    <div class="flex flex-col space-y-2">
+                      <div class="flex items-center space-x-2">
+                        <img src="../assets/icon/single_Calendar.svg" alt="">
+                        <p class="text-sm text-gray-500">September 4, 2020</p>
+                      </div>
+                      <span class="text-sm hover:text-red-700 transition duration-300">What is traffic arbitrage make money?</span>
+                    </div>
+                  </a>
                 </li>
-                <li><a href="./Blog.html" class="hover:text-[#31333b] transition duration-300">Blog</a></li>
-                <li><a href="./contacts.html" class="hover:text-[#31333b] transition duration-300">Contacts</a></li>
-            </ul>
-            <div class="mt-6 flex flex-col gap-y-4 sm:hidden">
-                <button id="mobileGetConsultationBtn" class="px-4 py-3 rounded bg-red-600 text-white font-bold">Get
-                    consultation</button>
-                <button id="mobileLoginRegisterBtn"
-                    class="flex items-center gap-x-2 px-4 py-3 rounded bg-white text-[#424551] font-bold">
-                    <img src="../assets/icon/Profile.svg" alt="">Log in / Register
-                </button>
-            </div>
-        </div>
-        <div id="consultationModal"
-            class="fixed inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-250 text-black">
-            <div class="mx-auto mt-16 bg-white rounded-lg p-8 w-[400px] transition relative duration-300">
-                <button id="closeModal" class="absolute top-2 right-4 text-xl text-gray-600 w-8 h-8">&times;</button>
-                <h2 class="text-2xl font-semibold mb-4 text-center">Sign in</h2>
-                <p class="mb-6 font-medium">Sign in to your account using email and password provided during
-                    registration.</p>
-                <form class="authForm" data-form="signin">
-                    <div class="mb-4">
-                        <label for="email" class="block text-sm font-medium">Email</label>
-                        <input type="email" id="email" name="email"
-                            class="w-full p-2 border rounded focus:border-blue-500 focus:outline-none"
-                            placeholder="Your working email" required />
+                <li>
+                  <a href="#" class="flex items-center space-x-4 hover:text-gray-700">
+                    <img class="w-16 h-16 rounded-lg" src="../assets/img/about7.png" alt="Article Thumbnail" />
+                    <div class="flex flex-col space-y-2">
+                      <div class="flex items-center space-x-2">
+                        <img src="../assets/icon/single_Calendar.svg" alt="">
+                        <p class="text-sm text-gray-500">July 15, 2020</p>
+                      </div>
+                      <span class="text-sm hover:text-red-700 transition duration-300">Startup: how to build longer than a year</span>
                     </div>
-                    <div class="mb-4">
-                        <label for="password" class="block text-sm font-medium ">Password</label>
-                        <input type="password" id="password" name="password"
-                            class="w-full p-2 border rounded focus:border-blue-500 focus:outline-none"
-                            placeholder="********" required />
+                  </a>
+                </li>
+                <li>
+                  <a href="#" class="flex items-center space-x-4 hover:text-gray-700">
+                    <img class="w-16 h-16 rounded-lg" src="../assets/img/about8.png" alt="Article Thumbnail" />
+                    <div class="flex flex-col space-y-2">
+                      <div class="flex items-center space-x-2">
+                        <img src="../assets/icon/single_Calendar.svg" alt="">
+                        <p class="text-sm text-gray-500">August 2, 2020</p>
+                      </div>
+                      <span class="text-sm hover:text-red-700 transition duration-300">What to do if you want to the product</span>
                     </div>
-                    <div class="flex justify-between items-center mb-4">
-                        <label class="flex items-center">
-                            <input type="checkbox" name="remember" /> <span class="ml-2 text-sm">Keep me signed
-                                in</span>
-                        </label>
-                        <a href="#" class="text-sm text-blue-500">Forgot password?</a>
-                    </div>
-                    <button type="submit"
-                        class="w-full bg-red-600 hover:bg-red-700 transition duration-300 text-white py-2 rounded-lg font-semibold authButton">Sign
-                        In</button>
-                    <div class="text-center mt-4">
-                        <span>Don't have an account? <a href="#" id="switchToSignUp"
-                                class="text-blue-500 cursor-pointer">Sign up</a></span>
-                    </div>
-                    <div class="mt-6 text-center">
-                        <span class="text-sm">Or sign in with</span>
-                        <div class="flex justify-center gap-x-4 mt-2">
-                            <a href="https://Facebook.com"><img src="../assets/icon/Facebook.svg" alt="Facebook"></a>
-                            <a href="https://Google.com"><img src="../assets/icon/Google.svg" alt="Google"></a>
-                            <a href="https://Linked-In.com"><img src="../assets/icon/Linked-In.svg" alt="Linked-In"></a>
-                        </div>
-                    </div>
-                </form>
+                  </a>
+                </li>
+              </ul>
             </div>
-        </div>
-        <div id="loginRegisterModal"
-            class="fixed  inset-0 bg-black bg-opacity-50 hidden justify-center items-center z-50 text-black">
-            <div class="bg-white mx-auto relative rounded-lg p-8 w-[400px]  ">
-                <button id="closeModal" class="absolute top-2 right-4 text-xl text-gray-600 w-8 h-8">&times;</button>
-                <h2 class="text-2xl font-semibold mb-4 modalTitle">Sign up</h2>
-                <p class="mb-6 text-sm text-gray-500">Registration takes less than a minute but gives you full control
-                    over your studying.</p>
-                <form class="authForm" data-form="signup">
-                    <div class="mb-4">
-                        <label for="fullName" class="block text-sm font-medium">Full Name</label>
-                        <input type="text" id="fullName" name="fullName"
-                            class="w-full p-2 border rounded focus:border-blue-500 focus:outline-none"
-                            placeholder="Your full name" required />
-                    </div>
-                    <div class="mb-4">
-                        <label for="email" class="block text-sm font-medium">Email</label>
-                        <input type="email" id="email" name="email"
-                            class="w-full p-2 border rounded focus:border-blue-500 focus:outline-none"
-                            placeholder="Your working email" required />
-                    </div>
-                    <div class="mb-4">
-                        <label for="password" class="block text-sm font-medium">Password</label>
-                        <input type="password" id="password" name="password"
-                            class="w-full p-2 border rounded focus:border-blue-500 focus:outline-none"
-                            placeholder="********" required />
-                    </div>
-                    <div class="mb-4">
-                        <label for="confirmPassword" class="block text-sm font-medium">Confirm Password</label>
-                        <input type="password" id="confirmPassword" name="confirmPassword"
-                            class="w-full p-2 border rounded focus:border-blue-500 focus:outline-none"
-                            placeholder="********" required />
-                    </div>
-                    <div class="flex items-center mb-4">
-                        <input type="checkbox" id="rememberMe" name="rememberMe" class="mr-2" />
-                        <label for="rememberMe" class="text-sm">Remember me</label>
-                    </div>
-                    <button type="submit"
-                        class="w-full bg-red-600 hover:bg-red-700 transition duration-300 text-white py-2 rounded-lg font-semibold authButton">Sign
-                        up</button>
-                    <div class="text-center mt-4">
-                        <span class="text-sm">Already have an account? <a href="#" id="switchToSignIn"
-                                class="text-blue-500 cursor-pointer">Sign in</a></span>
-                    </div>
-                    <div class="mt-6 text-center">
-                        <span class="text-sm">Or sign in with</span>
-                        <div class="flex justify-center gap-x-4 mt-2">
-                            <a href="https://Facebook.com"><img src="../assets/icon/Facebook.svg" alt="Facebook"></a>
-                            <a href="https://Google.com"><img src="../assets/icon/Google.svg" alt="Google"></a>
-                            <a href="https://Linked-In.com"><img src="../assets/icon/Linked-In.svg" alt="Linked-In"></a>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-
-
-    </header>
-
-
-    <div class="bg-white h-[3807px] relative overflow-hidden">
-        <div class="bg-gray-900 w-[1920px] h-[396px] absolute left-0 top-[3411px]">
-          <div
-            class="bg-white w-[100%] h-[58px] absolute right-[0%] left-[0%] bottom-0"
-            style="opacity: 0.05"
-          ></div>
-          <div
-            class="text-white text-left font-small-bold-font-family text-small-bold-font-size leading-small-bold-line-height font-small-bold-font-weight absolute right-[345px] bottom-[19px] flex items-center justify-start"
-            style="opacity: 0.6"
-          >
-            GO TO TOP
-          </div>
-          <div
-            class="flex flex-row gap-0.5 items-start justify-start absolute left-[345px] bottom-5 overflow-hidden"
-          >
-            <div
-              class="text-white text-left font-extrasmall-regular-font-family text-extrasmall-regular-font-size leading-extrasmall-regular-line-height font-extrasmall-regular-font-weight relative flex items-center justify-start"
-            >
-              © All rights reserved.
-            </div>
-            <div
-              class="flex flex-row gap-1 items-center justify-start shrink-0 relative overflow-hidden"
-            >
-              <div
-                class="text-white text-left font-extrasmall-regular-font-family text-extrasmall-regular-font-size leading-extrasmall-regular-line-height font-extrasmall-regular-font-weight relative flex items-center justify-start"
-              >
-                Made with
-              </div>
-              <img
-                class="shrink-0 w-4 h-4 relative overflow-visible"
-                src="heart0.svg"
-              />
-              <div
-                class="text-white text-left font-extrasmall-regular-font-family text-extrasmall-regular-font-size leading-extrasmall-regular-line-height font-extrasmall-regular-font-weight relative flex items-center justify-start"
-              >
-                by Createx Studio
+          
+            <!-- Tags Section -->
+            <div class="flex flex-col items-start bg-white shadow-md rounded-lg p-6" data-aos="fade-up" data-aos-duration="1600">
+              <h3 class="text-lg font-bold text-gray-800 mb-4">Tags</h3>
+              <div class="flex items-start flex-wrap space-y-2 space-x-4">
+                <a href="#" class="bg-red-100 text-red-600 text-sm px-3 py-1 rounded-lg">#marketing</a>
+                <a href="#" class="bg-blue-100 text-blue-600 text-sm px-3 py-1 rounded-lg">#recruiting</a>
+                <a href="#" class="bg-green-100 text-green-600 text-sm px-3 py-1 rounded-lg">#coding</a>
+                <a href="#" class="bg-yellow-100 text-yellow-600 text-sm px-3 py-1 rounded-lg">#learning</a>
+                <a href="#" class="bg-pink-100 text-pink-600 text-sm px-3 py-1 rounded-lg">#HR</a>
+                <a href="#" class="bg-orange-100 text-orange-600 text-sm px-3 py-1 rounded-lg">#self-development</a>
               </div>
             </div>
           </div>
-          <div
-            class="text-white text-left font-extraextrasmall-regular-font-family text-extraextrasmall-regular-font-size leading-extraextrasmall-regular-line-height font-extraextrasmall-regular-font-weight absolute left-[1289px] top-44 w-[286px] flex items-center justify-start"
-          >
-            *Subscribe to our newsletter to receive communications and early updates
-            from Createx SEO Agency.
-          </div>
-          <div
-            class="bg-[rgba(255,255,255,0.12)] rounded border-solid border-[rgba(255,255,255,0.20)] border w-[286px] h-9 absolute left-[1289px] top-32 overflow-hidden"
-          >
-            <div
-              class="text-white text-left font-extrasmall-regular-font-family text-extrasmall-regular-font-size leading-extrasmall-regular-line-height font-extrasmall-regular-font-weight absolute left-3 top-[9px]"
-              style="opacity: 0.6"
-            >
-              Email address
-            </div>
-            <img
-              class="w-4 h-4 absolute right-3 top-2.5 overflow-visible"
-              src="right0.svg"
-            />
-          </div>
-          <div
-            class="text-white text-left font-h6-font-family text-h6-font-size leading-h6-line-height font-h6-font-weight uppercase absolute left-[1289px] top-20 flex items-center justify-start"
-            style="letter-spacing: var(--h6-letter-spacing, 1px)"
-          >
-            SIGN UP TO OUR NEWSLETTER
-          </div>
-          <div class="w-[157px] h-[60px] static">
-            <div
-              class="flex flex-row gap-2 items-center justify-start absolute left-[1052px] top-[150px]"
-              style="opacity: 0.6"
-            >
-              <img
-                class="shrink-0 w-4 h-4 relative overflow-visible"
-                src="mail0.svg"
-              />
-              <div
-                class="text-white text-left font-base-regular-font-family text-base-regular-font-size leading-base-regular-line-height font-base-regular-font-weight relative"
-              >
-                hello@createx.com
-              </div>
-            </div>
-            <div
-              class="flex flex-row gap-2 items-center justify-start absolute left-[1052px] top-[116px]"
-              style="opacity: 0.6"
-            >
-              <img
-                class="shrink-0 w-4 h-4 relative overflow-visible"
-                src="i-phone0.svg"
-              />
-              <div
-                class="text-white text-left font-base-regular-font-family text-base-regular-font-size leading-base-regular-line-height font-base-regular-font-weight relative"
-              >
-                (405) 555-0128
-              </div>
-            </div>
-          </div>
-          <div
-            class="text-white text-left font-h6-font-family text-h6-font-size leading-h6-line-height font-h6-font-weight uppercase absolute left-[1052px] top-20 flex items-center justify-start"
-            style="letter-spacing: var(--h6-letter-spacing, 1px)"
-          >
-            CONTACT US
-          </div>
-          <div
-            class="flex flex-col gap-2 items-start justify-start absolute left-[863px] top-[116px]"
-            style="opacity: 0.6"
-          >
-            <div
-              class="text-white text-left font-base-regular-font-family text-base-regular-font-size leading-base-regular-line-height font-base-regular-font-weight relative flex items-end justify-start"
-            >
-              Marketing
-            </div>
-            <div
-              class="text-white text-left font-base-regular-font-family text-base-regular-font-size leading-base-regular-line-height font-base-regular-font-weight relative flex items-end justify-start"
-            >
-              Management
-            </div>
-            <div
-              class="text-white text-left font-base-regular-font-family text-base-regular-font-size leading-base-regular-line-height font-base-regular-font-weight relative flex items-end justify-start"
-            >
-              HR &amp; Recruting
-            </div>
-            <div
-              class="text-white text-left font-base-regular-font-family text-base-regular-font-size leading-base-regular-line-height font-base-regular-font-weight relative flex items-end justify-start"
-            >
-              Design
-            </div>
-            <div
-              class="text-white text-left font-base-regular-font-family text-base-regular-font-size leading-base-regular-line-height font-base-regular-font-weight relative flex items-end justify-start"
-            >
-              Development
-            </div>
-          </div>
-          <div
-            class="text-white text-left font-h6-font-family text-h6-font-size leading-h6-line-height font-h6-font-weight uppercase absolute left-[863px] top-20 flex items-center justify-start"
-            style="letter-spacing: var(--h6-letter-spacing, 1px)"
-          >
-            COURSES
-          </div>
-          <div
-            class="flex flex-col gap-2 items-start justify-start absolute left-[704px] top-[116px]"
-            style="opacity: 0.6"
-          >
-            <div
-              class="text-white text-left font-base-regular-font-family text-base-regular-font-size leading-base-regular-line-height font-base-regular-font-weight relative flex items-center justify-start"
-            >
-              About Us
-            </div>
-            <div
-              class="text-white text-left font-base-regular-font-family text-base-regular-font-size leading-base-regular-line-height font-base-regular-font-weight relative flex items-center justify-start"
-            >
-              Courses
-            </div>
-            <div
-              class="text-white text-left font-base-regular-font-family text-base-regular-font-size leading-base-regular-line-height font-base-regular-font-weight relative flex items-center justify-start"
-            >
-              Events
-            </div>
-            <div
-              class="text-white text-left font-base-regular-font-family text-base-regular-font-size leading-base-regular-line-height font-base-regular-font-weight relative flex items-center justify-start"
-            >
-              Blog
-            </div>
-            <div
-              class="text-white text-left font-base-regular-font-family text-base-regular-font-size leading-base-regular-line-height font-base-regular-font-weight relative flex items-center justify-start"
-            >
-              Contacts
-            </div>
-          </div>
-          <div
-            class="text-white text-left font-h6-font-family text-h6-font-size leading-h6-line-height font-h6-font-weight uppercase absolute left-[704px] top-20 flex items-center justify-start"
-            style="letter-spacing: var(--h6-letter-spacing, 1px)"
-          >
-            SITE MAP
-          </div>
-          <div
-            class="flex flex-row gap-5 items-center justify-start absolute left-[345px] top-[254px]"
-          >
-            <img
-              class="shrink-0 w-6 h-6 relative overflow-visible"
-              style="opacity: 0.6"
-              src="facebook0.svg"
-            />
-            <img
-              class="shrink-0 w-6 h-6 relative overflow-visible"
-              style="opacity: 0.6"
-              src="twitter0.svg"
-            />
-            <img
-              class="shrink-0 w-6 h-6 relative overflow-visible"
-              style="opacity: 0.6"
-              src="you-tube0.svg"
-            />
-            <img
-              class="shrink-0 w-6 h-6 relative overflow-visible"
-              style="opacity: 0.6"
-              src="telegram0.svg"
-            />
-            <img
-              class="shrink-0 w-6 h-6 relative overflow-visible"
-              style="opacity: 0.6"
-              src="instagram0.svg"
-            />
-            <img
-              class="shrink-0 w-6 h-6 relative overflow-visible"
-              style="opacity: 0.6"
-              src="linked-in0.svg"
-            />
-          </div>
-          <div
-            class="text-white text-left font-extrasmall-regular-font-family text-extrasmall-regular-font-size leading-extrasmall-regular-line-height font-extrasmall-regular-font-weight absolute left-[345px] top-[126px] w-[279px]"
-            style="opacity: 0.6"
-          >
-            Createx Online School is a leader in online studying. We have lots
-            of courses and programs from the main market experts. We provide relevant
-            approaches to online learning, internships and employment in the largest
-            companies in the country.
-          </div>
-          <img
-            class="w-[130px] h-[22px] absolute left-[345px] top-20 overflow-visible"
-            src="logo0.svg"
-          />
-        </div>
-        <div
-          class="flex flex-row gap-10 items-center justify-start absolute left-[calc(50%_-_399px)] top-[3179px]"
-        >
-          <div
-            class="text-gray-900 text-left font-h3-font-family text-h3-font-size leading-h3-line-height font-h3-font-weight relative flex items-center justify-start"
-          >
-            Do you want more articles, podcasts and videos?
-          </div>
-          <div
-            class="rounded pr-10 pl-10 flex flex-col gap-2.5 items-center justify-start shrink-0 relative overflow-hidden"
-            style="
-              background: var(
-                --btn-gradient,
-                linear-gradient(
-                  55.95deg,
-                  rgba(255, 63, 58, 1) 0%,
-                  rgba(247, 94, 5, 1) 100%
-                )
-              );
-            "
-          >
-            <div
-              class="text-white text-center font-['Lato-Bold',_sans-serif] text-base leading-[52px] font-bold relative flex items-center justify-center"
-              style="letter-spacing: 0.5px"
-            >
-              Go to blog
-            </div>
-          </div>
-        </div>
-        <div
-          class="w-[20.31%] h-[13.32%] absolute right-[17.97%] left-[61.72%] bottom-[18.6%] top-[68.09%]"
-        >
-          <div
-            class="flex flex-row gap-2 items-center justify-start absolute left-0 bottom-0 overflow-hidden"
-          >
-            <div
-              class="text-gray-900 text-left font-base-bold-font-family text-base-bold-font-size leading-base-bold-line-height font-base-bold-font-weight relative"
-            >
-              Read
-            </div>
-            <img
-              class="shrink-0 w-6 h-6 relative overflow-visible"
-              src="right1.svg"
-            />
-          </div>
-          <div
-            class="flex flex-col gap-2 items-start justify-start absolute left-0 top-[316px]"
-          >
-            <div
-              class="flex flex-row gap-3 items-center justify-start shrink-0 relative overflow-hidden"
-            >
-              <div
-                class="text-gray-700 text-left font-small-bold-font-family text-small-bold-font-size leading-small-bold-line-height font-small-bold-font-weight relative flex items-center justify-start"
-              >
-                Design
-              </div>
-              <div
-                class="border-solid border-gray-700 border-t border-r-[0] border-b-[0] border-l-[0] shrink-0 w-3 h-0 relative"
-                style="
-                  margin-top: -1px;
-                  transform-origin: 0 0;
-                  transform: rotate(90deg) scale(1, 1);
-                "
-              ></div>
-              <div
-                class="flex flex-row gap-2 items-center justify-start shrink-0 relative overflow-hidden"
-              >
-                <img
-                  class="shrink-0 w-4 h-4 relative overflow-visible"
-                  src="calendar0.svg"
-                />
-                <div
-                  class="text-gray-700 text-left font-small-regular-font-family text-small-regular-font-size leading-small-regular-line-height font-small-regular-font-weight relative flex items-center justify-start"
-                >
-                  August 8, 2020
-                </div>
-              </div>
-            </div>
-            <div
-              class="text-gray-900 text-left font-lead-bold-font-family text-lead-bold-font-size leading-lead-bold-line-height font-lead-bold-font-weight relative w-[390px]"
-            >
-              Should you choose a creative profession if you are attracted to
-              creativity?
-            </div>
-            <div
-              class="text-gray-800 text-left font-base-regular-font-family text-base-regular-font-size leading-base-regular-line-height font-base-regular-font-weight relative w-[390px]"
-            >
-              Curabitur nisl tincidunt eros venenatis vestibulum ac placerat. Tortor,
-              viverra sed vulputate ultrices...
-            </div>
-          </div>
-          <img
-            class="rounded w-[100%] h-[59.17%] absolute right-[0%] left-[0%] bottom-[40.83%] top-[0%]"
-            style="object-fit: cover"
-            src="image0.png"
-          />
-          <div
-            class="bg-white rounded pt-px pr-2 pb-px pl-2 flex flex-row gap-2.5 items-start justify-start absolute left-3 top-3 overflow-hidden"
-          >
-            <div
-              class="flex flex-row gap-1 items-center justify-start shrink-0 relative"
-            >
-              <div class="shrink-0 w-4 h-4 relative overflow-hidden">
-                <img
-                  class="w-[70.83%] h-[89.58%] absolute right-[14.58%] left-[14.58%] bottom-[5.21%] top-[5.21%] overflow-visible"
-                  src="files1.svg"
-                />
-              </div>
-              <div
-                class="text-gray-800 text-left font-small-regular-font-family text-small-regular-font-size leading-small-regular-line-height font-small-regular-font-weight relative"
-              >
-                Article
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="w-[20.31%] h-[13.32%] absolute right-[39.84%] left-[39.84%] bottom-[18.6%] top-[68.09%]"
-        >
-          <div
-            class="flex flex-row gap-2 items-center justify-start absolute left-0 bottom-0 overflow-hidden"
-          >
-            <div
-              class="text-gray-900 text-left font-base-bold-font-family text-base-bold-font-size leading-base-bold-line-height font-base-bold-font-weight relative"
-            >
-              Read
-            </div>
-            <img
-              class="shrink-0 w-6 h-6 relative overflow-visible"
-              src="right2.svg"
-            />
-          </div>
-          <div
-            class="flex flex-col gap-2 items-start justify-start absolute left-0 top-[316px]"
-          >
-            <div
-              class="flex flex-row gap-3 items-center justify-start shrink-0 relative overflow-hidden"
-            >
-              <div
-                class="text-gray-700 text-left font-small-bold-font-family text-small-bold-font-size leading-small-bold-line-height font-small-bold-font-weight relative flex items-center justify-start"
-              >
-                Development
-              </div>
-              <div
-                class="border-solid border-gray-700 border-t border-r-[0] border-b-[0] border-l-[0] shrink-0 w-3 h-0 relative"
-                style="
-                  margin-top: -1px;
-                  transform-origin: 0 0;
-                  transform: rotate(90deg) scale(1, 1);
-                "
-              ></div>
-              <div
-                class="flex flex-row gap-2 items-center justify-start shrink-0 relative overflow-hidden"
-              >
-                <img
-                  class="shrink-0 w-4 h-4 relative overflow-visible"
-                  src="calendar1.svg"
-                />
-                <div
-                  class="text-gray-700 text-left font-small-regular-font-family text-small-regular-font-size leading-small-regular-line-height font-small-regular-font-weight relative flex items-center justify-start"
-                >
-                  September 1, 2020
-                </div>
-              </div>
-            </div>
-            <div
-              class="text-gray-900 text-left font-lead-bold-font-family text-lead-bold-font-size leading-lead-bold-line-height font-lead-bold-font-weight relative w-[390px]"
-            >
-              How to choose the first programming language for a beginner
-            </div>
-            <div
-              class="text-gray-800 text-left font-base-regular-font-family text-base-regular-font-size leading-base-regular-line-height font-base-regular-font-weight relative w-[390px]"
-            >
-              Turpis sed at magna laoreet gravida consequat tortor placerat. Gravida
-              vitae aliquet enim egestas dui...
-            </div>
-          </div>
-          <img
-            class="rounded w-[100%] h-[59.17%] absolute right-[0%] left-[0%] bottom-[40.83%] top-[0%]"
-            style="object-fit: cover"
-            src="image1.png"
-          />
-          <div
-            class="bg-white rounded pt-px pr-2 pb-px pl-2 flex flex-row gap-2.5 items-start justify-start absolute left-3 top-3 overflow-hidden"
-          >
-            <div
-              class="flex flex-row gap-1 items-center justify-start shrink-0 relative"
-            >
-              <div class="shrink-0 w-4 h-4 relative overflow-hidden">
-                <img
-                  class="w-[70.83%] h-[89.58%] absolute right-[14.58%] left-[14.58%] bottom-[5.21%] top-[5.21%] overflow-visible"
-                  src="files3.svg"
-                />
-              </div>
-              <div
-                class="text-gray-800 text-left font-small-regular-font-family text-small-regular-font-size leading-small-regular-line-height font-small-regular-font-weight relative"
-              >
-                Article
-              </div>
-            </div>
-          </div>
-        </div>
-        <div
-          class="w-[20.31%] h-[13.32%] absolute right-[61.72%] left-[17.97%] bottom-[18.6%] top-[68.09%]"
-        >
-          <div
-            class="flex flex-row gap-2 items-center justify-start absolute left-0 bottom-0 overflow-hidden"
-          >
-            <div
-              class="text-gray-900 text-left font-base-bold-font-family text-base-bold-font-size leading-base-bold-line-height font-base-bold-font-weight relative"
-            >
-              Listen
-            </div>
-            <img
-              class="shrink-0 w-6 h-6 relative overflow-visible"
-              src="right3.svg"
-            />
-          </div>
-          <div
-            class="flex flex-col gap-2 items-start justify-start absolute left-0 top-[316px]"
-          >
-            <div
-              class="flex flex-row gap-3 items-start justify-start shrink-0 relative overflow-hidden"
-            >
-              <div
-                class="text-gray-700 text-left font-small-bold-font-family text-small-bold-font-size leading-small-bold-line-height font-small-bold-font-weight relative flex items-center justify-start"
-              >
-                Design
-              </div>
-              <div
-                class="border-solid border-gray-700 border-t border-r-[0] border-b-[0] border-l-[0] shrink-0 w-3 h-0 relative"
-                style="
-                  margin-top: -1px;
-                  transform-origin: 0 0;
-                  transform: rotate(90deg) scale(1, 1);
-                "
-              ></div>
-              <div
-                class="flex flex-row gap-2 items-center justify-start shrink-0 relative overflow-hidden"
-              >
-                <img
-                  class="shrink-0 w-4 h-4 relative overflow-visible"
-                  src="calendar2.svg"
-                />
-                <div
-                  class="text-gray-700 text-left font-small-regular-font-family text-small-regular-font-size leading-small-regular-line-height font-small-regular-font-weight relative flex items-center justify-start"
-                >
-                  July 28, 2020
-                </div>
-              </div>
-              <div
-                class="border-solid border-gray-700 border-t border-r-[0] border-b-[0] border-l-[0] shrink-0 w-3 h-0 relative"
-                style="
-                  margin-top: -1px;
-                  transform-origin: 0 0;
-                  transform: rotate(90deg) scale(1, 1);
-                "
-              ></div>
-              <div
-                class="flex flex-row gap-2 items-center justify-start shrink-0 relative overflow-hidden"
-              >
-                <img
-                  class="shrink-0 w-4 h-4 relative overflow-visible"
-                  src="clock0.svg"
-                />
-                <div
-                  class="text-gray-700 text-left font-small-regular-font-family text-small-regular-font-size leading-small-regular-line-height font-small-regular-font-weight relative flex items-center justify-start"
-                >
-                  36 min
-                </div>
-              </div>
-            </div>
-            <div
-              class="text-gray-900 text-left font-lead-bold-font-family text-lead-bold-font-size leading-lead-bold-line-height font-lead-bold-font-weight relative w-[390px]"
-            >
-              What are color profiles and how they work in graphic design
-            </div>
-            <div
-              class="text-gray-800 text-left font-base-regular-font-family text-base-regular-font-size leading-base-regular-line-height font-base-regular-font-weight relative w-[390px]"
-            >
-              Aliquam vulputate hendrerit quam sollicitudin urna enim viverra gravida.
-              Consectetur urna arcu eleifend...
-            </div>
-          </div>
-          <img
-            class="rounded w-[100%] h-[59.17%] absolute right-[0%] left-[0%] bottom-[40.83%] top-[0%]"
-            style="object-fit: cover"
-            src="image2.png"
-          />
-          <div
-            class="bg-white rounded pt-px pr-2 pb-px pl-2 flex flex-row gap-2.5 items-start justify-start absolute left-3 top-3 overflow-hidden"
-          >
-            <div
-              class="flex flex-row gap-1 items-center justify-start shrink-0 relative"
-            >
-              <img
-                class="shrink-0 w-4 h-4 relative overflow-visible"
-                src="mic0.svg"
-              />
-              <div
-                class="text-gray-800 text-left font-small-regular-font-family text-small-regular-font-size leading-small-regular-line-height font-small-regular-font-weight relative"
-              >
-                Podcast
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="w-[72px] h-6 absolute left-[1503px] top-[2508px]">
-          <img
-            class="w-[33.33%] h-[100%] absolute right-[0%] left-[66.67%] bottom-[0%] top-[0%] overflow-visible"
-            src="next-btn-hover0.svg"
-          />
-          <img
-            class="w-[33.33%] h-[100%] absolute right-[66.67%] left-[0%] bottom-[0%] top-[0%] overflow-visible"
-            src="prev-btn0.svg"
-          />
-        </div>
-        <div
-          class="flex flex-col gap-2 items-start justify-start absolute left-[343px] top-[2440px] overflow-hidden"
-        >
-          <div
-            class="text-gray-900 text-left font-h6-font-family text-h6-font-size leading-h6-line-height font-h6-font-weight uppercase relative"
-            style="letter-spacing: var(--h6-letter-spacing, 1px)"
-          >
-            Our blog
-          </div>
-          <div
-            class="text-gray-900 text-left font-h1-font-family text-h1-font-size leading-h1-line-height font-h1-font-weight relative"
-          >
-            You may also like
-          </div>
-        </div>
-        <div class="bg-gray-200 w-[1920px] h-[454px] absolute left-0 top-[1866px]">
-          <div
-            class="w-[600px] h-[52px] absolute left-[calc(50%_-_-15px)] top-[232px]"
-          >
-            <div
-              class="flex flex-row gap-3 items-center justify-start absolute left-0 top-[76px] overflow-hidden"
-            >
-              <img
-                class="shrink-0 w-4 h-4 relative overflow-visible"
-                src="checkbox-checked0.svg"
-              />
-              <div
-                class="text-gray-800 text-left font-base-regular-font-family text-base-regular-font-size leading-base-regular-line-height font-base-regular-font-weight relative"
-              >
-                I agree to receive communications from Createx Online School
-              </div>
-            </div>
-            <div
-              class="rounded pr-10 pl-10 flex flex-col gap-2.5 items-center justify-start absolute right-0 top-0 overflow-hidden"
-              style="
-                background: var(
-                  --btn-gradient,
-                  linear-gradient(
-                    55.95deg,
-                    rgba(255, 63, 58, 1) 0%,
-                    rgba(247, 94, 5, 1) 100%
-                  )
-                );
-              "
-            >
-              <div
-                class="text-white text-center font-['Lato-Bold',_sans-serif] text-base leading-[52px] font-bold relative flex items-center justify-center"
-                style="letter-spacing: 0.5px"
-              >
-                Subscribe
-              </div>
-            </div>
-            <div
-              class="bg-white rounded border-solid border-gray-400 border w-[70.33%] h-[52px] absolute right-[29.67%] left-[0%] top-0 overflow-hidden"
-            >
-              <div
-                class="text-gray-600 text-left font-base-regular-font-family text-base-regular-font-size leading-base-regular-line-height font-base-regular-font-weight absolute left-4 top-[13px]"
-              >
-                Your working email
-              </div>
-            </div>
-          </div>
-          <div
-            class="text-gray-900 text-left font-h2-font-family text-h2-font-size leading-h2-line-height font-h2-font-weight absolute left-[975px] top-[100px] w-[600px] flex items-center justify-start"
-          >
-            Want to get the best articles weekly?
-            <br />
-            Subscribe to our newsletter!
-          </div>
-          <div class="w-[507px] h-[454px] absolute left-[308px] top-0">
-            <img
-              class="w-[80.16%] h-[99.89%] absolute right-[19.84%] left-[0%] bottom-[0.11%] top-[0%] overflow-visible"
-              src="lamp0.svg"
-            />
-            <img
-              class="h-[auto] absolute left-[316.58px] top-[107.33px] overflow-visible"
-              src="bookshelf0.svg"
-            />
-            <img
-              class="h-[auto] absolute left-[128.17px] top-[133.79px] overflow-visible"
-              src="character0.svg"
-            />
-          </div>
-        </div>
-        <div class="w-[326px] h-[131px] static">
-          <div
-            class="rounded border-solid border-gray-400 border pt-[5.5px] pr-4 pb-[5.5px] pl-4 flex flex-col gap-3 items-center justify-start absolute right-[361px] top-[1019px] overflow-hidden"
-          >
-            <div
-              class="text-gray-700 text-left font-small-bold-font-family text-small-bold-font-size leading-small-bold-line-height font-small-bold-font-weight relative flex items-end justify-start"
-            >
-              #self-development
-            </div>
-          </div>
-          <div
-            class="rounded border-solid border-gray-400 border pt-[5.5px] pr-4 pb-[5.5px] pl-4 flex flex-col gap-3 items-center justify-start absolute left-[1337px] top-[1019px] overflow-hidden"
-          >
-            <div
-              class="text-gray-700 text-left font-small-bold-font-family text-small-bold-font-size leading-small-bold-line-height font-small-bold-font-weight relative flex items-end justify-start"
-            >
-              #HR
-            </div>
-          </div>
-          <div
-            class="rounded border-solid border-gray-400 border pt-[5.5px] pr-4 pb-[5.5px] pl-4 flex flex-col gap-3 items-center justify-start absolute left-[1233px] top-[1019px] overflow-hidden"
-          >
-            <div
-              class="text-gray-700 text-left font-small-bold-font-family text-small-bold-font-size leading-small-bold-line-height font-small-bold-font-weight relative flex items-end justify-start"
-            >
-              #learning
-            </div>
-          </div>
-          <div
-            class="bg-primary rounded pt-[5.5px] pr-4 pb-[5.5px] pl-4 flex flex-col gap-3 items-center justify-start absolute left-[1464px] top-[975px] overflow-hidden"
-          >
-            <div
-              class="text-white text-left font-small-bold-font-family text-small-bold-font-size leading-small-bold-line-height font-small-bold-font-weight relative flex items-end justify-start"
-            >
-              #coding
-            </div>
-          </div>
-          <div
-            class="rounded border-solid border-gray-400 border pt-[5.5px] pr-4 pb-[5.5px] pl-4 flex flex-col gap-3 items-center justify-start absolute left-[1350px] top-[975px] overflow-hidden"
-          >
-            <div
-              class="text-gray-700 text-left font-small-bold-font-family text-small-bold-font-size leading-small-bold-line-height font-small-bold-font-weight relative flex items-end justify-start"
-            >
-              #recruiting
-            </div>
-          </div>
-          <div
-            class="rounded border-solid border-gray-400 border pt-[5.5px] pr-4 pb-[5.5px] pl-4 flex flex-col gap-3 items-center justify-start absolute left-[1233px] top-[975px] overflow-hidden"
-          >
-            <div
-              class="text-gray-700 text-left font-small-bold-font-family text-small-bold-font-size leading-small-bold-line-height font-small-bold-font-weight relative flex items-end justify-start"
-            >
-              #marketing
-            </div>
-          </div>
-          <img
-            class="w-[22px] h-[21px] absolute left-[1522px] top-[1002px]"
-            style="object-fit: cover"
-            src="cursor0.png"
-          />
-          <div
-            class="text-gray-900 text-left font-h6-font-family text-h6-font-size leading-h6-line-height font-h6-font-weight uppercase absolute right-[644px] top-[920px]"
-            style="letter-spacing: var(--h6-letter-spacing, 1px)"
-          >
-            Tags
-          </div>
-        </div>
-        <div class="w-[342px] h-[396px] static">
-          <div
-            class="flex flex-col gap-6 items-start justify-start absolute left-[1233px] top-[512px]"
-          >
-            <div
-              class="flex flex-row gap-5 items-start justify-start shrink-0 relative overflow-hidden"
-            >
-              <img
-                class="rounded shrink-0 w-[100px] h-[100px] relative"
-                style="object-fit: cover"
-                src="image3.png"
-              />
-              <div
-                class="flex flex-col gap-1 items-start justify-start shrink-0 relative overflow-hidden"
-              >
-                <div
-                  class="flex flex-row gap-2 items-center justify-start shrink-0 relative overflow-hidden"
-                >
-                  <img
-                    class="shrink-0 w-4 h-4 relative overflow-visible"
-                    src="calendar3.svg"
-                  />
-                  <div
-                    class="text-gray-700 text-left font-small-regular-font-family text-small-regular-font-size leading-small-regular-line-height font-small-regular-font-weight relative flex items-center justify-start"
-                    style="-webkit-text-stroke: 1px var(--gray-700, #787a80)"
-                  >
-                    September 4, 2020
-                  </div>
-                </div>
-                <div
-                  class="text-gray-900 text-left font-base-bold-font-family text-base-bold-font-size leading-base-bold-line-height font-base-bold-font-weight relative w-[222px]"
-                >
-                  What is traffic arbitrage and does it really make money?
-                </div>
-              </div>
-            </div>
-            <div
-              class="flex flex-row gap-5 items-start justify-start shrink-0 h-[100px] relative overflow-hidden"
-            >
-              <img
-                class="rounded shrink-0 w-[100px] h-[100px] relative"
-                style="object-fit: cover"
-                src="image4.png"
-              />
-              <div
-                class="flex flex-col gap-1 items-start justify-start shrink-0 w-[220px] relative overflow-hidden"
-              >
-                <div
-                  class="flex flex-row gap-2 items-center justify-start shrink-0 relative overflow-hidden"
-                >
-                  <img
-                    class="shrink-0 w-4 h-4 relative overflow-visible"
-                    src="calendar4.svg"
-                  />
-                  <div
-                    class="text-gray-700 text-left font-small-regular-font-family text-small-regular-font-size leading-small-regular-line-height font-small-regular-font-weight relative flex items-center justify-start"
-                    style="-webkit-text-stroke: 1px var(--gray-700, #787a80)"
-                  >
-                    July 15, 2020
-                  </div>
-                </div>
-                <div
-                  class="text-primary text-left font-base-bold-font-family text-base-bold-font-size leading-base-bold-line-height font-base-bold-font-weight relative w-[222px]"
-                >
-                  Startup: how to build a team that will live longer than a year
-                </div>
-              </div>
-            </div>
-            <div
-              class="flex flex-row gap-5 items-start justify-start shrink-0 relative overflow-hidden"
-            >
-              <img
-                class="rounded shrink-0 w-[100px] h-[100px] relative"
-                style="object-fit: cover"
-                src="image5.png"
-              />
-              <div
-                class="flex flex-col gap-1 items-start justify-start shrink-0 w-[220px] relative overflow-hidden"
-              >
-                <div
-                  class="flex flex-row gap-2 items-center justify-start shrink-0 relative overflow-hidden"
-                >
-                  <img
-                    class="shrink-0 w-4 h-4 relative overflow-visible"
-                    src="calendar5.svg"
-                  />
-                  <div
-                    class="text-gray-700 text-left font-small-regular-font-family text-small-regular-font-size leading-small-regular-line-height font-small-regular-font-weight relative flex items-center justify-start"
-                    style="-webkit-text-stroke: 1px var(--gray-700, #787a80)"
-                  >
-                    August 2, 2020
-                  </div>
-                </div>
-                <div
-                  class="text-gray-900 text-left font-base-bold-font-family text-base-bold-font-size leading-base-bold-line-height font-base-bold-font-weight relative w-[222px]"
-                >
-                  What to do if you want to get feedback on the product
-                </div>
-              </div>
-            </div>
-          </div>
-          <img
-            class="w-[22px] h-[21px] absolute left-[1518px] top-[702px]"
-            style="object-fit: cover"
-            src="cursor1.png"
-          />
-          <div
-            class="text-gray-900 text-left font-h6-font-family text-h6-font-size leading-h6-line-height font-h6-font-weight uppercase absolute right-[513px] top-[464px]"
-            style="letter-spacing: var(--h6-letter-spacing, 1px)"
-          >
-            Trending Articles
-          </div>
-        </div>
-        <div class="w-[342px] h-[164px] static">
-          <div class="w-[342px] h-[100px] static">
-            <div
-              class="flex flex-row gap-3 items-center justify-start absolute left-[1353px] top-[379px]"
-            >
-              <img
-                class="shrink-0 w-5 h-5 relative overflow-visible"
-                src="instagram1.svg"
-              />
-              <img
-                class="shrink-0 w-5 h-5 relative overflow-visible"
-                src="twitter1.svg"
-              />
-              <img
-                class="shrink-0 w-5 h-5 relative overflow-visible"
-                src="linked-in1.svg"
-              />
-            </div>
-            <div
-              class="flex flex-col gap-1 items-start justify-start absolute left-[1353px] top-[304px]"
-            >
-              <div
-                class="text-gray-800 text-left font-lead-bold-font-family text-lead-bold-font-size leading-lead-bold-line-height font-lead-bold-font-weight relative"
-              >
-                Kristin Watson
-              </div>
-              <div
-                class="text-gray-700 text-left font-small-regular-font-family text-small-regular-font-size leading-small-regular-line-height font-small-regular-font-weight relative w-[222px]"
-              >
-                Curator of Marketing Course
-              </div>
-            </div>
-            <img
-              class="rounded w-[100px] h-[100px] absolute left-[1233px] top-[304px]"
-              style="object-fit: cover"
-              src="image6.png"
-            />
-          </div>
-          <img
-            class="w-[22px] h-[21px] absolute left-[1424px] top-[399px]"
-            style="object-fit: cover"
-            src="cursor2.png"
-          />
-          <div
-            class="text-gray-900 text-left font-h6-font-family text-h6-font-size leading-h6-line-height font-h6-font-weight uppercase absolute right-[614px] top-64"
-            style="letter-spacing: var(--h6-letter-spacing, 1px)"
-          >
-            Author
-          </div>
-        </div>
-        <div
-          class="bg-white rounded border-solid border-gray-400 border w-[342px] h-11 absolute left-[1233px] top-[152px] overflow-hidden"
-        >
-          <div
-            class="text-gray-600 text-left font-small-regular-font-family text-small-regular-font-size leading-small-regular-line-height font-small-regular-font-weight absolute left-4 top-[11px]"
-          >
-            Search blog...
-          </div>
-          <img
-            class="w-4 h-4 absolute right-4 top-3.5 overflow-visible"
-            src="search0.svg"
-          />
-        </div>
-        <div
-          class="flex flex-row gap-3 items-center justify-start absolute right-[765px] top-[1717px]"
-        >
-          <div
-            class="text-gray-900 text-left font-base-bold-font-family text-base-bold-font-size leading-base-bold-line-height font-base-bold-font-weight relative flex items-center justify-start"
-          >
-            Share:
-          </div>
-          <div
-            class="flex flex-row gap-3 items-center justify-start shrink-0 relative"
-          >
-            <img
-              class="shrink-0 w-5 h-5 relative overflow-visible"
-              src="facebook1.svg"
-            />
-            <img
-              class="shrink-0 w-5 h-5 relative overflow-visible"
-              src="twitter2.svg"
-            />
-            <img
-              class="shrink-0 w-5 h-5 relative overflow-visible"
-              src="linked-in2.svg"
-            />
-          </div>
-        </div>
-        <div
-          class="flex flex-row gap-3 items-center justify-start absolute left-[345px] top-[1714px]"
-        >
-          <div
-            class="text-gray-900 text-left font-base-bold-font-family text-base-bold-font-size leading-base-bold-line-height font-base-bold-font-weight relative w-9 h-[26px] flex items-center justify-start"
-          >
-            Tags:
-          </div>
-          <div
-            class="rounded border-solid border-gray-400 border pt-[5.5px] pr-4 pb-[5.5px] pl-4 flex flex-col gap-3 items-center justify-start shrink-0 relative overflow-hidden"
-          >
-            <div
-              class="text-gray-700 text-left font-small-bold-font-family text-small-bold-font-size leading-small-bold-line-height font-small-bold-font-weight relative flex items-end justify-start"
-            >
-              #learning
-            </div>
-          </div>
-          <div
-            class="rounded border-solid border-gray-400 border pt-[5.5px] pr-4 pb-[5.5px] pl-4 flex flex-col gap-3 items-center justify-start shrink-0 relative overflow-hidden"
-          >
-            <div
-              class="text-gray-700 text-left font-small-bold-font-family text-small-bold-font-size leading-small-bold-line-height font-small-bold-font-weight relative flex items-end justify-start"
-            >
-              #HR
-            </div>
-          </div>
-          <div
-            class="rounded border-solid border-gray-400 border pt-[5.5px] pr-4 pb-[5.5px] pl-4 flex flex-col gap-3 items-center justify-start shrink-0 relative overflow-hidden"
-          >
-            <div
-              class="text-gray-700 text-left font-small-bold-font-family text-small-bold-font-size leading-small-bold-line-height font-small-bold-font-weight relative flex items-end justify-start"
-            >
-              #self-development
-            </div>
-          </div>
-        </div>
-        <div
-          class="text-gray-800 text-left font-base-regular-font-family text-base-regular-font-size leading-base-regular-line-height font-base-regular-font-weight absolute left-[345px] top-[1550px] w-[810px]"
-        >
-          Enim, vel massa odio diam. Blandit massa gravida feugiat elementum id nec
-          sed leo. Nisi in ornare lectus eget. Urna, risus, consectetur volutpat lorem
-          purus. Velit aliquet nibh vitae maecenas. Consectetur neque ut aliquam eros,
-          purus enim dignissim aenean vitae. Ultrices fames augue mattis tortor est
-          justo, pharetra nibh risus. Facilisi at porttitor volutpat natoque proin
-          amet, nulla. Vivamus ut lobortis sagittis curabitur tellus convallis eget
-          netus vitae.
-        </div>
-        <div
-          class="flex flex-col gap-1 items-center justify-start absolute left-[345px] top-[1410px]"
-        >
-          <div
-            class="flex flex-row gap-4 items-center justify-start shrink-0 relative"
-          >
-            <div class="shrink-0 w-4 h-4 relative overflow-hidden">
-              <img
-                class="w-[95.83%] h-[91.67%] absolute right-[0%] left-[4.17%] bottom-[4.17%] top-[4.17%] overflow-visible"
-                src="check1.svg"
-              />
-            </div>
-            <div
-              class="text-gray-800 text-left font-base-regular-font-family text-base-regular-font-size leading-base-regular-line-height font-base-regular-font-weight relative w-[568px]"
-            >
-              A fermentum in morbi pretium aliquam adipiscing donec tempus.
-            </div>
-          </div>
-          <div
-            class="flex flex-row gap-4 items-center justify-start shrink-0 relative"
-          >
-            <div class="shrink-0 w-4 h-4 relative overflow-hidden">
-              <img
-                class="w-[95.83%] h-[91.67%] absolute right-[0%] left-[4.17%] bottom-[4.17%] top-[4.17%] overflow-visible"
-                src="check3.svg"
-              />
-            </div>
-            <div
-              class="text-gray-800 text-left font-base-regular-font-family text-base-regular-font-size leading-base-regular-line-height font-base-regular-font-weight relative w-[568px]"
-            >
-              Vulputate placerat amet pulvinar lorem nisl.
-            </div>
-          </div>
-          <div
-            class="flex flex-row gap-4 items-center justify-start shrink-0 relative"
-          >
-            <div class="shrink-0 w-4 h-4 relative overflow-hidden">
-              <img
-                class="w-[95.83%] h-[91.67%] absolute right-[0%] left-[4.17%] bottom-[4.17%] top-[4.17%] overflow-visible"
-                src="check5.svg"
-              />
-            </div>
-            <div
-              class="text-gray-800 text-left font-base-regular-font-family text-base-regular-font-size leading-base-regular-line-height font-base-regular-font-weight relative w-[568px]"
-            >
-              Consequat feugiat habitant gravida quisque elit bibendum id adipiscing
-              sed.
-            </div>
-          </div>
-          <div
-            class="flex flex-row gap-4 items-center justify-start shrink-0 relative"
-          >
-            <div class="shrink-0 w-4 h-4 relative overflow-hidden">
-              <img
-                class="w-[95.83%] h-[91.67%] absolute right-[0%] left-[4.17%] bottom-[4.17%] top-[4.17%] overflow-visible"
-                src="check7.svg"
-              />
-            </div>
-            <div
-              class="text-gray-800 text-left font-base-regular-font-family text-base-regular-font-size leading-base-regular-line-height font-base-regular-font-weight relative w-[568px]"
-            >
-              Etiam duis lobortis in fames ultrices commodo nibh.
-            </div>
-          </div>
-        </div>
-        <div
-          class="text-gray-800 text-left font-base-regular-font-family text-base-regular-font-size leading-base-regular-line-height font-base-regular-font-weight absolute left-[345px] top-[1334px] w-[810px]"
-        >
-          Mauris amet arcu nisl vel dictum tellus. Sed rhoncus, ut sed id ut erat
-          mattis. Vitae mus blandit in neque amet non fringilla blandit:
-        </div>
-        <div
-          class="flex flex-row gap-[30px] items-start justify-start absolute left-[345px] top-[1166px] overflow-hidden"
-        >
-          <img class="shrink-0 w-7 h-5 relative overflow-visible" src="braces0.svg" />
-          <div
-            class="text-gray-900 text-left font-lead-bold-font-family text-lead-bold-font-size leading-lead-bold-line-height font-lead-bold-font-weight relative w-[752px]"
-          >
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Justo, amet
-            lectus quam viverra mus lobortis fermentum amet, eu. Pulvinar eu sed purus
-            facilisi. Vitae id turpis tempus ornare turpis quis non. Congue tortor in
-            tot euismod vulputate etiam eros. Vel accumsan at elit neque, ipsum.
-          </div>
-        </div>
-        <div
-          class="text-gray-800 text-left font-base-regular-font-family text-base-regular-font-size leading-base-regular-line-height font-base-regular-font-weight absolute left-[345px] top-[936px] w-[810px]"
-        >
-          At facilisi sapien posuere eget nunc senectus proin nullam. Tortor senectus
-          in et sagittis, vitae diam cras dignissim. Varius adipiscing eget diam nisi.
-          Orci, consectetur vulputate metus ornare pharetra, neque, fermentum. Vel nec
-          rhoncus, non nunc, neque in massa. Feugiat leo nam nisl lacinia amet, odio.
-          Mi varius viverra risus vel.
-          <br />
-          <br />
-          Amet, morbi sed pharetra, elit eget mi potenti. Condimentum orci interdum
-          feugiat lectus libero duis. Nisl massa, elementum varius sit. Nunc felis,
-          porttitor aliquam urna, accumsan et sed. Aliquet non sed duis diam vehicula
-          rhoncus. In dictum nullam tincidunt semper pellentesque purus morbi sed. Ut
-          aliquet velit pharetra, nisi nunc, non.
-        </div>
-        <div
-          class="text-gray-900 text-left font-lead-bold-font-family text-lead-bold-font-size leading-lead-bold-line-height font-lead-bold-font-weight absolute left-[345px] top-[822px] w-[810px]"
-        >
-          Vulputate vitae pellentesque scelerisque luctus consequat mattis
-          pellentesque dui odio. Interdum aenean sit malesuada ornare sed gravida
-          rhoncus, congue. Purus auctor nullam diam quis est hendrerit ac euismod.
-        </div>
-        <img
-          class="rounded w-[42.19%] h-[9.46%] absolute right-[39.84%] left-[17.97%] bottom-[79.98%] top-[10.56%]"
-          style="object-fit: cover"
-          src="image7.png"
-        />
-        <div class="w-[810px] h-[210px] static">
-          <div
-            class="flex flex-row gap-3 items-center justify-start absolute right-[765px] top-[336px]"
-          >
-            <div
-              class="text-gray-900 text-left font-base-bold-font-family text-base-bold-font-size leading-base-bold-line-height font-base-bold-font-weight relative flex items-center justify-start"
-            >
-              Share:
-            </div>
-            <div
-              class="flex flex-row gap-3 items-center justify-start shrink-0 relative"
-            >
-              <img
-                class="shrink-0 w-5 h-5 relative overflow-visible"
-                src="facebook2.svg"
-              />
-              <img
-                class="shrink-0 w-5 h-5 relative overflow-visible"
-                src="twitter3.svg"
-              />
-              <img
-                class="shrink-0 w-5 h-5 relative overflow-visible"
-                src="linked-in3.svg"
-              />
-            </div>
-          </div>
-          <div
-            class="flex flex-row gap-6 items-center justify-start absolute left-[345px] top-[336px]"
-          >
-            <div
-              class="flex flex-row gap-2 items-center justify-start shrink-0 relative overflow-hidden"
-            >
-              <img
-                class="shrink-0 w-4 h-4 relative overflow-visible"
-                src="calendar6.svg"
-              />
-              <div
-                class="text-gray-700 text-left font-base-regular-font-family text-base-regular-font-size leading-base-regular-line-height font-base-regular-font-weight relative flex items-center justify-start"
-              >
-                August 3, 2020
-              </div>
-            </div>
-            <div
-              class="flex flex-row gap-2 items-center justify-start shrink-0 relative overflow-hidden"
-            >
-              <img
-                class="shrink-0 w-4 h-4 relative overflow-visible"
-                src="clock1.svg"
-              />
-              <div
-                class="text-gray-700 text-left font-base-regular-font-family text-base-regular-font-size leading-base-regular-line-height font-base-regular-font-weight relative flex items-center justify-start"
-              >
-                4 min read
-              </div>
-            </div>
-          </div>
-          <div
-            class="text-gray-900 text-left font-h1-font-family text-h1-font-size leading-h1-line-height font-h1-font-weight absolute left-[calc(50%_-_615px)] top-[190px] w-[810px] flex items-center justify-start"
-          >
-            HR statistics: job search, interviews, hiring and recruiting
-          </div>
-          <div
-            class="flex flex-row gap-3 items-center justify-start absolute left-[345px] top-[152px] overflow-hidden"
-          >
-            <div
-              class="flex flex-row gap-2 items-center justify-start shrink-0 relative"
-            >
-              <div class="shrink-0 w-4 h-4 relative overflow-hidden">
-                <img
-                  class="w-[70.83%] h-[89.58%] absolute right-[14.58%] left-[14.58%] bottom-[5.21%] top-[5.21%] overflow-visible"
-                  src="files5.svg"
-                />
-              </div>
-              <div
-                class="text-gray-800 text-left font-base-regular-font-family text-base-regular-font-size leading-base-regular-line-height font-base-regular-font-weight relative flex items-center justify-start"
-              >
-                Article
-              </div>
-            </div>
-            <div
-              class="border-solid border-gray-700 border-t border-r-[0] border-b-[0] border-l-[0] shrink-0 w-4 h-0 relative"
-              style="
-                margin-top: -1px;
-                transform-origin: 0 0;
-                transform: rotate(90deg) scale(1, 1);
-              "
-            ></div>
-            <div
-              class="text-primary text-left font-base-bold-font-family text-base-bold-font-size leading-base-bold-line-height font-base-bold-font-weight relative"
-            >
-              HR &amp; Recruting
-            </div>
-          </div>
-        </div>
-        <div class="w-[1230px] h-[52px] absolute left-[345px] top-5 overflow-hidden">
-          <div
-            class="flex flex-row gap-9 items-start justify-start absolute right-0 top-[calc(50%_-_26px)] overflow-hidden"
-          >
-            <div
-              class="rounded pr-10 pl-10 flex flex-col gap-2.5 items-center justify-start shrink-0 relative overflow-hidden"
-              style="
-                background: var(
-                  --btn-gradient,
-                  linear-gradient(
-                    55.95deg,
-                    rgba(255, 63, 58, 1) 0%,
-                    rgba(247, 94, 5, 1) 100%
-                  )
-                );
-              "
-            >
-              <div
-                class="text-white text-center font-['Lato-Bold',_sans-serif] text-base leading-[52px] font-bold relative flex items-center justify-center"
-                style="letter-spacing: 0.5px"
-              >
-                Get consultation
-              </div>
-            </div>
-            <div
-              class="flex flex-row gap-2 items-center justify-start shrink-0 relative"
-            >
-              <div class="shrink-0 w-5 h-5 relative overflow-hidden">
-                <img
-                  class="w-[83.33%] h-[89.58%] absolute right-[8.33%] left-[8.33%] bottom-[5.21%] top-[5.21%] overflow-visible"
-                  src="person0.svg"
-                />
-              </div>
-              <div
-                class="text-gray-800 text-left font-base-bold-font-family text-base-bold-font-size leading-base-bold-line-height font-base-bold-font-weight relative flex items-center justify-start"
-              >
-                
+          
         </div>
       </div>
-      
- 
-    <footer class=>
-        <div class="container mx-auto max-w-[1230px] px-4">
-            <div class="flex flex-wrap justify-between gap-y-8 ">
-                <div class="max-w-[300px]">
-                    <a href="../index.html" class="block mb-4">
-                        <img src="../assets/img/logo2.svg" alt="">
-                    </a>
-                    <p class="text-sm text-gray-400">
-                        Createx Online School is a leader in online studying. We base our courses on practice, not on
-                        theory. We provide relevant approaches to online learning.
-                    </p>
-                    <div class="flex gap-x-4 mt-4">
-                        <a href="htps://Facebook.com"><img src="../assets/icon/Facebook.svg" alt="Facebook" class="w-5 h-5"></a>
-                        <a href="htps://Twitter.com"><img src="../assets/icon/Twitter.svg" alt="Twitter" class="w-5 h-5"></a>
-                        <a href="htps://Youtube.com"><img src="../assets/icon/YouTube.svg" alt="YouTube" class="w-5 h-5"></a>
-                        <a href="htps://Telegram.com"><img src="../assets/icon/telegram.svg" alt="Telegram" class="w-5 h-5"></a>
-                        <a href="htps://Instagram.com"><img src="../assets/icon/Instagram.svg" alt="Instagram" class="w-5 h-5"></a>
-                        <a href="htps://Linkedin.com"><img src="../assets/icon/Linked-In.svg" alt="LinkedIn" class="w-5 h-5"></a>
-                    </div>
-                </div>
-                <div class="ml-4">
-                    <h3 class="text-lg font-semibold mb-4">SITE MAP</h3>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="./About_us.html" class="hover:text-red-500 transition">About Us</a></li>
-                        <li><a href="./Courses.html" class="hover:text-red-500 transition">Courses</a></li>
-                        <li><a href="./Events_List_View.html" class="hover:text-red-500 transition">Events</a></li>
-                        <li><a href="./Blog.html" class="hover:text-red-500 transition">Blog</a></li>
-                        <li><a href="./contacts.html" class="hover:text-red-500 transition">Contacts</a></li>
-                    </ul>
-                </div>
-                <div class="ml-4">
-                    <h3 class="text-lg font-semibold mb-4">COURSES</h3>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li><a href="#" class="hover:text-red-500 transition">Marketing</a></li>
-                        <li><a href="#" class="hover:text-red-500 transition">Management</a></li>
-                        <li><a href="#" class="hover:text-red-500 transition">HR & Recruiting</a></li>
-                        <li><a href="#" class="hover:text-red-500 transition">Design</a></li>
-                        <li><a href="#" class="hover:text-red-500 transition">Development</a></li>
-                    </ul>
-                </div>
-                <div class="ml-4">
-                    <h3 class="text-lg font-semibold mb-4">CONTACT US</h3>
-                    <ul class="space-y-2 text-sm text-gray-400">
-                        <li>📞 <a href="tel:+1234567890" class="hover:text-red-500 transition">+1 (234) 567-89-00</a></li>
-                        <li>✉️ <a href="mailto:hello@createx.com" class="hover:text-red-500 transition">hello@createx.com</a></li>
-                    </ul>
-                </div>
-                <div class="mr-10">
-                    <h3 class="text-lg font-semibold mb-4">SIGN UP TO OUR NEWSLETTER</h3>
-                    <form action="#" class="relative">
-                        <input
-                            type="email"
-                            placeholder="Email address"
-                            class="w-64 p-2 pr-12 rounded bg-gray-800 text-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500"
-                        />
-                        <button
-                            type="submit"
-                            class="absolute top-0 right-50 h-full px-4 bg-red-500 hover:bg-red-600 rounded-r text-white transition"
-                        >
-                            &rarr;
-                        </button>
-                    </form>
-                    <p class="w-64 text-xs text-gray-500 mt-2">
-                        *Subscribe to receive marketing, communication, and education emails from Createx Agency.
-                    </p>
-                </div>
-            </div>
-            <div
-                class="mt-8 border-t border-gray-700 pt-4 flex justify-between items-center text-sm text-gray-500"
-            >
-                <p>© All  reserved. Made with ❤️ by  Studio</p>
-                <a href="#" class="hover:text-red-500 transition">GO TO TOP</a>
-            </div>
+
+    </section>
+    <section>
+      <div class="bg-gray-50 py-16 mt-10">
+        <div class="container mx-auto px-4 md:flex items-center justify-between">
+          <div class="flex-1 mb-8 md:mb-0" data-aos="zoom-in-up" data-aos-delay="100">
+            <img src="../assets/img/illustration_blog.png" alt="Illustration of person with books"
+              class="w-full max-w-md mx-auto" />
+          </div>
+          <!-- Matn va forma (o'ng tomonda) -->
+          <div class="flex-1" data-aos="zoom-in-up" data-aos-delay="200">
+            <h2 class="text-2xl md:text-3xl font-bold text-gray-800 mb-4">
+              Want to get the best articles weekly? <br />
+              Subscribe to our newsletter!
+            </h2>
+            <form class="flex flex-col space-y-4">
+              <div class="flex items-center">
+                <input type="email" placeholder="Your working email"
+                  class="flex-1 px-4 py-3 border border-gray-300 rounded-l-md focus:outline-none focus:ring-2 focus:ring-orange-500" />
+                <button type="submit"
+                  class="px-6 py-3 bg-orange-500 text-white font-semibold rounded-r-md hover:bg-orange-600">
+                  Subscribe
+                </button>
+              </div>
+              <label class="flex items-center text-sm text-gray-600">
+                <input type="checkbox" class="mr-2 text-orange-500 focus:ring-orange-500" />
+                I agree to receive communications from Createx Online School
+              </label>
+            </form>
+          </div>
         </div>
-    </footer>
-    <script src="../js/app.js"></script>
+      </div>
+    </section>
+    <section class="p-12">
+      <div class="container mx-auto max-w-[1230px]">
+        <div class="flex items-end flex-wrap justify-between mb-6">
+          <div class="flex items-start flex-col">
+            <p class="text-lg uppercase  font-semibold text-gray-800 mb-2">Our blog</p>
+            <h3 class="text-4xl font-bold text-gray-800 ">You may also like</h3>
+          </div>
+          <div class="flex items-center space-x-2 mr-8">
+            <button
+              class=" transform  hover:bg-red-500 text-black hover:text-white rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center hover:shadow-lg transform transition duration-300">
+              <span class="text-xl">&larr;</span>
+            </button>
+            <button
+              class=" transform  hover:bg-red-500 text-black hover:text-white rounded-full w-10 h-10 md:w-12 md:h-12 flex items-center justify-center hover:shadow-lg transform transition duration-300">
+
+              <span class="text-xl">&rarr;</span>
+            </button>
+          </div>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-4">
+          <div class="bg-blue-100 rounded-lg shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="100">
+            <img src="../assets/img/about6.png" alt="Podcast" class="w-full h-46 object-cover" />
+            <div class="p-4">
+              <div class="flex items-center gap-2 mb-4">
+                <span class="bg-blue-200 text-blue-600 text-sm px-2 py-1 rounded">🎙️ Podcast</span>
+              </div>
+              <h3 class="text-lg font-semibold mb-2">What is traffic arbitrage and does it really make money?</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Pharetra, ullamcorper iaculis viverra parturient sed id sed. Convallis proin dignissim lacus, purus
+                gravida...
+              </p>
+              <div class="text-gray-500 text-xs mb-2">Marketing · September 4, 2020 · 36 min</div>
+              <a href="#" class="text-blue-600 font-semibold text-sm flex items-center gap-1">
+                Listen <span>→</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-gray-100 rounded-lg shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="200">
+            <img src="../assets/img/blog1.png" alt="Article" class="w-full h-46 object-cover" />
+            <div class="p-4">
+              <div class="flex items-center gap-2 mb-4">
+                <span class="bg-gray-200 text-gray-600 text-sm px-2 py-1 rounded">📄 Article</span>
+              </div>
+              <h3 class="text-lg font-semibold mb-2">How to choose the first programming language for a beginner</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Turpis sed at magna laoreet gravida consequat tortor placerat. Gravida vitae aliquet enim egestas dui...
+              </p>
+              <div class="text-gray-500 text-xs mb-2">Development · September 1, 2020</div>
+              <a href="#" class="text-gray-600 font-semibold text-sm flex items-center gap-1">
+                Read <span>→</span>
+              </a>
+            </div>
+          </div>
+
+          <div class="bg-yellow-100 rounded-lg shadow-md overflow-hidden" data-aos="fade-up" data-aos-delay="300">
+            <img src="../assets/img/about8.png" alt="Video" class="w-full h-46 object-cover" />
+            <div class="p-4">
+              <div class="flex items-center gap-2 mb-4">
+                <span class="bg-yellow-200 text-yellow-600 text-sm px-2 py-1 rounded">🎥 Video</span>
+              </div>
+              <h3 class="text-lg font-semibold mb-2">Should you choose a creative profession if you are attracted to
+                creativity?</h3>
+              <p class="text-gray-600 text-sm mb-4">
+                Curabitur nisl tincidunt eros venenatis vestibulum ac placerat. Tortor, viverra sed vulputate
+                ultrices...
+              </p>
+              <div class="text-gray-500 text-xs mb-2">Design · August 8, 2020 · 40 min</div>
+              <a href="#" class="text-yellow-600 font-semibold text-sm flex items-center gap-1">
+                Watch <span>→</span>
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+
+  <footer class="bg-[#1b1f24] text-white py-10">
+    <div class="container mx-auto max-w-[1230px] px-4">
+      <div class="flex flex-wrap justify-between gap-y-8 ">
+        <div class="max-w-[300px]">
+          <a href="../index.html" class="block mb-4">
+            <img src="../assets/img/logo2.svg" alt="">
+          </a>
+          <p class="text-sm text-gray-400">
+            Createx Online School is a leader in online studying. We base our courses on practice, not on
+            theory. We provide relevant approaches to online learning.
+          </p>
+          <div class="flex gap-x-4 mt-4">
+            <a href="htps://Facebook.com"><img src="../assets/icon/Facebook.svg" alt="Facebook" class="w-5 h-5"></a>
+            <a href="htps://Twitter.com"><img src="../assets/icon/Twitter.svg" alt="Twitter" class="w-5 h-5"></a>
+            <a href="htps://Youtube.com"><img src="../assets/icon/YouTube.svg" alt="YouTube" class="w-5 h-5"></a>
+            <a href="htps://Telegram.com"><img src="../assets/icon/telegram.svg" alt="Telegram" class="w-5 h-5"></a>
+            <a href="htps://Instagram.com"><img src="../assets/icon/Instagram.svg" alt="Instagram" class="w-5 h-5"></a>
+            <a href="htps://Linkedin.com"><img src="../assets/icon/Linked-In.svg" alt="LinkedIn" class="w-5 h-5"></a>
+          </div>
+        </div>
+        <div class="ml-4">
+          <h3 class="text-lg font-semibold mb-4">SITE MAP</h3>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="./About_us.html" class="hover:text-red-500 transition">About Us</a></li>
+            <li><a href="./Courses.html" class="hover:text-red-500 transition">Courses</a></li>
+            <li><a href="./Events_List_View.html" class="hover:text-red-500 transition">Events</a></li>
+            <li><a href="./Blog.html" class="hover:text-red-500 transition">Blog</a></li>
+            <li><a href="./contacts.html" class="hover:text-red-500 transition">Contacts</a></li>
+          </ul>
+        </div>
+        <div class="ml-4">
+          <h3 class="text-lg font-semibold mb-4">COURSES</h3>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li><a href="#" class="hover:text-red-500 transition">Marketing</a></li>
+            <li><a href="#" class="hover:text-red-500 transition">Management</a></li>
+            <li><a href="#" class="hover:text-red-500 transition">HR & Recruiting</a></li>
+            <li><a href="#" class="hover:text-red-500 transition">Design</a></li>
+            <li><a href="#" class="hover:text-red-500 transition">Development</a></li>
+          </ul>
+        </div>
+        <div class="ml-4">
+          <h3 class="text-lg font-semibold mb-4">CONTACT US</h3>
+          <ul class="space-y-2 text-sm text-gray-400">
+            <li>📞 <a href="tel:+1234567890" class="hover:text-red-500 transition">+1 (234) 567-89-00</a>
+            </li>
+            <li>✉️ <a href="mailto:hello@createx.com" class="hover:text-red-500 transition">hello@createx.com</a></li>
+          </ul>
+        </div>
+        <div class="mr-10">
+          <h3 class="text-lg font-semibold mb-4">SIGN UP TO OUR NEWSLETTER</h3>
+          <form action="#" class="relative">
+            <input type="email" placeholder="Email address"
+              class="w-64 p-2 pr-12 rounded bg-gray-800 text-gray-400 focus:outline-none focus:ring-2 focus:ring-red-500" />
+            <button type="submit"
+              class="absolute top-0 right-50 h-full px-4 bg-red-500 hover:bg-red-600 rounded-r text-white transition">
+              &rarr;
+            </button>
+          </form>
+          <p class="w-64 text-xs text-gray-500 mt-2">
+            *Subscribe to receive marketing, communication, and education emails from Createx Agency.
+          </p>
+        </div>
+      </div>
+      <div class="mt-8 border-t border-gray-700 pt-4 flex justify-between items-center text-sm text-gray-500">
+        <p>© All reserved. Made with ❤️ by Studio</p>
+        <a href="#" class="hover:text-red-500 transition">GO TO TOP</a>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/app.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
 </body>
+
 </html>
